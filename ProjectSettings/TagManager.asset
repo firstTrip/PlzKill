@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Weafon
+  - Blood
+  - Monster
+  - Ground
+  - Wave
+  - Obstacle
+  - Mob_Monster
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - Ground
+  - Interation
+  - Blood
+  - Monster
+  - Obstacle
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3910484739
+    locked: 0
+  - name: IngameTile
+    uniqueID: 1001496295
+    locked: 0
+  - name: Object
+    uniqueID: 4038586949
+    locked: 0
+  - name: Player
+    uniqueID: 1769033549
+    locked: 0
