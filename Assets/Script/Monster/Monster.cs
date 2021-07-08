@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using BansheeGz.BGDatabase;
 
 public class Monster : MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class Monster : MonoBehaviour
 
     bool asd;
 
+    public MonsterData monsterData;
+
     public enum MonsterType
     {
         AggressiveMonster, // 선공몹
@@ -44,21 +47,28 @@ public class Monster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        HP = 100;
-        blood = 1;
-        attRange = 1f;
-        att = 10f;
-        attSpeed = 2.5f;
+        Initiallized();
         asd = true;
         setSize = transform.localScale.x;
         Debug.Log(setSize);
         rb = GetComponent<Rigidbody2D>();
+        monsterData = GetComponent<MonsterData>();
         death = false;
         isTracing = false;
         isAttacking = true;
         Invoke("Think", 1f);
     }
 
+
+    protected virtual void Initiallized()
+    {
+        HP = monsterData.HP;
+        speed = monsterData.Speed;
+        attRange = monsterData.AttRange;
+        att = monsterData.Att;
+        attSpeed = monsterData.AttSpeed;
+        blood = (int)monsterData.BloodCnt;
+    }
     // Update is called once per frame
     void Update()
     {

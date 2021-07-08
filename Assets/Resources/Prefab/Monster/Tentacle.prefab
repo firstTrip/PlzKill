@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 6810604789391690848}
   - component: {fileID: 6810604789391690852}
   - component: {fileID: 6810604789391690855}
+  - component: {fileID: 3890603010601175674}
   - component: {fileID: 4122409945794306424}
   - component: {fileID: 6810604789391690874}
   - component: {fileID: 6810604789391690875}
@@ -160,6 +161,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3890603010601175674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6810604789391690872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec7e0ac6d1fec34b9225311d5a16659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnEntityChange:
+    m_PersistentCalls:
+      m_Calls: []
+  entityIdString: DffJNBAxEkOFMgewZ1DfAA
+  metaIdString: 
+  initWithFirst: 0
 --- !u!114 &4122409945794306424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71966499773aefa45acab0bccbb9d45f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 0
+  HP: 50
   blood: 0
   speed: 0
   att: 0
@@ -184,6 +203,7 @@ MonoBehaviour:
   traceTarget: {fileID: 0}
   textObj: {fileID: 323697615979723228, guid: 6c81e843f5295c14cb5c3f2d50f897ee, type: 3}
   textPos: {fileID: 1409703836}
+  monsterData: {fileID: 3890603010601175674}
   monsterType: 0
   pushForce: 0
 --- !u!50 &6810604789391690874

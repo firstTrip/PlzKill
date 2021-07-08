@@ -28,6 +28,8 @@ public class Mob_Monster : MonoBehaviour
     [SerializeField] protected GameObject textObj;
     [SerializeField] protected Transform textPos;
 
+    public MonsterData monsterData;
+
     protected SpriteRenderer sr;
     protected enum MonsterType
     {
@@ -43,15 +45,11 @@ public class Mob_Monster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        HP = 1000;
-        blood = 1;
-        attRange = 1f;
-        att = 10f;
-        attSpeed = 2f;
-
+        Initiallized();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        monsterData = GetComponent<MonsterData>();
         spriteScale = sr.transform.localScale.x;
         Debug.Log(spriteScale);
         death = false;
@@ -63,6 +61,17 @@ public class Mob_Monster : MonoBehaviour
             Invoke("Think", 1f);
 
         }
+    }
+
+    protected virtual void Initiallized()
+    {
+
+        HP = monsterData.HP;
+        speed = monsterData.Speed;
+        attRange = monsterData.AttRange;
+        att = monsterData.Att;
+        attSpeed = monsterData.AttSpeed;
+        blood = (int)monsterData.BloodCnt;
     }
 
     // Update is called once per frame

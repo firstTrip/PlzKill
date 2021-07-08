@@ -439,6 +439,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster_type1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7424861396621556550, guid: fe8162713dd00ce46905b47dce0aec2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8162713dd00ce46905b47dce0aec2d, type: 3}
 --- !u!1 &56760725
@@ -6346,6 +6351,18 @@ Transform:
   m_Father: {fileID: 1939140593}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1348411960 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3581976156537835587, guid: fe8162713dd00ce46905b47dce0aec2d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1013819448463217749}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec7e0ac6d1fec34b9225311d5a16659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1353074782
 GameObject:
   m_ObjectHideFlags: 0
@@ -7142,6 +7159,7 @@ MonoBehaviour:
   traceTarget: {fileID: 0}
   textObj: {fileID: 0}
   textPos: {fileID: 0}
+  monsterData: {fileID: 0}
   monsterType: 4
   startPos: {x: 0, y: 0}
   boundary: 3
@@ -17055,6 +17073,11 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1013819448296341101, guid: fe8162713dd00ce46905b47dce0aec2d,
+        type: 3}
+      propertyPath: monsterData
+      value: 
+      objectReference: {fileID: 1348411960}
     - target: {fileID: 2563109325632947040, guid: fe8162713dd00ce46905b47dce0aec2d,
         type: 3}
       propertyPath: m_Pivot.x
@@ -17165,7 +17188,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster_type1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8178435658092927848, guid: fe8162713dd00ce46905b47dce0aec2d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fe8162713dd00ce46905b47dce0aec2d, type: 3}
 --- !u!1001 &1104263718546697302
 PrefabInstance:
@@ -17393,14 +17417,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4122409945794306424, guid: 5c11a9ce6b5b7154aa261877e18fb45a,
         type: 3}
-      propertyPath: HP
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4122409945794306424, guid: 5c11a9ce6b5b7154aa261877e18fb45a,
-        type: 3}
-      propertyPath: bloodPiece
+      propertyPath: monsterData
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2576678652642597611}
     - target: {fileID: 6810604789391690848, guid: 5c11a9ce6b5b7154aa261877e18fb45a,
         type: 3}
       propertyPath: m_Pivot.x
@@ -17513,6 +17532,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c11a9ce6b5b7154aa261877e18fb45a, type: 3}
+--- !u!114 &2576678652642597611 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3890603010601175674, guid: 5c11a9ce6b5b7154aa261877e18fb45a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2576678652642597610}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec7e0ac6d1fec34b9225311d5a16659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &3278674614022018869 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2563109325632947040, guid: fe8162713dd00ce46905b47dce0aec2d,
@@ -17642,23 +17673,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat
       objectReference: {fileID: 0}
-    - target: {fileID: 7418362557547475380, guid: 1b0136303b697214985b95d6e23b9801,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7418362557547475380, guid: 1b0136303b697214985b95d6e23b9801,
-        type: 3}
-      propertyPath: m_TagString
-      value: Mob_Monster
-      objectReference: {fileID: 0}
-    - target: {fileID: 7418362557547475383, guid: 1b0136303b697214985b95d6e23b9801,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 9191609193783531195, guid: 1b0136303b697214985b95d6e23b9801, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0136303b697214985b95d6e23b9801, type: 3}
 --- !u!4 &4552211051028616442 stripped
 Transform:
@@ -17888,40 +17903,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c072732bd83910499245bd8c1fb4f9d, type: 3}
---- !u!1 &6810604790219504367 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7418362557547475380, guid: 1b0136303b697214985b95d6e23b9801,
-    type: 3}
-  m_PrefabInstance: {fileID: 4068845625254841179}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6810604790219504368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6810604790219504367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fc670b9a0b5f7944973fd291baf9fd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 0
-  blood: 0
-  speed: 0
-  att: 0
-  attSpeed: 0
-  attRange: 0
-  bloodPiece: {fileID: 0}
-  animator: {fileID: 0}
-  nextDiretion: 0
-  traceTarget: {fileID: 0}
-  textObj: {fileID: 0}
-  textPos: {fileID: 0}
-  monsterType: 4
-  startPos: {x: 0, y: 0}
-  boundary: 3
-  posY: 0
 --- !u!224 &6810604790219504375 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7418362557547475372, guid: 1b0136303b697214985b95d6e23b9801,

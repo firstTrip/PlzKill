@@ -11,15 +11,13 @@ public class Tentacle : Mob_Monster
     // Start is called before the first frame update
     void Start()
     {
-        HP = 50;
-        blood = 1;
-        attRange = 2f;
-        att = 10f;
-        attSpeed = 2f;
+        Initiallized();
         pushForce = 3;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        monsterData = GetComponent<MonsterData>();
+
         playerRb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
         spriteScale = sr.transform.localScale.x;
         Debug.Log(spriteScale);
@@ -60,6 +58,16 @@ public class Tentacle : Mob_Monster
             return;
         }
         FixedMob();
+    }
+
+    protected override void Initiallized()
+    {
+        HP = monsterData.HP;
+        speed = monsterData.Speed;
+        attRange = monsterData.AttRange;
+        att = monsterData.Att;
+        attSpeed = monsterData.AttSpeed;
+        blood = (int)monsterData.BloodCnt;
     }
 
     protected override void FixedMob()

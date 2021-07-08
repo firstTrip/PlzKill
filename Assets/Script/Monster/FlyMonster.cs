@@ -15,16 +15,13 @@ public class FlyMonster : Mob_Monster
     // Start is called before the first frame update
     void Start()
     {
-        HP = 1000;
-        blood = 1;
-        attRange = 1f;
-        att = 10f;
-        attSpeed = 2f;
         startPos = transform.position;
-
+        Initiallized();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        monsterData = GetComponent<MonsterData>();
+
         spriteScale = sr.transform.localScale.x;
         Debug.Log(spriteScale);
         death = false;
@@ -69,6 +66,16 @@ public class FlyMonster : Mob_Monster
 
     }
 
+
+    protected override void Initiallized()
+    {
+        HP = monsterData.HP;
+        speed = monsterData.Speed;
+        attRange = monsterData.AttRange;
+        att = monsterData.Att;
+        attSpeed = monsterData.AttSpeed;
+        blood = (int)monsterData.BloodCnt;
+    }
     protected override void Around()
     {
 

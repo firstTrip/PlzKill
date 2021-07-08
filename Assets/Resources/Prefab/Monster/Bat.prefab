@@ -57,15 +57,16 @@ GameObject:
   m_Component:
   - component: {fileID: 7418362557547475372}
   - component: {fileID: 7418362557547475368}
+  - component: {fileID: 8887075881790659268}
+  - component: {fileID: 6810604790219504368}
   - component: {fileID: 7418362557547475371}
   - component: {fileID: 7418362557547475382}
   - component: {fileID: 7418362557547475383}
   - component: {fileID: 7418362557547475370}
   - component: {fileID: 7418362557547475369}
-  - component: {fileID: 9191609193783531195}
   m_Layer: 0
   m_Name: Bat
-  m_TagString: Untagged
+  m_TagString: Mob_Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,6 +142,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8887075881790659268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7418362557547475380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec7e0ac6d1fec34b9225311d5a16659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnEntityChange:
+    m_PersistentCalls:
+      m_Calls: []
+  entityIdString: EepNdL/2fkak2q3VbLilbQ
+  metaIdString: 
+  initWithFirst: 0
+--- !u!114 &6810604790219504368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7418362557547475380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc670b9a0b5f7944973fd291baf9fd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 0
+  blood: 0
+  speed: 0
+  att: 0
+  attSpeed: 0
+  attRange: 0
+  bloodPiece: {fileID: 0}
+  animator: {fileID: 0}
+  nextDiretion: 0
+  traceTarget: {fileID: 0}
+  textObj: {fileID: 0}
+  textPos: {fileID: 0}
+  monsterData: {fileID: 8887075881790659268}
+  monsterType: 4
+  startPos: {x: 0, y: 0}
+  boundary: 3
+  posY: 0
 --- !u!114 &7418362557547475371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +250,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -235,28 +283,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7418362557547475380}
   m_CullTransparentMesh: 1
---- !u!114 &9191609193783531195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7418362557547475380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f4d5d4de6d1aba44a81e51f95acd6a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 0
-  blood: 0
-  speed: 0
-  att: 0
-  attSpeed: 0
-  attRange: 0
-  bloodPiece: {fileID: 0}
-  animator: {fileID: 0}
-  nextDiretion: 0
-  traceTarget: {fileID: 0}
-  textObj: {fileID: 0}
-  textPos: {fileID: 0}
-  monsterType: 2
