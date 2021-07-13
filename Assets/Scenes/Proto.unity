@@ -6244,7 +6244,7 @@ MonoBehaviour:
   m_Follow: {fileID: 3278674614920438866}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 6
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -6265,7 +6265,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333428250}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.30999994, y: -0.5000005, z: -9.9}
+  m_LocalPosition: {x: -0.30999994, y: 0.17999959, z: -9.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 561188427}
@@ -7111,59 +7111,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7418362557547475380, guid: 1b0136303b697214985b95d6e23b9801,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7418362557547475380, guid: 1b0136303b697214985b95d6e23b9801,
-        type: 3}
-      propertyPath: m_TagString
-      value: Mob_Monster
-      objectReference: {fileID: 0}
-    - target: {fileID: 7418362557547475383, guid: 1b0136303b697214985b95d6e23b9801,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 9191609193783531195, guid: 1b0136303b697214985b95d6e23b9801, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0136303b697214985b95d6e23b9801, type: 3}
---- !u!1 &1664783530 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7418362557547475380, guid: 1b0136303b697214985b95d6e23b9801,
-    type: 3}
-  m_PrefabInstance: {fileID: 1664783529}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1664783531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1664783530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fc670b9a0b5f7944973fd291baf9fd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 0
-  blood: 0
-  speed: 0
-  att: 0
-  attSpeed: 0
-  attRange: 0
-  bloodPiece: {fileID: 0}
-  animator: {fileID: 0}
-  nextDiretion: 0
-  traceTarget: {fileID: 0}
-  textObj: {fileID: 0}
-  textPos: {fileID: 0}
-  monsterData: {fileID: 0}
-  monsterType: 4
-  startPos: {x: 0, y: 0}
-  boundary: 3
-  posY: 0
 --- !u!224 &1664783532 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7418362557547475372, guid: 1b0136303b697214985b95d6e23b9801,
@@ -16262,7 +16211,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -16286,7 +16235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974760141}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.30999994, y: -0.5000005, z: -9.9}
+  m_LocalPosition: {x: -0.30999994, y: 0.17999959, z: -9.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1710195585}

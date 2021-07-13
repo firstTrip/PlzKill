@@ -64,6 +64,7 @@ GameObject:
   - component: {fileID: 7418362557547475383}
   - component: {fileID: 7418362557547475370}
   - component: {fileID: 7418362557547475369}
+  - component: {fileID: 1664783531}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Mob_Monster
@@ -283,3 +284,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7418362557547475380}
   m_CullTransparentMesh: 1
+--- !u!114 &1664783531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7418362557547475380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc670b9a0b5f7944973fd291baf9fd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 0
+  blood: 0
+  speed: 0
+  att: 0
+  attSpeed: 0
+  attRange: 0
+  bloodPiece: {fileID: 0}
+  animator: {fileID: 7418362557547475370}
+  nextDiretion: 0
+  traceTarget: {fileID: 0}
+  textObj: {fileID: 0}
+  textPos: {fileID: 0}
+  monsterData: {fileID: 0}
+  monsterType: 4
+  startPos: {x: 0, y: 0}
+  boundary: 3
+  posY: 0
