@@ -3211,6 +3211,7 @@ GameObject:
   - component: {fileID: 905037640814115956}
   - component: {fileID: 905037640814115958}
   - component: {fileID: 905037640814115959}
+  - component: {fileID: 8517753653291422974}
   - component: {fileID: 905037640814115957}
   m_Layer: 0
   m_Name: Player1
@@ -3309,6 +3310,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.33}
   m_Size: {x: 0.4, y: 0.66}
   m_Direction: 0
+--- !u!114 &8517753653291422974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7319740829783013718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4dc04affff1f0e4783bb7d8598dfb7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnEntityChange:
+    m_PersistentCalls:
+      m_Calls: []
+  entityIdString: 8MGCb0qP8kmFkgFt5dqoIQ
+  metaIdString: 
+  initWithFirst: 0
 --- !u!114 &905037640814115957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3323,6 +3342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasItem: []
   HP: 100
+  MaxHP: 0
   att: 0
   speed: 1
   dashPower: 15
@@ -3337,6 +3357,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   myWeapon: {fileID: 4764001446268837224}
   CollTimeImage: {fileID: 0}
+  playerData: {fileID: 8517753653291422974}
 --- !u!1 &7386873004660738941
 GameObject:
   m_ObjectHideFlags: 0

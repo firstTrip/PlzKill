@@ -18857,7 +18857,17 @@ PrefabInstance:
     - target: {fileID: 905037640814115957, guid: a37d6b8776bfea54d911d1df08207fa3,
         type: 3}
       propertyPath: attSpeed
-      value: 5
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 905037640814115957, guid: a37d6b8776bfea54d911d1df08207fa3,
+        type: 3}
+      propertyPath: dashPower
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 905037640814115957, guid: a37d6b8776bfea54d911d1df08207fa3,
+        type: 3}
+      propertyPath: jumpPower
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 905037640814115957, guid: a37d6b8776bfea54d911d1df08207fa3,
         type: 3}

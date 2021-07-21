@@ -68,6 +68,9 @@ public class Player : MonoBehaviour
     public Image CollTimeImage;
     private Camera cam;
 
+    [Space]
+
+    public PlayerData playerData;
     #region enum
     public enum PlayerCurrentState
     {
@@ -123,23 +126,25 @@ public class Player : MonoBehaviour
         anim = GetComponent<SPUM_Prefabs>();
         cam = Camera.main;
         hasItem = new List<GameObject>();
+        playerData = GetComponent<PlayerData>();
 
-        MaxHP = 100;
+
+        MaxHP = playerData.HP;
 
         HP = MaxHP;
 
 
-        maxBlood = 100;
+        maxBlood = playerData.MaxBlood;
         blood = 0;
 
-        att = 10;
-        speed = 5;
-        jumpPower = 8;
-        dashPower = 15;
-        attSpeed = 1f;
+        att = playerData.att;
+        speed = playerData.speed;
+        jumpPower = playerData.jumpPower;
+        dashPower = playerData.dashPower;
+        attSpeed = playerData.attSpeed;
 
-        dashCnt = 3;
-        dashCoolTime = 10;
+        dashCnt = playerData.dashCnt;
+        dashCoolTime = playerData.dashCoolTime;
 
         fallMultiplierFloat = 3f;
         lowJumpMultiplierFloat =2f;
