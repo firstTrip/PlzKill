@@ -28,6 +28,12 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpPower;
     [SerializeField] private float attSpeed;
 
+
+
+
+    private float BAtt;
+    private float BSpeed;
+    private float BAttSpeed;
     [Space]
     [Header("보정 점프")]
     [SerializeField] private float fallMultiplierFloat;
@@ -38,6 +44,10 @@ public class Player : MonoBehaviour
     [Header("흡혈")]
     [SerializeField] private float maxBlood;
     [SerializeField] private float blood;
+
+    [Space]
+
+    private int cnt = 0;
 
     [Space]
 
@@ -52,11 +62,15 @@ public class Player : MonoBehaviour
 
     [Space]
 
+
     private Vector2 MousePoint;
     int weafonIndex;
+
+    [Header("판단 그룹")]
     private bool coolRunning;
     private bool isAttacking;
-    bool isdashing;
+    private bool isDashing;
+    private bool isBerserk;
 
     [Space]
     [Header(" 애니메이션")]
@@ -106,9 +120,22 @@ public class Player : MonoBehaviour
         Jump();
         BetterJump();
         Dash();
+        BerserkMode();
 
         Interation();
         Swap();
+
+        if (isBerserk)
+        {
+            blood -= 5* Time.deltaTime;
+
+            if (blood < 0.001f)
+            {
+                HP -= 5 * Time.deltaTime;
+                blood = 0;
+            }
+        }
+
 
         if (isAttacking)
         {
@@ -143,8 +170,13 @@ public class Player : MonoBehaviour
         dashPower = playerData.dashPower;
         attSpeed = playerData.attSpeed;
 
+
         dashCnt = playerData.dashCnt;
         dashCoolTime = playerData.dashCoolTime;
+
+        BAtt = att;
+        BSpeed = speed;
+        BAttSpeed = attSpeed;
 
         fallMultiplierFloat = 3f;
         lowJumpMultiplierFloat =2f;
@@ -262,12 +294,12 @@ public class Player : MonoBehaviour
             
             leftTime = dashCoolTime;
             dashCnt--;
-            isdashing = true;
+            isDashing = true;
             //rb.constraints = RigidbodyConstraints2D.None;
             //rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             rb.gravityScale = 0;
 
-            if (isdashing)
+            if (isDashing)
             {
                 if (MousePoint.x > this.gameObject.transform.position.x)
                 {
@@ -291,7 +323,7 @@ public class Player : MonoBehaviour
         //rb.velocity = new Vector2(rb.velocity.normalized.x * 0.5f, rb.velocity.y);
         rb.gravityScale = 1;
         rb.velocity = Vector2.zero;
-        isdashing = false;
+        isDashing = false;
         playerCurrentState = PlayerCurrentState.idle;
     }
 
@@ -364,6 +396,41 @@ public class Player : MonoBehaviour
 
             myWeapon.GetComponent<Weafon>().ChangeWeafon(hasItem[weafonIndex].gameObject);
         }
+    }
+
+    private void BerserkMode()
+    {
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("Into BerserkMode");
+            cnt++;
+
+            if (cnt > 1)
+            {
+                CancleBerserkMode(BAtt, BSpeed, BAttSpeed);
+                cnt = 0;
+                isBerserk = false;
+
+                return;
+            }
+
+            att = BAtt * 2;
+            speed = BSpeed * 2;
+            attSpeed = BAttSpeed / 2;
+            isBerserk = true;
+        }
+    }
+
+    private void CancleBerserkMode(float Batt,float Bspeed,float BAttSpeed)
+    {
+        Debug.Log("out BerserkMode");
+
+        att = Batt;
+        speed = Bspeed;
+        attSpeed = BAttSpeed;
+
+        Debug.Log("att :  " + att + "speed :  " + speed + "attSpeed :   " + attSpeed);
     }
 
     private void Interation()

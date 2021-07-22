@@ -18905,6 +18905,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 905037640814115957, guid: a37d6b8776bfea54d911d1df08207fa3,
         type: 3}
+      propertyPath: blood
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 905037640814115957, guid: a37d6b8776bfea54d911d1df08207fa3,
+        type: 3}
       propertyPath: dashCnt
       value: 2
       objectReference: {fileID: 0}

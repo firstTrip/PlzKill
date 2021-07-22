@@ -79,7 +79,6 @@ public class Monster : MonoBehaviour
         {
             CancelInvoke();
             nextDiretion = 2;
-            Debug.Log("die");
             rb.velocity = Vector2.zero;
             this.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
             //this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
@@ -214,7 +213,6 @@ public class Monster : MonoBehaviour
         nextDiretion = Random.Range(-1, 2); // -1 왼쪽 , 0 정지 , 1 오른쪽
         float time = Random.Range(2f, 5f);
 
-        Debug.Log(nextDiretion);
 
         if (nextDiretion == 2)
             return;
