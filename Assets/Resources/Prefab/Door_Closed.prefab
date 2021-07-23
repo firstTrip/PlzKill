@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5186083032175355248}
   - component: {fileID: 5186083032175355251}
   - component: {fileID: 6414246124593286411}
+  - component: {fileID: 6233839916456112224}
   m_Layer: 13
   m_Name: Door_Closed
   m_TagString: Untagged
@@ -109,3 +110,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5, y: 6}
   m_EdgeRadius: 0
+--- !u!114 &6233839916456112224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5186083032175355250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55817e25a1330b54abd67c96a145f055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}

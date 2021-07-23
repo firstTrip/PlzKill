@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StageManager : MonoBehaviour
 {
@@ -32,6 +33,9 @@ public class StageManager : MonoBehaviour
 
     private int star;
     private int redStar;
+
+    private int levelNum;
+    private int stageNum;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +56,8 @@ public class StageManager : MonoBehaviour
         star = 0;
         redStar = 0;
 
+        levelNum = 1;
+        stageNum = 1;
         Stage = new List<GameObject>();
 
     }
@@ -59,6 +65,14 @@ public class StageManager : MonoBehaviour
 
     public void CallStage()
     {
+        Debug.Log(levelNum + "-" + stageNum + "_Stage");
+        SceneManager.LoadScene(levelNum + "-"+ stageNum + "_Stage");
+        stageNum++;
 
+        if (stageNum == 4)
+        {
+            stageNum = 1;
+            levelNum++;
+        }
     }
 }

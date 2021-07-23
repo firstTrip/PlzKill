@@ -22,14 +22,18 @@ public class Door : MonoBehaviour
 
     private void NextLevel()
     {
-        //SceneManager.sceneLoaded
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("nextLevel");
+
+            StageManager.Instance.CallStage();
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("nextLevel");
             NextLevel();
         }   
     }
