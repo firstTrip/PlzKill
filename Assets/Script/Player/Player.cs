@@ -545,6 +545,11 @@ public class Player : MonoBehaviour
         return dashCnt;
     }
 
+    public float setBlood()
+    {
+        return blood;
+    }
+
     public void getDashCnt(int cnt)
     {
         if (dashCnt < 3)

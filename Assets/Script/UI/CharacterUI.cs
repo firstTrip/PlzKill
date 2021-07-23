@@ -2,13 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CharacterUI : MonoBehaviour
 {
 
+    #region SingleTon
+    /* SingleTon */
+    private static CharacterUI instance;
+    public static CharacterUI Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = GameObject.FindObjectOfType(typeof(CharacterUI)) as CharacterUI;
+                if (!instance)
+                {
+                    GameObject container = new GameObject();
+                    container.name = "CharacterUI";
+                    instance = container.AddComponent(typeof(CharacterUI)) as CharacterUI;
+                }
+            }
+
+            return instance;
+        }
+    }
+
+    #endregion
+
     [SerializeField] private Image Hpbar;
-    [SerializeField] private Text BloodText;
-    [SerializeField] private Text CoinText;
+    [SerializeField] private TextMeshProUGUI BloodText;
+    [SerializeField] private TextMeshProUGUI CoinText;
     [SerializeField] private Image[] DashSlot;
     private float startDashCnt;
     private Player player;
@@ -17,6 +42,20 @@ public class CharacterUI : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         startDashCnt = player.setDashCnt();
+    }
+
+    private void Awake()
+    {
+        #region SingleTon
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != null)
+        {
+            Destroy(this);
+        }
+        #endregion
     }
 
     // Update is called once per frame
@@ -34,7 +73,7 @@ public class CharacterUI : MonoBehaviour
 
     private void BloodFillAmount()
     {
-
+        BloodText.text = player.setBlood().ToString();
     }
 
     private void DashCnt()
@@ -42,8 +81,6 @@ public class CharacterUI : MonoBehaviour
 
         if(startDashCnt != player.setDashCnt())
         {
-            Debug.Log(player.setDashCnt());
-
             for (int n = 0; n < startDashCnt; n++)
             {
                 DashSlot[n].gameObject.SetActive(false);
