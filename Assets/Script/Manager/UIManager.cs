@@ -33,9 +33,11 @@ public class UIManager : MonoBehaviour
     #endregion
 
     public Image textBox;
+    public Image textNpcBox;
     public Image FadeImg;
 
     public TextMeshProUGUI text;
+    public TextMeshProUGUI npcText;
     private void Awake()
     {
         #region SingleTon
@@ -65,12 +67,36 @@ public class UIManager : MonoBehaviour
         }
     }
 
+
+    public void SetNpcNotice(bool isActive)
+    {
+
+        if (isActive)
+        {
+            textNpcBox.gameObject.SetActive(true);
+            //GameManager.Instance.GamePause(true);
+        }
+        else
+        {
+            textNpcBox.gameObject.SetActive(false);
+            // GameManager.Instance.GamePause(false);
+        }
+    }
+
     public void SetText(string dialogue, float Duration)
     {
         Debug.Log(dialogue);
         Debug.Log(text);
         text.text = dialogue;
         TMProUGUIDoText.DoText(text, Duration);
+    }
+
+    public void SetNpcText(string dialogue, float Duration)
+    {
+        Debug.Log(dialogue);
+        Debug.Log(npcText);
+        npcText.text = dialogue;
+        TMProUGUIDoText.DoText(npcText, Duration);
     }
 
     public void FadeOut(float dulation)
