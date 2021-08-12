@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1815653188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1815653189}
+  m_Layer: 0
+  m_Name: Pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1815653189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815653188}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7588653687943121131}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &126357373438808220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2600,6 +2630,7 @@ GameObject:
   - component: {fileID: 905037639939253469}
   - component: {fileID: 905037639939254050}
   - component: {fileID: 905037639939254051}
+  - component: {fileID: 1927316022}
   m_Layer: 0
   m_Name: R_Weapon
   m_TagString: Untagged
@@ -2616,7 +2647,7 @@ Transform:
   m_GameObject: {fileID: 4764001446268837224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 5842509953813616298}
   m_RootOrder: 0
@@ -2682,7 +2713,7 @@ BoxCollider2D:
   m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.015625, y: 0.140625}
@@ -2711,7 +2742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 100
-  att: 15
+  att: 5
   attSpeed: 2
   sprite: {fileID: 0}
 --- !u!114 &905037639939254051
@@ -2729,6 +2760,25 @@ MonoBehaviour:
   att: 0
   PlayerAtt: 0
   weaponId: {fileID: 0}
+--- !u!95 &1927316022
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4764001446268837224}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f3726b17fa8f0d34ca80cb0cdfa13cab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4876885966903342662
 GameObject:
   m_ObjectHideFlags: 0
@@ -3227,7 +3277,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7319740829783013718}
-  m_LocalRotation: {x: -0, y: 0.008726557, z: -0, w: 0.9999619}
+  m_LocalRotation: {x: 0, y: 0.008726558, z: 0, w: 0.999962}
   m_LocalPosition: {x: 0, y: 0, z: 0.00015256465}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
@@ -3341,18 +3391,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasItem: []
-  HP: 100
+  HP: 200
   MaxHP: 0
   att: 0
   speed: 1
   dashPower: 15
   jumpPower: 7
-  attSpeed: 0
+  attSpeed: 5
   fallMultiplierFloat: 0
   lowJumpMultiplierFloat: 0
   maxBlood: 0
   blood: 0
-  dashCnt: 0
+  dashCnt: 2
   dashCoolTime: 3
   anim: {fileID: 0}
   myWeapon: {fileID: 4764001446268837224}
@@ -3775,6 +3825,7 @@ Transform:
   m_Children:
   - {fileID: 7836039916077528748}
   - {fileID: 6336299974816730318}
+  - {fileID: 1815653189}
   m_Father: {fileID: 2382236805619974512}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3799,7 +3850,7 @@ Animator:
   m_GameObject: {fileID: 8259854279909048334}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c2fc0aafc4ba14749a6cc196ffeb52b8, type: 2}
+  m_Controller: {fileID: 9100000, guid: ee95fa87715f32d4c9a7b386f7c84484, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

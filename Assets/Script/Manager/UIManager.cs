@@ -51,7 +51,7 @@ public class UIManager : MonoBehaviour
         }
         #endregion
     }
-
+    
     public void SetNotice(bool isActive )
     {
 

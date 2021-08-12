@@ -156,7 +156,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NormalAnimator
+  m_Name: PlayerAnimator
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Run
@@ -263,7 +263,7 @@ BlendTree:
   m_Name: NormalState
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: fb3d63259e5844b3f99e8aaace4edd07, type: 2}
+    m_Motion: {fileID: 7400000, guid: 0cd08166fc48f5b4d9884add3441d38d, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
