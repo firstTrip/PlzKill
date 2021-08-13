@@ -55,6 +55,7 @@ public class Npc : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.E))
             {
+                Debug.Log("into interactoin");
                 isFlag = false;
                 select();
             }

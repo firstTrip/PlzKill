@@ -122,7 +122,7 @@ public class Player : MonoBehaviour
         Dash();
         BerserkMode();
 
-        Interation();
+        //Interation();
         Swap();
 
         if (isBerserk)
