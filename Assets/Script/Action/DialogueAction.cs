@@ -7,6 +7,6 @@ public class DialogueAction : MonoBehaviour
 
     void Action()
     {
-        UIManager.Instance.SetNotice(true);
+        //UIManager.Instance.SetNotice(true);
     }
 }

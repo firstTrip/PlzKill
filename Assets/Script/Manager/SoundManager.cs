@@ -22,8 +22,6 @@ public class SoundManager : MonoBehaviour
 
 
 
-
-
     #region SingleTon
     /* SingleTon */
     private static SoundManager instance;
@@ -37,7 +35,7 @@ public class SoundManager : MonoBehaviour
                 if (!instance)
                 {
                     GameObject container = new GameObject();
-                    container.name = "GameManager";
+                    container.name = "SoundManager";
                     instance = container.AddComponent(typeof(SoundManager)) as SoundManager;
                 }
             }

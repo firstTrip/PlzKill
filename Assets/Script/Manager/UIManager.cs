@@ -38,6 +38,8 @@ public class UIManager : MonoBehaviour
 
     public TextMeshProUGUI text;
     public TextMeshProUGUI npcText;
+
+    public int talkIndex;
     private void Awake()
     {
         #region SingleTon
@@ -52,51 +54,50 @@ public class UIManager : MonoBehaviour
         #endregion
     }
     
-    public void SetNotice(bool isActive )
+    public void SetNotice(bool isActive ,bool isNpc )
     {
 
         if (isActive)
         {
-            textBox.gameObject.SetActive(true);
+            if (isNpc)
+                textNpcBox.gameObject.SetActive(true);
+            else
+                textBox.gameObject.SetActive(true);
             //GameManager.Instance.GamePause(true);
         }
         else
         {
-            textBox.gameObject.SetActive(false);
-           // GameManager.Instance.GamePause(false);
-        }
-    }
-
-
-    public void SetNpcNotice(bool isActive)
-    {
-
-        if (isActive)
-        {
-            textNpcBox.gameObject.SetActive(true);
-            //GameManager.Instance.GamePause(true);
-        }
-        else
-        {
-            textNpcBox.gameObject.SetActive(false);
+            if (isNpc)
+                textNpcBox.gameObject.SetActive(false);
+            else
+                textBox.gameObject.SetActive(false);
             // GameManager.Instance.GamePause(false);
         }
+
     }
 
-    public void SetText(string dialogue, float Duration)
+    public void SetText(int id,bool isNpc , float Duration)
     {
-        Debug.Log(dialogue);
-        Debug.Log(text);
-        text.text = dialogue;
-        TMProUGUIDoText.DoText(text, Duration);
-    }
+        string talkData = TalkManager.Instance.GetTalk(id, talkIndex);
 
-    public void SetNpcText(string dialogue, float Duration)
-    {
-        Debug.Log(dialogue);
-        Debug.Log(npcText);
-        npcText.text = dialogue;
-        TMProUGUIDoText.DoText(npcText, Duration);
+        if (talkData == null)
+            return;
+
+        if (isNpc)
+        {
+            Debug.Log(talkData);
+            npcText.text = talkData;
+            TMProUGUIDoText.DoText(npcText, Duration);
+
+        }
+        else
+        {
+            text.text = talkData;
+            Debug.Log(talkData);
+            TMProUGUIDoText.DoText(text, Duration);
+
+        }
+        
     }
 
     public void FadeOut(float dulation)

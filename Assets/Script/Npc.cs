@@ -11,11 +11,14 @@ public class Npc : MonoBehaviour
     private bool isFlag;
 
     public string dialogue;
+
+    ObjData objData;
     // Start is called before the first frame update
     void Start()
     {
         isActive = false;
         isFlag = true;
+        objData = GetComponent<ObjData>();
     }
 
     // Update is called once per frame
@@ -30,10 +33,12 @@ public class Npc : MonoBehaviour
     }
     private void select()
     {
+
+        Debug.Log(objData.ID);
         isActive = false;
-        UIManager.Instance.SetNpcNotice(true);
-        UIManager.Instance.SetNpcText(dialogue, 1f);
-        Debug.Log("into select");
+        UIManager.Instance.SetNotice(true,objData.IsNpc);
+        UIManager.Instance.SetText(objData.ID,objData.IsNpc, 1f);
+
     }
 
     public void YesSelect()
@@ -44,7 +49,6 @@ public class Npc : MonoBehaviour
     public void NoSelect()
     {
         Debug.Log("into NoSelect");
-
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -68,7 +72,8 @@ public class Npc : MonoBehaviour
         {
             isActive = false;
             isFlag = true;
-            UIManager.Instance.SetNpcNotice(false);
+            UIManager.Instance.SetNotice(false, objData.IsNpc);
+
         }
     }
 }

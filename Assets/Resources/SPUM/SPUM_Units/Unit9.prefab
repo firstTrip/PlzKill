@@ -3326,6 +3326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3278674614053649664}
+  - component: {fileID: 3337168571003616}
   - component: {fileID: 3790982329745309077}
   - component: {fileID: 138624131}
   - component: {fileID: 1668866370405880368}
@@ -3357,6 +3358,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -170}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3337168571003616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7573831300888823078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 056a0686c23deab46aed1d47c90e0dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnEntityChange:
+    m_PersistentCalls:
+      m_Calls: []
+  entityIdString: zPMosiryFECekxy2DFDSUA
+  metaIdString: 
+  initWithFirst: 0
 --- !u!114 &3790982329745309077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3387,6 +3406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Icon: {fileID: 5900415804518571522}
+  dialogue: 
 --- !u!61 &1668866370405880368
 BoxCollider2D:
   m_ObjectHideFlags: 0

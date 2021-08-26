@@ -38,8 +38,6 @@ public class Weafon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(player.transform.localScale.x);
-
         if (flag)
             TrackingMonuse();
     }
@@ -67,8 +65,6 @@ public class Weafon : MonoBehaviour
         }
         flag = true;
         changePos = 60;
-
-
 
     }
 
