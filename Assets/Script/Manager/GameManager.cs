@@ -30,6 +30,11 @@ public class GameManager : MonoBehaviour
     #endregion
 
     public EnumGameState NowState;
+
+    private GameObject scanObject;
+    public bool isAction;
+
+    public float Duration;
     private void Awake()
     {
         #region SingleTon
@@ -42,6 +47,8 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         }
         #endregion
+
+        Duration = 1f;
     }
 
     private bool isPause;
@@ -62,14 +69,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void ChangeGameState(EnumGameState state)
     {
         NowState = state;
+    }
+
+    public void TalkAction(GameObject scanObj)
+    {
+
+        Debug.Log("Talk Action");
+        scanObject = scanObj;
+        ObjData objData = scanObject.GetComponent<ObjData>();
+
+        UIManager.Instance.SetText(objData.ID, objData.IsNpc, Duration);
+        UIManager.Instance.SetNotice(isAction, objData.IsNpc);
     }
 }

@@ -45,7 +45,6 @@ public class TalkManager : MonoBehaviour
         #endregion
 
         talkData = new Dictionary<int, string[]>();
-
         GenerateData();
 
     }

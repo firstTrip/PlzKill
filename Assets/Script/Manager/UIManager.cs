@@ -52,8 +52,14 @@ public class UIManager : MonoBehaviour
             Destroy(this);
         }
         #endregion
+        talkIndex = 0;
     }
-    
+
+    private void Update()
+    {
+        
+    }
+
     public void SetNotice(bool isActive ,bool isNpc )
     {
 
@@ -72,6 +78,7 @@ public class UIManager : MonoBehaviour
             else
                 textBox.gameObject.SetActive(false);
             // GameManager.Instance.GamePause(false);
+
         }
 
     }
@@ -79,9 +86,15 @@ public class UIManager : MonoBehaviour
     public void SetText(int id,bool isNpc , float Duration)
     {
         string talkData = TalkManager.Instance.GetTalk(id, talkIndex);
+        Debug.Log(talkData+talkIndex);
 
-        if (talkData == null)
+        if (talkData == null) 
+        {
+            GameManager.Instance.isAction = false;
+            talkIndex = 0;
             return;
+
+        }
 
         if (isNpc)
         {
@@ -97,7 +110,8 @@ public class UIManager : MonoBehaviour
             TMProUGUIDoText.DoText(text, Duration);
 
         }
-        
+        GameManager.Instance.isAction = true;
+        talkIndex++;
     }
 
     public void FadeOut(float dulation)
