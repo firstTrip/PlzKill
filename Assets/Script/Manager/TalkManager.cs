@@ -52,7 +52,7 @@ public class TalkManager : MonoBehaviour
 
     void GenerateData()
     {
-        talkData.Add(1000,new string[]{"Hi!!","My name is Npc" });
+        talkData.Add(1000,new string[]{"안녕!!","넌 무엇을 원하니?\n선택해" });
     }
 
     
