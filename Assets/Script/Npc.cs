@@ -25,6 +25,31 @@ public class Npc : MonoBehaviour
     void Update()
     {
         ShowIcon(isActive);
+        CheckPlayer();
+
+    }
+
+    private void CheckPlayer()
+    {
+        RaycastHit2D ray = Physics2D.Raycast(transform.position + new Vector3(-3,1,0), Vector2.right, 6f,LayerMask.GetMask("Player"));
+        Debug.DrawRay(transform.position + new Vector3(-3, 1, 0), Vector2.right *6f, Color.red);
+
+        if (ray)
+        {
+            isActive = true;
+            Debug.Log(ray.collider.name);
+
+            if(Input.GetKeyDown(KeyCode.E))
+                GameManager.Instance.TalkAction(this.gameObject);
+
+        }
+        else
+        {
+            isActive = false;
+            UIManager.Instance.SetNotice(false, objData.IsNpc);
+
+        }
+
     }
 
     private void ShowIcon(bool isActive)
@@ -51,6 +76,7 @@ public class Npc : MonoBehaviour
         Debug.Log("into NoSelect");
     }
 
+    /*
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.CompareTag("Player") && isFlag)
@@ -76,4 +102,5 @@ public class Npc : MonoBehaviour
 
         }
     }
+    */
 }

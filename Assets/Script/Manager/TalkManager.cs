@@ -52,7 +52,7 @@ public class TalkManager : MonoBehaviour
 
     void GenerateData()
     {
-        talkData.Add(1000,new string[]{"dnwls","asd" });
+        talkData.Add(1000,new string[]{"Hi!!","My name is Npc" });
     }
 
     

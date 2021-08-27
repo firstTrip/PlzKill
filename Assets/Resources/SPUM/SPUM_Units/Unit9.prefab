@@ -2860,7 +2860,7 @@ RectTransform:
   m_GameObject: {fileID: 5900415804518571522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 3278674614053649664}
   m_RootOrder: 1
@@ -2910,7 +2910,7 @@ SpriteRenderer:
   m_SortingLayerID: -256380347
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: f633c27c122797143bf4782f5c45d885, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82185af37a0778f43a877849110cea8b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3406,7 +3406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Icon: {fileID: 5900415804518571522}
-  dialogue: 
+  dialogue: choose your mind
 --- !u!61 &1668866370405880368
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3995,9 +3995,9 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9092683277515177086}
   m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 872383433
+  m_SortingLayer: 4
+  m_SortingOrder: 0
 --- !u!95 &8086202439210286133
 Animator:
   serializedVersion: 3

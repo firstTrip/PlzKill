@@ -665,7 +665,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1769033549
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: be8598e7641237c428bd6296dafaffb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1036,7 +1036,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1769033549
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: be8598e7641237c428bd6296dafaffb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2107,7 +2107,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1769033549
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: af0a23300d997c8468a8f9e4ba66f844, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5288,18 +5288,6 @@ Transform:
   m_Father: {fileID: 193547481}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &957191907 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4040591602733105637, guid: a37d6b8776bfea54d911d1df08207fa3,
-    type: 3}
-  m_PrefabInstance: {fileID: 905037639549936930}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28ac21711b0ec40a0812d33a586eb7ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &958027091
 GameObject:
   m_ObjectHideFlags: 0
@@ -5399,7 +5387,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1769033549
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: be8598e7641237c428bd6296dafaffb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6943,7 +6931,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1769033549
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: be8598e7641237c428bd6296dafaffb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7985,15 +7973,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 138624131, guid: bd3910526b6e0a944bd1ae8994788d6f, type: 3}
-      propertyPath: dialogue
-      value: choose your mind
-      objectReference: {fileID: 0}
-    - target: {fileID: 2004604649, guid: bd3910526b6e0a944bd1ae8994788d6f, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 82185af37a0778f43a877849110cea8b,
-        type: 3}
     - target: {fileID: 3278674614053649664, guid: bd3910526b6e0a944bd1ae8994788d6f,
         type: 3}
       propertyPath: m_Pivot.x
@@ -8098,16 +8077,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5228912304166878713, guid: bd3910526b6e0a944bd1ae8994788d6f,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5228912304166878713, guid: bd3910526b6e0a944bd1ae8994788d6f,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7573831300888823078, guid: bd3910526b6e0a944bd1ae8994788d6f,
         type: 3}
@@ -20583,30 +20552,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1927316022, guid: a37d6b8776bfea54d911d1df08207fa3, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 251526969757962678, guid: a37d6b8776bfea54d911d1df08207fa3,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 251526969757962678, guid: a37d6b8776bfea54d911d1df08207fa3,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1769033549
-      objectReference: {fileID: 0}
-    - target: {fileID: 905037640814115957, guid: a37d6b8776bfea54d911d1df08207fa3,
-        type: 3}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 957191907}
-    - target: {fileID: 905037640814115957, guid: a37d6b8776bfea54d911d1df08207fa3,
-        type: 3}
-      propertyPath: CollTimeImage
-      value: 
-      objectReference: {fileID: 1149370151}
     - target: {fileID: 2382236805619974512, guid: a37d6b8776bfea54d911d1df08207fa3,
         type: 3}
       propertyPath: m_Pivot.x

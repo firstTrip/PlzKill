@@ -3263,7 +3263,7 @@ GameObject:
   - component: {fileID: 905037640814115959}
   - component: {fileID: 8517753653291422974}
   - component: {fileID: 905037640814115957}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3837,9 +3837,9 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8259854279909048334}
   m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 1769033549
+  m_SortingLayer: 5
+  m_SortingOrder: 0
 --- !u!95 &8987109763486810181
 Animator:
   serializedVersion: 3
