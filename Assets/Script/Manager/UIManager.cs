@@ -85,13 +85,15 @@ public class UIManager : MonoBehaviour
 
     public void SetText(int id,bool isNpc , float Duration)
     {
-        string talkData = TalkManager.Instance.GetTalk(id, talkIndex);
+        int QuestInt = QuestManager.Instance.GetQuestIndex();
+        string talkData = TalkManager.Instance.GetTalk(id + QuestInt, talkIndex);
         Debug.Log(talkData+talkIndex);
 
         if (talkData == null) 
         {
             GameManager.Instance.isAction = false;
             talkIndex = 0;
+            QuestManager.Instance.QuestIndex = 10;
             return;
 
         }

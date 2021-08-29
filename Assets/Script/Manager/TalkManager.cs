@@ -52,10 +52,16 @@ public class TalkManager : MonoBehaviour
 
     void GenerateData()
     {
-        talkData.Add(1000,new string[]{"안녕!!","넌 무엇을 원하니?\n선택해" });
+        // 9 = NoSelect 를 선택시
+        // 11 = YesSelect 를 선택시
+        talkData.Add(10 +1000,new string[]{"안녕!!","넌 무엇을 원하니?\n선택해" });
+        talkData.Add(11+1000, new string[] { "고맙군 자네 자네가 은인이야" });
+
+        talkData.Add(9+1000, new string[] { "자네는 재능이 있어" });
+
     }
 
-    
+
     public string GetTalk(int id,int talkIndex)
     {
         if (talkIndex == talkData[id].Length)

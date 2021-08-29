@@ -37,7 +37,6 @@ public class Npc : MonoBehaviour
         if (ray)
         {
             isActive = true;
-            Debug.Log(ray.collider.name);
 
             if(Input.GetKeyDown(KeyCode.E))
                 GameManager.Instance.TalkAction(this.gameObject);
@@ -56,24 +55,24 @@ public class Npc : MonoBehaviour
     {
         Icon.SetActive(isActive);
     }
-    private void select()
-    {
-
-        Debug.Log(objData.ID);
-        isActive = false;
-        UIManager.Instance.SetNotice(true,objData.IsNpc);
-        UIManager.Instance.SetText(objData.ID,objData.IsNpc, 1f);
-
-    }
-
+ 
     public void YesSelect()
     {
+
+        this.objData.IsNpc = false;
+        QuestManager.Instance.UpQuestInDex();
+        GameManager.Instance.TalkAction(this.gameObject);
+
         Debug.Log("into YesSelect");
     }
 
     public void NoSelect()
     {
-        Debug.Log("into NoSelect");
+
+        this.objData.IsNpc = false;
+        QuestManager.Instance.DownQuestInDex();
+        GameManager.Instance.TalkAction(this.gameObject);
+
     }
 
     /*

@@ -4,15 +4,58 @@ using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    #region SingleTon
+    /* SingleTon */
+    private static QuestManager instance;
+    public static QuestManager Instance
     {
-        
+        get
+        {
+            if (instance == null)
+            {
+                instance = GameObject.FindObjectOfType(typeof(QuestManager)) as QuestManager;
+                if (!instance)
+                {
+                    GameObject container = new GameObject();
+                    container.name = "QuestManager";
+                    instance = container.AddComponent(typeof(QuestManager)) as QuestManager;
+                }
+            }
+
+            return instance;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    #endregion
+
+
+    public int QuestIndex;
+
+    private void Awake()
     {
-        
+        #region SingleTon
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != null)
+        {
+            Destroy(this);
+        }
+        #endregion
+
+
+        QuestIndex = 10;
     }
+
+    public int GetQuestIndex()
+    {
+        return QuestIndex;
+    }
+
+    public void DownQuestInDex() => QuestIndex--;
+
+    public void UpQuestInDex() => QuestIndex++;
+
 }
