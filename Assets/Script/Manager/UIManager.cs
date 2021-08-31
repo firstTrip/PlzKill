@@ -39,6 +39,9 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI text;
     public TextMeshProUGUI npcText;
 
+    public Button[] npcButton;
+    public Button[] RewardButton;
+
     public int talkIndex;
     private void Awake()
     {
@@ -53,11 +56,11 @@ public class UIManager : MonoBehaviour
         }
         #endregion
         talkIndex = 0;
-    }
 
-    private void Update()
-    {
-        
+        for (int i = 0; i < RewardButton.Length; i++)
+        {
+            RewardButton[i].gameObject.SetActive(false);
+        }
     }
 
     public void SetNotice(bool isActive ,bool isNpc )
@@ -91,15 +94,23 @@ public class UIManager : MonoBehaviour
 
         if (talkData == null) 
         {
-            GameManager.Instance.isAction = false;
-            talkIndex = 0;
-            QuestManager.Instance.QuestIndex = 10;
+            if (isNpc)
+            {
+                for (int i = 0; i < npcButton.Length; i++)
+                    npcButton[i].gameObject.SetActive(true);
+                return;
+            }
+
+            IntializeText();
             return;
 
         }
 
         if (isNpc)
         {
+            for (int i = 0; i < npcButton.Length; i++)
+                npcButton[i].gameObject.SetActive(false);
+
             Debug.Log(talkData);
             npcText.text = talkData;
             TMProUGUIDoText.DoText(npcText, Duration);
@@ -116,6 +127,28 @@ public class UIManager : MonoBehaviour
         talkIndex++;
     }
 
+    public void IntializeText()
+    {
+        GameManager.Instance.isAction = false;
+        talkIndex = 0;
+        QuestManager.Instance.QuestIndex = 10;
+    }
+
+    public void ActiveReward()
+    {
+        for(int i=0;i < RewardButton.Length; i++)
+        {
+            RewardButton[i].gameObject.SetActive(true);
+        }
+    }
+
+    public void DisActiveReward()
+    {
+        for (int i = 0; i < RewardButton.Length; i++)
+        {
+            RewardButton[i].gameObject.SetActive(false);
+        }
+    }
     public void FadeOut(float dulation)
     {
         //FadeImg.DOFade(1.0f, dulation);

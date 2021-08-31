@@ -200,7 +200,6 @@ public class Player : MonoBehaviour
         if (playerCurrentState == PlayerCurrentState.dash || playerCurrentState == PlayerCurrentState.hurt)
             return;
 
-        Debug.Log("int move");
         xLaw = Input.GetAxisRaw("Horizontal");
 
         rb.AddForce(Vector2.right * xLaw, ForceMode2D.Impulse);
@@ -550,6 +549,63 @@ public class Player : MonoBehaviour
         return blood;
     }
 
+    public void GetReward(Reward reward)
+    {
+        switch (reward.ReName) 
+        {
+            case "공격력 증가":
+                Debug.Log("공격력 증가");
+                break;
+
+            case "공격 속도 증가":
+                Debug.Log("공격 속도 증가");
+
+                break;
+
+            case "체력 증가":
+                Debug.Log("체력 증가");
+
+                break;
+
+            case "방어력 증가":
+                Debug.Log("방어력 증가");
+
+                break;
+
+            case "흡혈 효율 증가":
+                Debug.Log("흡혈 효율 증가");
+
+                break;
+
+            case "이동 속도 증가":
+                Debug.Log("이동 속도 증가");
+
+                break;
+
+            case "점프력 증가":
+                Debug.Log("점프력 증");
+
+                break;
+
+            case "대시 쿨타임 감소":
+                Debug.Log("대시 쿨타임 감소");
+
+                break;
+
+            case "기본 스킬 쿨타임 감소":
+                Debug.Log("기본 스킬 쿨타임 감소");
+
+                break;
+
+            case "스킬 추가":
+                Debug.Log("스킬 추가");
+
+                break;
+        
+
+        }
+
+    }
     public void getDashCnt(int cnt)
     {
         if (dashCnt < 3)

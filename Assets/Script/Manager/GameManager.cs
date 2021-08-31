@@ -34,7 +34,15 @@ public class GameManager : MonoBehaviour
     private GameObject scanObject;
     public bool isAction;
 
+    private int NpcCount;
     public float Duration;
+
+    public List<Reward> RewardList = new List<Reward>();
+
+    public List<Reward> RewardResult = new List<Reward>();
+
+    private int num = 0;
+    public int total;
     private void Awake()
     {
         #region SingleTon
@@ -49,6 +57,11 @@ public class GameManager : MonoBehaviour
         #endregion
 
         Duration = 1f;
+        NpcCount = 0;
+        SetStatList();
+
+
+
     }
 
     private bool isPause;
@@ -84,4 +97,77 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.SetText(objData.ID, objData.IsNpc, Duration);
         UIManager.Instance.SetNotice(isAction, objData.IsNpc);
     }
+
+    public void UpNpcCnt()
+    {
+        NpcCount++;
+        if(NpcCount == 3)
+        {
+            NpcCount = 0;
+            //무기 보상 주기
+        }
+    }
+
+    public Reward RandomReward()
+    {
+        int weight =0;
+        int selectNum = 0;
+
+        selectNum = Mathf.RoundToInt(total * Random.Range(0.0f, 1.0f));
+
+        for(int i=0;i< RewardList.Count; i++)
+        {
+            weight += RewardList[i].weight;
+            if(selectNum <= weight)
+            {
+                Reward temp = new Reward(RewardList[i]);
+                return temp;
+            }
+            
+        }
+
+        return null;
+    }
+
+    public void MakeReward()
+    {
+
+        for (int i = 0; i < 10; i++)
+        {
+            RewardResult.Add(RandomReward());
+        }
+
+        /*
+        if (RewardResult != null)
+        {
+            RewardList.Clear();
+            RewardResult.Clear();
+        }
+        else
+        {
+            
+        }
+        */
+      
+    }
+
+    public void SetStatList()
+    {
+        for(int i=0;i< RewardList.Count; i++)
+        {
+            total += RewardList[i].weight;
+        }
+    }
+
+    
+    public Reward SetReward()
+    {
+        do
+        {
+            num++;
+        } while (RewardResult[num - 1].ReName == RewardResult[num].ReName);
+
+        return RewardResult[num];
+    }
+    
 }

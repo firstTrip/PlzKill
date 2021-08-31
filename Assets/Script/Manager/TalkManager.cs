@@ -55,9 +55,9 @@ public class TalkManager : MonoBehaviour
         // 9 = NoSelect 를 선택시
         // 11 = YesSelect 를 선택시
         talkData.Add(10 +1000,new string[]{"안녕!!","넌 무엇을 원하니?\n선택해" });
-        talkData.Add(11+1000, new string[] { "고맙군 자네 자네가 은인이야" });
+        talkData.Add(11+1000, new string[] { "왜 나를 죽이는가...." });
 
-        talkData.Add(9+1000, new string[] { "자네는 재능이 있어" });
+        talkData.Add(9+1000, new string[] { "살려줘서 고맙다네 \n 나중에 꼭 보상을 하겠네" });
 
     }
 
