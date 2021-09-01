@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+
 
 public class Boss : MonoBehaviour
 {
@@ -12,6 +14,10 @@ public class Boss : MonoBehaviour
 
 
     public GameObject Player;
+    public GameObject smashBullet;
+
+    public SpriteRenderer sr;
+    float spriteSize;
     private Rigidbody2D rb;
     [Space]
 
@@ -21,6 +27,12 @@ public class Boss : MonoBehaviour
 
     [Space]
 
+    [Header(" Åºµµ ¼Óµµ")]
+    public int BulletSpeed;
+    [Space]
+
+    public Transform handPos;
+    public int bulletCnt;
     public float DashCoolTime;
 
     public float radius;
@@ -43,8 +55,11 @@ public class Boss : MonoBehaviour
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
+        spriteSize = sr.size.x;
+        Debug.Log(spriteSize);
         bossState = BossState.Idle;
-
+        patternIndex = 0;
         Think();
     }
 
@@ -72,21 +87,36 @@ public class Boss : MonoBehaviour
     {
         bossState = BossState.Idle;
 
-        patternIndex = patternIndex == 1 ? 0 : patternIndex +1;
+        patternIndex = patternIndex == 2 ? 0 : patternIndex +1;
         curCountPatterns = 0;
 
         switch (patternIndex)
         {
             case 0:
-                DashToPlayer();
+                Walk();
                 break;
 
             case 1:
+                DashToPlayer();
+                break;
+
+            case 2:
                 SmashToPlayer();
                 break;
         }
     }
 
+    void Walk()
+    {
+
+        Debug.Log("Walk");
+
+
+        if (curCountPatterns < maxPatternsCount[patternIndex])
+            Invoke("DashToPlayer", DashCoolTime);
+        else
+            Invoke("Think", 2);
+    }
     void DashToPlayer()
     {
         Debug.Log("DashToPlayer");
@@ -108,7 +138,9 @@ public class Boss : MonoBehaviour
         }
 
         if (onWall)
-            Stop();
+        {
+            Stun();
+        }
 
         curCountPatterns++;
 
@@ -123,6 +155,22 @@ public class Boss : MonoBehaviour
     {
         Debug.Log("SmashToPlayer");
 
+        for(int i=0; i< bulletCnt; i++)
+        {
+            GameObject Bullet = Instantiate(smashBullet , handPos.position + new Vector3((i) * -0.6f , (i) * -0.3f, 0),Quaternion.identity);
+            Rigidbody2D rb=  Bullet.GetComponent<Rigidbody2D>();
+
+            //Bullet.transform.rotation = 
+
+            Vector2 temp = Player.transform.position - transform.position;
+
+            float z = Mathf.Atan2(temp.x,temp.y) * Mathf.Rad2Deg;
+            Bullet.transform.rotation = Quaternion.Euler(0, 0, z);
+
+            rb.AddForce(new Vector2(temp.x,temp.y) * BulletSpeed, ForceMode2D.Impulse);
+
+            Destroy(Bullet, 1.5f);
+        }
         curCountPatterns++;
 
         if (curCountPatterns < maxPatternsCount[patternIndex])
@@ -131,7 +179,7 @@ public class Boss : MonoBehaviour
             Invoke("Think", 2);
     }
 
-    void Stop()
+    void Stun()
     {
         // ¾Ö´Ô Àç»ý
         // µ¿ÀÛ x  
@@ -142,5 +190,10 @@ public class Boss : MonoBehaviour
         DashCoolTime = 3f;
         Debug.Log(bossState);
 
+    }
+
+    public string GetBossState()
+    {
+        return bossState.ToString();
     }
 }
