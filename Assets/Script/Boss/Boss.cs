@@ -17,7 +17,7 @@ public class Boss : MonoBehaviour
     public GameObject smashBullet;
 
     public SpriteRenderer sr;
-    float spriteSize;
+    Vector2 spriteSize;
     private Rigidbody2D rb;
     [Space]
 
@@ -39,10 +39,13 @@ public class Boss : MonoBehaviour
 
     public bool onWall;
 
+
+    private int nextDiretion;
     private enum BossState 
     {
         Death,
         Idle,
+        Walk,
         Dash,
         Stun,
         Berserk
@@ -56,7 +59,7 @@ public class Boss : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        spriteSize = sr.size.x;
+        spriteSize = sr.size;
         Debug.Log(spriteSize);
         bossState = BossState.Idle;
         patternIndex = 0;
@@ -81,6 +84,8 @@ public class Boss : MonoBehaviour
         onWall = Physics2D.OverlapCircle(this.transform.position + new Vector3(rightXoffset, 0, 0), radius, LayerMask.GetMask("Ground"))
                             || Physics2D.OverlapCircle(this.transform.position + new Vector3(leftXoffset, 0, 0), radius, LayerMask.GetMask("Ground"));
 
+        if (bossState == BossState.Idle)
+            Flip();
     }
 
     void Think()
@@ -93,11 +98,11 @@ public class Boss : MonoBehaviour
         switch (patternIndex)
         {
             case 0:
-                Walk();
+                DashToPlayer();
                 break;
 
             case 1:
-                DashToPlayer();
+                Walk();
                 break;
 
             case 2:
@@ -110,19 +115,51 @@ public class Boss : MonoBehaviour
     {
 
         Debug.Log("Walk");
+        bossState = BossState.Walk;
 
+        Flip();
+
+        rb.velocity = new Vector2(nextDiretion *5, rb.velocity.y);
+
+        curCountPatterns++;
 
         if (curCountPatterns < maxPatternsCount[patternIndex])
-            Invoke("DashToPlayer", DashCoolTime);
+            Invoke("Walk", DashCoolTime);
         else
             Invoke("Think", 2);
     }
+
+    void Flip()
+    {
+        if (Player.transform.position.x > gameObject.transform.position.x)
+        {
+            nextDiretion = 1;
+        }
+        else
+        {
+            nextDiretion = -1;
+
+        }
+
+        if (nextDiretion == -1)
+        {
+            transform.localScale = new Vector3(-spriteSize.x, spriteSize.y, 1);
+
+        }
+        else if (nextDiretion == 1)
+        {
+            transform.localScale = new Vector3(spriteSize.x, spriteSize.y, 1);
+
+        }
+    }
+
     void DashToPlayer()
     {
         Debug.Log("DashToPlayer");
 
         DashCoolTime = 2f;
         bossState = BossState.Dash;
+        Flip();
         bool isRight = Player.transform.position.x - gameObject.transform.position.x > 0 ? true : false;
 
         Debug.Log(isRight);
@@ -158,7 +195,7 @@ public class Boss : MonoBehaviour
         for(int i=0; i< bulletCnt; i++)
         {
             GameObject Bullet = Instantiate(smashBullet , handPos.position + new Vector3((i) * -0.6f , (i) * -0.3f, 0),Quaternion.identity);
-            Rigidbody2D rb=  Bullet.GetComponent<Rigidbody2D>();
+            Rigidbody2D rbB=  Bullet.GetComponent<Rigidbody2D>();
 
             //Bullet.transform.rotation = 
 
@@ -167,7 +204,7 @@ public class Boss : MonoBehaviour
             float z = Mathf.Atan2(temp.x,temp.y) * Mathf.Rad2Deg;
             Bullet.transform.rotation = Quaternion.Euler(0, 0, z);
 
-            rb.AddForce(new Vector2(temp.x,temp.y) * BulletSpeed, ForceMode2D.Impulse);
+            rbB.AddForce(new Vector2(temp.x,temp.y) * BulletSpeed, ForceMode2D.Impulse);
 
             Destroy(Bullet, 1.5f);
         }
@@ -189,6 +226,12 @@ public class Boss : MonoBehaviour
 
         DashCoolTime = 3f;
         Debug.Log(bossState);
+
+    }
+
+    void ChangeIdle()
+    {
+        bossState = BossState.Idle;
 
     }
 

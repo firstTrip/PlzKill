@@ -501,7 +501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patternIndex: 0
   curCountPatterns: 0
-  maxPatternsCount: 010000000400000003000000
+  maxPatternsCount: 020000000100000003000000
   dashPower: 20
   Player: {fileID: 0}
   smashBullet: {fileID: 6631381252428551713, guid: 21d64866150e9db49886b80b3b10714e,
