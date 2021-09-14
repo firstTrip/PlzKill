@@ -121,13 +121,12 @@ public class Player : MonoBehaviour
         CoolTime(dashCoolTime);
 
         Jump();
-
-        if (rb.velocity.y > 0)
-            Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, true);
-        else
-            Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, false);
         BetterJump();
+
         Dash();
+
+
+
         BerserkMode();
 
         //Interation();
@@ -202,6 +201,11 @@ public class Player : MonoBehaviour
         if (HP < 0)
             return;
 
+        if (rb.velocity.y > 0)
+            Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, true);
+        else
+            Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, false);
+
         Move();
     }
 
@@ -247,10 +251,9 @@ public class Player : MonoBehaviour
             {
                 playerCurrentState = PlayerCurrentState.jump;
                 rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-
-                
-                
+              
             }
+
         }
     }
 
@@ -309,6 +312,7 @@ public class Player : MonoBehaviour
             isDashing = true;
             //rb.constraints = RigidbodyConstraints2D.None;
             //rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
             rb.gravityScale = 0;
 
             if (isDashing)
@@ -332,11 +336,12 @@ public class Player : MonoBehaviour
 
     private void recoverIdle()
     {
-        //rb.velocity = new Vector2(rb.velocity.normalized.x * 0.5f, rb.velocity.y);
-        rb.gravityScale = 1;
         rb.velocity = Vector2.zero;
+        rb.gravityScale = 1;
         isDashing = false;
         playerCurrentState = PlayerCurrentState.idle;
+        //Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, true);
+        //rb.velocity = Vector2.zero;
     }
 
     private void LookAtMouse()
