@@ -84,6 +84,9 @@ public class Player : MonoBehaviour
 
     [Space]
 
+    public LayerMask GroundLayer;
+    public LayerMask PlayerLayer;
+
     public PlayerData playerData;
     #region enum
     public enum PlayerCurrentState
@@ -118,6 +121,11 @@ public class Player : MonoBehaviour
         CoolTime(dashCoolTime);
 
         Jump();
+
+        if (rb.velocity.y > 0)
+            Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, true);
+        else
+            Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, false);
         BetterJump();
         Dash();
         BerserkMode();
@@ -183,6 +191,9 @@ public class Player : MonoBehaviour
 
         hasItem.Add(myWeapon); // 초기 무기 추가 1번 무기
 
+
+        PlayerLayer = LayerMask.NameToLayer("Player");
+        GroundLayer = LayerMask.NameToLayer("Ground");
         isAttacking = true;
     }
 
@@ -236,6 +247,8 @@ public class Player : MonoBehaviour
             {
                 playerCurrentState = PlayerCurrentState.jump;
                 rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+
+                
                 
             }
         }
