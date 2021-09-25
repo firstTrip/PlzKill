@@ -17,6 +17,7 @@ public class Boss : MonoBehaviour
     public GameObject smashBullet;
 
     public SpriteRenderer sr;
+    public Animator anim;
     Vector2 spriteSize;
     private Rigidbody2D rb;
     [Space]
@@ -27,7 +28,7 @@ public class Boss : MonoBehaviour
 
     [Space]
 
-    [Header(" 탄도 속도")]
+    [Header(" ???? ????")]
     public int BulletSpeed;
     [Space]
 
@@ -59,8 +60,9 @@ public class Boss : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        spriteSize = sr.size;
-        Debug.Log(spriteSize);
+        anim = GetComponent<Animator>();
+        spriteSize = sr.transform.localScale;
+        Debug.Log("boss Size :"+spriteSize);
         bossState = BossState.Idle;
         patternIndex = 0;
         Think();
@@ -156,14 +158,25 @@ public class Boss : MonoBehaviour
     void DashToPlayer()
     {
         Debug.Log("DashToPlayer");
-
         DashCoolTime = 2f;
         bossState = BossState.Dash;
         Flip();
+
+
+        StartCoroutine("WaitDash");
+
+
+        
+
+    }
+
+
+    IEnumerator WaitDash()
+    {
+        anim.SetTrigger("Test2");
+        yield return new WaitForSeconds(2f);
+
         bool isRight = Player.transform.position.x - gameObject.transform.position.x > 0 ? true : false;
-
-        Debug.Log(isRight);
-
 
         if (isRight)
         {
@@ -187,12 +200,12 @@ public class Boss : MonoBehaviour
             Invoke("Think", 2);
 
     }
-
     void SmashToPlayer()
     {
         Debug.Log("SmashToPlayer");
+        anim.SetTrigger("Test");
 
-        for(int i=0; i< bulletCnt; i++)
+        for (int i=0; i< bulletCnt; i++)
         {
             GameObject Bullet = Instantiate(smashBullet , handPos.position + new Vector3((i) * -0.6f , (i) * -0.3f, 0),Quaternion.identity);
             Rigidbody2D rbB=  Bullet.GetComponent<Rigidbody2D>();
@@ -218,9 +231,9 @@ public class Boss : MonoBehaviour
 
     void Stun()
     {
-        // 애님 재생
-        // 동작 x  
-        // 3초 있다가 다시 대쉬 
+        // ???? ????
+        // ???? x  
+        // 3?? ?????? ???? ???? 
 
         bossState = BossState.Stun;
 
