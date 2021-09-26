@@ -121,6 +121,7 @@ public class Player : MonoBehaviour
         CoolTime(dashCoolTime);
 
         Jump();
+        //UnderJump();
         BetterJump();
 
         Dash();
@@ -200,11 +201,14 @@ public class Player : MonoBehaviour
     {
         if (HP < 0)
             return;
+        if(playerCurrentState != PlayerCurrentState.dash) 
+        {
+            if (rb.velocity.y > 0)
+                Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, true);
+            else
+                Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, false);
+        }
 
-        if (rb.velocity.y > 0)
-            Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, true);
-        else
-            Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, false);
 
         Move();
     }
@@ -253,6 +257,17 @@ public class Player : MonoBehaviour
                 rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
               
             }
+
+        }
+    }
+
+    private void UnderJump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) &&Input.GetKey(KeyCode.S))
+        {
+            Debug.Log("under Jump");
+            playerCurrentState = PlayerCurrentState.dash;
+            Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, true);
 
         }
     }
@@ -306,7 +321,10 @@ public class Player : MonoBehaviour
                 return;
 
             playerCurrentState = PlayerCurrentState.dash;
-            
+            Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, true);
+
+
+
             leftTime = dashCoolTime;
             dashCnt--;
             isDashing = true;
@@ -340,7 +358,7 @@ public class Player : MonoBehaviour
         rb.gravityScale = 1;
         isDashing = false;
         playerCurrentState = PlayerCurrentState.idle;
-        //Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, true);
+        //Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, false);
         //rb.velocity = Vector2.zero;
     }
 
@@ -391,7 +409,7 @@ public class Player : MonoBehaviour
             }
 
             float ratio = 1.0f - (leftTime / dashCoolTime);
-            CollTimeImage.fillAmount = ratio;
+            //CollTimeImage.fillAmount = ratio;
 
         }
 
