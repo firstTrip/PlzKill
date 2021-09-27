@@ -71,6 +71,7 @@ public class Player : MonoBehaviour
     private bool isAttacking;
     private bool isDashing;
     private bool isBerserk;
+    private bool isOverWall;
 
     [Space]
     [Header(" 애니메이션")]
@@ -85,6 +86,8 @@ public class Player : MonoBehaviour
     [Space]
 
     public LayerMask GroundLayer;
+    public LayerMask MonsterLayer;
+
     public LayerMask PlayerLayer;
 
     public PlayerData playerData;
@@ -120,8 +123,8 @@ public class Player : MonoBehaviour
         LookAtMouse();
         CoolTime(dashCoolTime);
 
+        UnderJump();
         Jump();
-        //UnderJump();
         BetterJump();
 
         Dash();
@@ -194,14 +197,16 @@ public class Player : MonoBehaviour
 
         PlayerLayer = LayerMask.NameToLayer("Player");
         GroundLayer = LayerMask.NameToLayer("Ground");
+        MonsterLayer = LayerMask.NameToLayer("Monster");
         isAttacking = true;
+        isOverWall = true;
     }
 
     private void FixedUpdate()
     {
         if (HP < 0)
             return;
-        if(playerCurrentState != PlayerCurrentState.dash) 
+        if(isOverWall) 
         {
             if (rb.velocity.y > 0)
                 Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, true);
@@ -248,6 +253,10 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && playerCurrentState != PlayerCurrentState.dash)
         {
+
+            if (!isOverWall)
+                return;
+
             Debug.Log("isJumping");
             RaycastHit2D rayHit = Physics2D.Raycast(rb.position, Vector3.down, 0.5f, LayerMask.GetMask("Ground"));
 
@@ -266,10 +275,17 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) &&Input.GetKey(KeyCode.S))
         {
             Debug.Log("under Jump");
-            playerCurrentState = PlayerCurrentState.dash;
+            isOverWall = false;
             Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, true);
 
+            Invoke("recoverOverWall", 0.4f);
         }
+    }
+
+    private void recoverOverWall()
+    {
+        isOverWall = true;
+
     }
 
     private void BetterJump()
@@ -328,6 +344,7 @@ public class Player : MonoBehaviour
             leftTime = dashCoolTime;
             dashCnt--;
             isDashing = true;
+            isOverWall = false;
             //rb.constraints = RigidbodyConstraints2D.None;
             //rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
@@ -358,6 +375,7 @@ public class Player : MonoBehaviour
         rb.gravityScale = 1;
         isDashing = false;
         playerCurrentState = PlayerCurrentState.idle;
+        isOverWall = true;
         //Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, false);
         //rb.velocity = Vector2.zero;
     }
@@ -521,12 +539,18 @@ public class Player : MonoBehaviour
                 blood = maxBlood;
             Debug.Log(blood);
 
-        }
+        }else
         
         if (collision.CompareTag("Monster"))
         {
             GetDamage(collision.GetComponent<Monster>().att, collision.gameObject.transform);
             Debug.Log("touch Monster");
+        }else
+
+        if (collision.CompareTag("Boss"))
+        {
+            Debug.Log(collision.name);
+            GetDamage(collision.GetComponent<Boss>().bAtt, collision.gameObject.transform);
         }
     }
 
@@ -551,10 +575,23 @@ public class Player : MonoBehaviour
 
         int dir = transform.position.x - target.position.x > 0 ? 1 : -1;
         rb.AddForce(new Vector2(dir, 1) *1.5f, ForceMode2D.Impulse);
+
+
         Debug.Log(HP);
+        StartCoroutine(TouchMonster());
 
         Invoke("recoverIdle", 0.2f);
     }
+
+    IEnumerator TouchMonster()
+    {
+
+        Physics2D.IgnoreLayerCollision(PlayerLayer, MonsterLayer, true);
+        yield return new WaitForSeconds(0.25f);
+        Physics2D.IgnoreLayerCollision(PlayerLayer, MonsterLayer, false);
+
+    }
+
     public float setAtt()
     {
         return att;

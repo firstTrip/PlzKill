@@ -11,15 +11,16 @@ public class Boss : MonoBehaviour
     public int[] maxPatternsCount;
 
     public float dashPower;
-
-
     public GameObject Player;
     public GameObject smashBullet;
 
     public SpriteRenderer sr;
-    public Animator anim;
+    public Animator Anim;
     Vector2 spriteSize;
     private Rigidbody2D rb;
+
+    public float bAtt;
+
     [Space]
 
     [Header("offSet")]
@@ -60,10 +61,12 @@ public class Boss : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        anim = GetComponent<Animator>();
+        Anim = GetComponent<Animator>();
         spriteSize = sr.transform.localScale;
         Debug.Log("boss Size :"+spriteSize);
         bossState = BossState.Idle;
+
+        bAtt = 30f;
         patternIndex = 0;
         Think();
     }
@@ -165,15 +168,12 @@ public class Boss : MonoBehaviour
 
         StartCoroutine("WaitDash");
 
-
-        
-
     }
 
 
     IEnumerator WaitDash()
     {
-        anim.SetTrigger("Test2");
+        Anim.SetTrigger("Test2");
         yield return new WaitForSeconds(2f);
 
         bool isRight = Player.transform.position.x - gameObject.transform.position.x > 0 ? true : false;
@@ -203,7 +203,7 @@ public class Boss : MonoBehaviour
     void SmashToPlayer()
     {
         Debug.Log("SmashToPlayer");
-        anim.SetTrigger("Test");
+        Anim.SetTrigger("Test");
 
         for (int i=0; i< bulletCnt; i++)
         {
@@ -231,10 +231,6 @@ public class Boss : MonoBehaviour
 
     void Stun()
     {
-        // ???? ????
-        // ???? x  
-        // 3?? ?????? ???? ???? 
-
         bossState = BossState.Stun;
 
         DashCoolTime = 3f;

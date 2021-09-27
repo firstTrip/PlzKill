@@ -11,6 +11,7 @@ TagManager:
   - Wave
   - Obstacle
   - Mob_Monster
+  - Boss
   layers:
   - Default
   - TransparentFX
