@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e08d6e11bc9688840b948eac303512f1
+guid: 8530f025ebc817e4eb9adffb37632c7e
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -98,18 +98,6 @@ TextureImporter:
   - first:
       213: -7422406869995106728
     second: 1st_boss_character_sheet_31
-  - first:
-      213: 6801935437055808547
-    second: 1st_boss_character_sheet_32
-  - first:
-      213: 6157380044955493040
-    second: 1st_boss_character_sheet_33
-  - first:
-      213: 4716719112413841369
-    second: 1st_boss_character_sheet_34
-  - first:
-      213: -4919977162458605280
-    second: 1st_boss_character_sheet_35
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -613,8 +601,8 @@ TextureImporter:
       name: 1st_boss_character_sheet_19
       rect:
         serializedVersion: 2
-        x: 200
-        y: 600
+        x: 0
+        y: 500
         width: 100
         height: 100
       alignment: 0
@@ -634,8 +622,8 @@ TextureImporter:
       name: 1st_boss_character_sheet_20
       rect:
         serializedVersion: 2
-        x: 300
-        y: 600
+        x: 100
+        y: 500
         width: 100
         height: 100
       alignment: 0
@@ -655,8 +643,8 @@ TextureImporter:
       name: 1st_boss_character_sheet_21
       rect:
         serializedVersion: 2
-        x: 600
-        y: 600
+        x: 200
+        y: 500
         width: 100
         height: 100
       alignment: 0
@@ -676,8 +664,8 @@ TextureImporter:
       name: 1st_boss_character_sheet_22
       rect:
         serializedVersion: 2
-        x: 700
-        y: 600
+        x: 300
+        y: 500
         width: 100
         height: 100
       alignment: 0
@@ -697,7 +685,7 @@ TextureImporter:
       name: 1st_boss_character_sheet_23
       rect:
         serializedVersion: 2
-        x: 0
+        x: 400
         y: 500
         width: 100
         height: 100
@@ -718,7 +706,7 @@ TextureImporter:
       name: 1st_boss_character_sheet_24
       rect:
         serializedVersion: 2
-        x: 100
+        x: 500
         y: 500
         width: 100
         height: 100
@@ -739,7 +727,7 @@ TextureImporter:
       name: 1st_boss_character_sheet_25
       rect:
         serializedVersion: 2
-        x: 200
+        x: 600
         y: 500
         width: 100
         height: 100
@@ -760,7 +748,7 @@ TextureImporter:
       name: 1st_boss_character_sheet_26
       rect:
         serializedVersion: 2
-        x: 300
+        x: 700
         y: 500
         width: 100
         height: 100
@@ -781,7 +769,7 @@ TextureImporter:
       name: 1st_boss_character_sheet_27
       rect:
         serializedVersion: 2
-        x: 400
+        x: 800
         y: 500
         width: 100
         height: 100
@@ -802,7 +790,7 @@ TextureImporter:
       name: 1st_boss_character_sheet_28
       rect:
         serializedVersion: 2
-        x: 500
+        x: 900
         y: 500
         width: 100
         height: 100
@@ -823,8 +811,8 @@ TextureImporter:
       name: 1st_boss_character_sheet_29
       rect:
         serializedVersion: 2
-        x: 600
-        y: 500
+        x: 0
+        y: 400
         width: 100
         height: 100
       alignment: 0
@@ -844,8 +832,8 @@ TextureImporter:
       name: 1st_boss_character_sheet_30
       rect:
         serializedVersion: 2
-        x: 700
-        y: 500
+        x: 100
+        y: 400
         width: 100
         height: 100
       alignment: 0
@@ -865,90 +853,6 @@ TextureImporter:
       name: 1st_boss_character_sheet_31
       rect:
         serializedVersion: 2
-        x: 800
-        y: 500
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85ec58ff6405ef890800000000000000
-      internalID: -7422406869995106728
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_32
-      rect:
-        serializedVersion: 2
-        x: 900
-        y: 500
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3245ad6ed34556e50800000000000000
-      internalID: 6801935437055808547
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_33
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 400
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b2a6a61788637550800000000000000
-      internalID: 6157380044955493040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_34
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 400
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d709b0ea07257140800000000000000
-      internalID: 4716719112413841369
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_35
-      rect:
-        serializedVersion: 2
         x: 200
         y: 400
         width: 100
@@ -960,8 +864,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 029de9086dab8bbb0800000000000000
-      internalID: -4919977162458605280
+      spriteID: 85ec58ff6405ef890800000000000000
+      internalID: -7422406869995106728
       vertices: []
       indices: 
       edges: []

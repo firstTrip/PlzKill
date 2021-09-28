@@ -1,115 +1,154 @@
 fileFormatVersion: 2
-guid: e08d6e11bc9688840b948eac303512f1
+guid: a884188c445c38b4986f5d768247126b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3817927207500565034
-    second: 1st_boss_character_sheet_0
+      213: 696180638120438371
+    second: 2nd_boss_character_sheet_0
   - first:
-      213: 4643656005832252832
-    second: 1st_boss_character_sheet_1
+      213: -7918962282676674769
+    second: 2nd_boss_character_sheet_1
   - first:
-      213: 7350195779672045553
-    second: 1st_boss_character_sheet_2
+      213: -8578252890276392368
+    second: 2nd_boss_character_sheet_2
   - first:
-      213: -5416002061964656846
-    second: 1st_boss_character_sheet_3
+      213: 7693508203662369763
+    second: 2nd_boss_character_sheet_3
   - first:
-      213: 1749666611645086366
-    second: 1st_boss_character_sheet_4
+      213: -3550886593261054418
+    second: 2nd_boss_character_sheet_4
   - first:
-      213: -1129995359029467395
-    second: 1st_boss_character_sheet_5
+      213: -4056070240077192766
+    second: 2nd_boss_character_sheet_5
   - first:
-      213: 5400891066271229208
-    second: 1st_boss_character_sheet_6
+      213: -5163308798245035380
+    second: 2nd_boss_character_sheet_6
   - first:
-      213: 2770605453831850708
-    second: 1st_boss_character_sheet_7
+      213: 3750169655944508333
+    second: 2nd_boss_character_sheet_7
   - first:
-      213: 7302557948779715996
-    second: 1st_boss_character_sheet_8
+      213: -6730756542323664742
+    second: 2nd_boss_character_sheet_8
   - first:
-      213: -1528598713161880339
-    second: 1st_boss_character_sheet_9
+      213: 7860950546966011964
+    second: 2nd_boss_character_sheet_9
   - first:
-      213: -1797289351113210733
-    second: 1st_boss_character_sheet_10
+      213: -3138011332472468490
+    second: 2nd_boss_character_sheet_10
   - first:
-      213: -8639569908126922444
-    second: 1st_boss_character_sheet_11
+      213: -4545818991890307305
+    second: 2nd_boss_character_sheet_11
   - first:
-      213: 6478037839973753058
-    second: 1st_boss_character_sheet_12
+      213: -3988057390755067887
+    second: 2nd_boss_character_sheet_12
   - first:
-      213: 2165912101717757551
-    second: 1st_boss_character_sheet_13
+      213: 5697081231267747685
+    second: 2nd_boss_character_sheet_13
   - first:
-      213: 5556384378927638115
-    second: 1st_boss_character_sheet_14
+      213: -1289263144009520122
+    second: 2nd_boss_character_sheet_14
   - first:
-      213: -8820919290333660936
-    second: 1st_boss_character_sheet_15
+      213: -75951023464941577
+    second: 2nd_boss_character_sheet_15
   - first:
-      213: 8129336044352916238
-    second: 1st_boss_character_sheet_16
+      213: -7228014699565266291
+    second: 2nd_boss_character_sheet_16
   - first:
-      213: 1649186638679684454
-    second: 1st_boss_character_sheet_17
+      213: -7344699668679196004
+    second: 2nd_boss_character_sheet_17
   - first:
-      213: 2729649142041514798
-    second: 1st_boss_character_sheet_18
+      213: 5548952967510003860
+    second: 2nd_boss_character_sheet_18
   - first:
-      213: -1895475073832087280
-    second: 1st_boss_character_sheet_19
+      213: 7806347535554665411
+    second: 2nd_boss_character_sheet_19
   - first:
-      213: 7833966638702836698
-    second: 1st_boss_character_sheet_20
+      213: -3077872485588593079
+    second: 2nd_boss_character_sheet_20
   - first:
-      213: 316234852871085100
-    second: 1st_boss_character_sheet_21
+      213: -5952077850034262083
+    second: 2nd_boss_character_sheet_21
   - first:
-      213: 6970396391737678433
-    second: 1st_boss_character_sheet_22
+      213: -6880598727403192098
+    second: 2nd_boss_character_sheet_22
   - first:
-      213: 6969044551969197780
-    second: 1st_boss_character_sheet_23
+      213: -7647135529827669780
+    second: 2nd_boss_character_sheet_23
   - first:
-      213: -4488194493179967791
-    second: 1st_boss_character_sheet_24
+      213: -8805570027347469999
+    second: 2nd_boss_character_sheet_24
   - first:
-      213: -3907832676886899833
-    second: 1st_boss_character_sheet_25
+      213: 3427151606947153283
+    second: 2nd_boss_character_sheet_25
   - first:
-      213: -5116859096237722406
-    second: 1st_boss_character_sheet_26
+      213: 877026108275726368
+    second: 2nd_boss_character_sheet_26
   - first:
-      213: -4381817636163330763
-    second: 1st_boss_character_sheet_27
+      213: 3735806150696669018
+    second: 2nd_boss_character_sheet_27
   - first:
-      213: -4096072351682780991
-    second: 1st_boss_character_sheet_28
+      213: 8880372436847304039
+    second: 2nd_boss_character_sheet_28
   - first:
-      213: 2356884166596466110
-    second: 1st_boss_character_sheet_29
+      213: -1080826386439750570
+    second: 2nd_boss_character_sheet_29
   - first:
-      213: -1439055672426515181
-    second: 1st_boss_character_sheet_30
+      213: -7696476976940536225
+    second: 2nd_boss_character_sheet_30
   - first:
-      213: -7422406869995106728
-    second: 1st_boss_character_sheet_31
+      213: -1041538709173536347
+    second: 2nd_boss_character_sheet_31
   - first:
-      213: 6801935437055808547
-    second: 1st_boss_character_sheet_32
+      213: 3043359735861790564
+    second: 2nd_boss_character_sheet_32
   - first:
-      213: 6157380044955493040
-    second: 1st_boss_character_sheet_33
+      213: -348971586566483866
+    second: 2nd_boss_character_sheet_33
   - first:
-      213: 4716719112413841369
-    second: 1st_boss_character_sheet_34
+      213: -95058746507485583
+    second: 2nd_boss_character_sheet_34
   - first:
-      213: -4919977162458605280
-    second: 1st_boss_character_sheet_35
+      213: 2925053087723188077
+    second: 2nd_boss_character_sheet_35
+  - first:
+      213: 8341011519708713742
+    second: 2nd_boss_character_sheet_36
+  - first:
+      213: -2298139010865111720
+    second: 2nd_boss_character_sheet_37
+  - first:
+      213: 4533189533145997002
+    second: 2nd_boss_character_sheet_38
+  - first:
+      213: -6038875349754673560
+    second: 2nd_boss_character_sheet_39
+  - first:
+      213: -2555136576075030900
+    second: 2nd_boss_character_sheet_40
+  - first:
+      213: 6397664765791515908
+    second: 2nd_boss_character_sheet_41
+  - first:
+      213: 8218013706348110534
+    second: 2nd_boss_character_sheet_42
+  - first:
+      213: 3913566124069721367
+    second: 2nd_boss_character_sheet_43
+  - first:
+      213: -2379819032903864477
+    second: 2nd_boss_character_sheet_44
+  - first:
+      213: 577356937073291391
+    second: 2nd_boss_character_sheet_45
+  - first:
+      213: 1647920471093108882
+    second: 2nd_boss_character_sheet_46
+  - first:
+      213: 2292028619397621240
+    second: 2nd_boss_character_sheet_47
+  - first:
+      213: 7266036865900003731
+    second: 2nd_boss_character_sheet_48
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -211,7 +250,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 1st_boss_character_sheet_0
+      name: 2nd_boss_character_sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -225,14 +264,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2ace5521900cf430800000000000000
-      internalID: 3817927207500565034
+      spriteID: 36a6ca21a9459a900800000000000000
+      internalID: 696180638120438371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1st_boss_character_sheet_1
+      name: 2nd_boss_character_sheet_1
       rect:
         serializedVersion: 2
         x: 100
@@ -246,14 +285,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ad9dbeb884917040800000000000000
-      internalID: 4643656005832252832
+      spriteID: f2f1757a2c13a1290800000000000000
+      internalID: -7918962282676674769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1st_boss_character_sheet_2
+      name: 2nd_boss_character_sheet_2
       rect:
         serializedVersion: 2
         x: 200
@@ -267,14 +306,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f77dec5e14210660800000000000000
-      internalID: 7350195779672045553
+      spriteID: 0529b91227ce3f880800000000000000
+      internalID: -8578252890276392368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1st_boss_character_sheet_3
+      name: 2nd_boss_character_sheet_3
       rect:
         serializedVersion: 2
         x: 300
@@ -288,119 +327,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23f30d1e1de76d4b0800000000000000
-      internalID: -5416002061964656846
+      spriteID: 3e369d303f4d4ca60800000000000000
+      internalID: 7693508203662369763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1st_boss_character_sheet_4
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 900
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9a777e5380184810800000000000000
-      internalID: 1749666611645086366
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_5
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 900
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df6653b35337150f0800000000000000
-      internalID: -1129995359029467395
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_6
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 900
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8156da34fc1d3fa40800000000000000
-      internalID: 5400891066271229208
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_7
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 900
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4da48602bfa237620800000000000000
-      internalID: 2770605453831850708
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_8
-      rect:
-        serializedVersion: 2
-        x: 800
-        y: 900
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9d58b883c5e75560800000000000000
-      internalID: 7302557948779715996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_9
+      name: 2nd_boss_character_sheet_4
       rect:
         serializedVersion: 2
         x: 900
@@ -414,14 +348,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: decedd9b19359cae0800000000000000
-      internalID: -1528598713161880339
+      spriteID: e265af2f477b8bec0800000000000000
+      internalID: -3550886593261054418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1st_boss_character_sheet_10
+      name: 2nd_boss_character_sheet_5
       rect:
         serializedVersion: 2
         x: 0
@@ -435,14 +369,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3940e4c8bdebe07e0800000000000000
-      internalID: -1797289351113210733
+      spriteID: 2c16a2c4b91f5b7c0800000000000000
+      internalID: -4056070240077192766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1st_boss_character_sheet_11
+      name: 2nd_boss_character_sheet_6
       rect:
         serializedVersion: 2
         x: 100
@@ -456,14 +390,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 439c0f561f41a1880800000000000000
-      internalID: -8639569908126922444
+      spriteID: c82a4fe110e3858b0800000000000000
+      internalID: -5163308798245035380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1st_boss_character_sheet_12
+      name: 2nd_boss_character_sheet_7
       rect:
         serializedVersion: 2
         x: 200
@@ -477,14 +411,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e0ac25e71d96e950800000000000000
-      internalID: 6478037839973753058
+      spriteID: da3750ece674b0430800000000000000
+      internalID: 3750169655944508333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1st_boss_character_sheet_13
+      name: 2nd_boss_character_sheet_8
       rect:
         serializedVersion: 2
         x: 300
@@ -498,14 +432,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6e4b9db49dde0e10800000000000000
-      internalID: 2165912101717757551
+      spriteID: a985929f59c8792a0800000000000000
+      internalID: -6730756542323664742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1st_boss_character_sheet_14
+      name: 2nd_boss_character_sheet_9
       rect:
         serializedVersion: 2
         x: 400
@@ -519,14 +453,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 366e285572e3c1d40800000000000000
-      internalID: 5556384378927638115
+      spriteID: c3062d49fd4b71d60800000000000000
+      internalID: 7860950546966011964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1st_boss_character_sheet_15
+      name: 2nd_boss_character_sheet_10
       rect:
         serializedVersion: 2
         x: 500
@@ -540,14 +474,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f8754304acc59580800000000000000
-      internalID: -8820919290333660936
+      spriteID: 6fb04daa15b8374d0800000000000000
+      internalID: -3138011332472468490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1st_boss_character_sheet_16
+      name: 2nd_boss_character_sheet_11
       rect:
         serializedVersion: 2
         x: 600
@@ -561,14 +495,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0b4f6faf0431d070800000000000000
-      internalID: 8129336044352916238
+      spriteID: 717672f26b10ae0c0800000000000000
+      internalID: -4545818991890307305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1st_boss_character_sheet_17
+      name: 2nd_boss_character_sheet_12
       rect:
         serializedVersion: 2
         x: 700
@@ -582,14 +516,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 665b2d6928613e610800000000000000
-      internalID: 1649186638679684454
+      spriteID: 1184c28cee297a8c0800000000000000
+      internalID: -3988057390755067887
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1st_boss_character_sheet_18
+      name: 2nd_boss_character_sheet_13
       rect:
         serializedVersion: 2
         x: 800
@@ -603,290 +537,122 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2395d0be69a1e520800000000000000
-      internalID: 2729649142041514798
+      spriteID: 56752460239101f40800000000000000
+      internalID: 5697081231267747685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1st_boss_character_sheet_19
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 600
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01191a7867be1b5e0800000000000000
-      internalID: -1895475073832087280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_20
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 600
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: adbb42ad627d7bc60800000000000000
-      internalID: 7833966638702836698
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_21
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 600
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2c9af65ced736400800000000000000
-      internalID: 316234852871085100
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_22
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 600
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16a50396692dbb060800000000000000
-      internalID: 6970396391737678433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_23
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 500
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4deceffa81507b060800000000000000
-      internalID: 6969044551969197780
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_24
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 500
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d6c42f43eab6b1c0800000000000000
-      internalID: -4488194493179967791
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_25
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 500
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7831e7c82e694c9c0800000000000000
-      internalID: -3907832676886899833
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_26
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 500
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad4360323c34df8b0800000000000000
-      internalID: -5116859096237722406
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_27
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 500
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53d51f56318a033c0800000000000000
-      internalID: -4381817636163330763
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_28
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 500
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c026a7e5e3d727c0800000000000000
-      internalID: -4096072351682780991
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_29
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 500
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb599b689a555b020800000000000000
-      internalID: 2356884166596466110
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_30
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 500
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 315b1098d72770ce0800000000000000
-      internalID: -1439055672426515181
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_31
-      rect:
-        serializedVersion: 2
-        x: 800
-        y: 500
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85ec58ff6405ef890800000000000000
-      internalID: -7422406869995106728
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_32
+      name: 2nd_boss_character_sheet_14
       rect:
         serializedVersion: 2
         x: 900
+        y: 700
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c2f47500e9b1ee0800000000000000
+      internalID: -1289263144009520122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f77b0252fa22fef0800000000000000
+      internalID: -75951023464941577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a4c192deee0bb90800000000000000
+      internalID: -7228014699565266291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c928272b092621a90800000000000000
+      internalID: -7344699668679196004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 600
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49098c70357d10d40800000000000000
+      internalID: 5548952967510003860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 100
         y: 500
         width: 100
         height: 100
@@ -897,60 +663,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3245ad6ed34556e50800000000000000
-      internalID: 6801935437055808547
+      spriteID: 3cb5bf949b7b55c60800000000000000
+      internalID: 7806347535554665411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1st_boss_character_sheet_33
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 400
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b2a6a61788637550800000000000000
-      internalID: 6157380044955493040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_34
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 400
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d709b0ea07257140800000000000000
-      internalID: 4716719112413841369
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1st_boss_character_sheet_35
+      name: 2nd_boss_character_sheet_20
       rect:
         serializedVersion: 2
         x: 200
-        y: 400
+        y: 500
         width: 100
         height: 100
       alignment: 0
@@ -960,8 +684,596 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 029de9086dab8bbb0800000000000000
-      internalID: -4919977162458605280
+      spriteID: 9461b8818433945d0800000000000000
+      internalID: -3077872485588593079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbfac391bb8f56da0800000000000000
+      internalID: -5952077850034262083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0c02399e33380a0800000000000000
+      internalID: -6880598727403192098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce86a5b70caefd590800000000000000
+      internalID: -7647135529827669780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159902bc6b45cc580800000000000000
+      internalID: -8805570027347469999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3858e7b8a30bf8f20800000000000000
+      internalID: 3427151606947153283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 500
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028948a4992db2c00800000000000000
+      internalID: 877026108275726368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5f8ef1a6ef38d330800000000000000
+      internalID: 3735806150696669018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d147b5eab6d3b70800000000000000
+      internalID: 8880372436847304039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65cb364c0222001f0800000000000000
+      internalID: -1080826386439750570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5eac7797fe903590800000000000000
+      internalID: -7696476976940536225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a974e3ff06bb81f0800000000000000
+      internalID: -1041538709173536347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467c4cb2e8f2c3a20800000000000000
+      internalID: 3043359735861790564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6601002e034382bf0800000000000000
+      internalID: -348971586566483866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 300
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e90add2984eaef0800000000000000
+      internalID: -95058746507485583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f66e22940e79820800000000000000
+      internalID: 2925053087723188077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03ddabd8c931c370800000000000000
+      internalID: 8341011519708713742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ddae4eebe5b10e0800000000000000
+      internalID: -2298139010865111720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace9faeccdf19ee30800000000000000
+      internalID: 4533189533145997002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866820f5dda913ca0800000000000000
+      internalID: -6038875349754673560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e907e52d45a8cd0800000000000000
+      internalID: -2555136576075030900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405390d453219c850800000000000000
+      internalID: 6397664765791515908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c2ab2eccef3c0270800000000000000
+      internalID: 8218013706348110534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7159d26a7a7cf4630800000000000000
+      internalID: 3913566124069721367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f2d0ac23f29fed0800000000000000
+      internalID: -2379819032903864477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f707cd6431f230800800000000000000
+      internalID: 577356937073291391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2906999ffe69ed610800000000000000
+      internalID: 1647920471093108882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f5693ab2ebeecf10800000000000000
+      internalID: 2292028619397621240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2nd_boss_character_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 391ccdc480626d460800000000000000
+      internalID: 7266036865900003731
       vertices: []
       indices: 
       edges: []
