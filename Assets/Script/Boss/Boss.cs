@@ -11,7 +11,15 @@ public class Boss : MonoBehaviour
     public int[] maxPatternsCount;
 
     public float dashPower;
+    [Space]
+    [Header("HP")]
+    public float HP;
+
+    [Space]
     public GameObject Player;
+    [Space]
+    public Transform[] bulletPos;
+    [Space]
     public GameObject smashBullet;
 
     public SpriteRenderer sr;
@@ -30,7 +38,7 @@ public class Boss : MonoBehaviour
     [Space]
 
     [Header(" ???? ????")]
-    public int BulletSpeed;
+    public float BulletSpeed;
 
     [Space]
 
@@ -208,15 +216,15 @@ public class Boss : MonoBehaviour
 
         for (int i=0; i< bulletCnt; i++)
         {
-            GameObject Bullet = Instantiate(smashBullet , handPos.position + new Vector3((i) * -0.6f , (i) * -0.3f, 0),Quaternion.identity);
+            GameObject Bullet = Instantiate(smashBullet , bulletPos[i].position + new Vector3((i) * -0.6f , (i) * -0.3f, 0),Quaternion.identity);
             Rigidbody2D rbB=  Bullet.GetComponent<Rigidbody2D>();
 
-            //Bullet.transform.rotation = 
+            //Bullet.transform.rotation = Quaternion.Euler(0, 0, 90);
 
-            Vector2 temp = Player.transform.position - transform.position;
+            Vector2 temp = Player.transform.position - bulletPos[i].position;
 
             float z = Mathf.Atan2(temp.x,temp.y) * Mathf.Rad2Deg;
-            Bullet.transform.rotation = Quaternion.Euler(0, 0, z);
+            Bullet.transform.rotation = Quaternion.Euler(0, 0, z -100);
 
             rbB.AddForce(new Vector2(temp.x,temp.y) * BulletSpeed, ForceMode2D.Impulse);
 
