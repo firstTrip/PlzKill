@@ -30,6 +30,9 @@ public class Player : MonoBehaviour
 
 
 
+    [Space]
+
+    private float srSize;
 
     private float BAtt;
     private float BSpeed;
@@ -75,13 +78,16 @@ public class Player : MonoBehaviour
 
     [Space]
     [Header(" 애니메이션")]
-    [SerializeField] private SPUM_Prefabs anim;
+    //[SerializeField] private SPUM_Prefabs anim;
+    [SerializeField] private Animator anim;
 
     [Space]
     private Rigidbody2D rb;
     public GameObject myWeapon;
+    public GameObject dashPaticle;
     public Image CollTimeImage;
     private Camera cam;
+    private SpriteRenderer sr;
 
     [Space]
 
@@ -117,7 +123,9 @@ public class Player : MonoBehaviour
 
         if(HP < 0)
         {
-            anim.PlayAnimation(2);
+            //anim.PlayAnimation(2);
+            anim.SetTrigger("death");
+
             return;
         }
         LookAtMouse();
@@ -129,6 +137,10 @@ public class Player : MonoBehaviour
 
         Dash();
 
+        if (playerCurrentState == PlayerCurrentState.dash)
+            dashPaticle.SetActive(true);
+        else
+            dashPaticle.SetActive(false);
 
 
         BerserkMode();
@@ -161,11 +173,13 @@ public class Player : MonoBehaviour
         playerCurrentState = PlayerCurrentState.idle;
 
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<SPUM_Prefabs>();
+        //anim = GetComponent<SPUM_Prefabs>();
+        anim = GetComponent<Animator>();
+
         cam = Camera.main;
         hasItem = new List<GameObject>();
         playerData = GetComponent<PlayerData>();
-
+        sr = GetComponent<SpriteRenderer>();
 
         MaxHP = playerData.HP;
 
@@ -192,8 +206,10 @@ public class Player : MonoBehaviour
         fallMultiplierFloat = 3f;
         lowJumpMultiplierFloat =2f;
 
-        hasItem.Add(myWeapon); // 초기 무기 추가 1번 무기
+        srSize = sr.transform.localScale.x;
 
+        //hasItem.Add(myWeapon); // 초기 무기 추가 1번 무기
+        dashPaticle.SetActive(false);
 
         PlayerLayer = LayerMask.NameToLayer("Player");
         GroundLayer = LayerMask.NameToLayer("Ground");
@@ -206,14 +222,16 @@ public class Player : MonoBehaviour
     {
         if (HP < 0)
             return;
-        if(isOverWall) 
+
+
+
+        if (isOverWall) 
         {
             if (rb.velocity.y > 0)
                 Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, true);
             else
                 Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, false);
         }
-
 
         Move();
     }
@@ -227,7 +245,8 @@ public class Player : MonoBehaviour
         xLaw = Input.GetAxisRaw("Horizontal");
 
         rb.AddForce(Vector2.right * xLaw, ForceMode2D.Impulse);
-        anim.PlayAnimation(1);
+        //anim.PlayAnimation(1);
+        anim.SetTrigger("walk");
 
         if (rb.velocity.x > speed)
         {
@@ -243,7 +262,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            anim.PlayAnimation(0);
+            //anim.PlayAnimation(0);
             playerCurrentState = PlayerCurrentState.idle;
         }
 
@@ -258,13 +277,14 @@ public class Player : MonoBehaviour
                 return;
 
             Debug.Log("isJumping");
-            RaycastHit2D rayHit = Physics2D.Raycast(rb.position, Vector3.down, 0.5f, LayerMask.GetMask("Ground"));
+            RaycastHit2D rayHit = Physics2D.Raycast(rb.position, Vector3.down, 1f, LayerMask.GetMask("Ground"));
 
             if (rayHit.collider != null)
             {
+                anim.SetTrigger("jump");
                 playerCurrentState = PlayerCurrentState.jump;
                 rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-              
+
             }
 
         }
@@ -277,6 +297,7 @@ public class Player : MonoBehaviour
             Debug.Log("under Jump");
             isOverWall = false;
             Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, true);
+            anim.SetTrigger("jump");
 
             Invoke("recoverOverWall", 0.4f);
         }
@@ -314,11 +335,12 @@ public class Player : MonoBehaviour
         {
             //MousePoint = cam.WorldToScreenPoint(Input.mousePosition);
             isAttacking = false;
-            anim.PlayAnimation(4);
+            //anim.PlayAnimation(4);
+            anim.SetTrigger("attack");
             int SwishSound = Random.Range(1, 4);
             SoundManager.Instance.PlaySound("Swish"+ SwishSound.ToString());
             Debug.Log("Attack" + SwishSound.ToString());
-            myWeapon.GetComponent<Weafon>().Attack();
+            //myWeapon.GetComponent<Weafon>().Attack();
             Invoke("CancleAttack", attSpeed);
         }
     }
@@ -336,9 +358,9 @@ public class Player : MonoBehaviour
             if (playerCurrentState == PlayerCurrentState.dash)
                 return;
 
-            playerCurrentState = PlayerCurrentState.dash;
+            anim.SetTrigger("dash");
             Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, true);
-
+            playerCurrentState = PlayerCurrentState.dash;
 
 
             leftTime = dashCoolTime;
@@ -376,8 +398,10 @@ public class Player : MonoBehaviour
         isDashing = false;
         playerCurrentState = PlayerCurrentState.idle;
         isOverWall = true;
+
         //Physics2D.IgnoreLayerCollision(PlayerLayer, GroundLayer, false);
         //rb.velocity = Vector2.zero;
+
     }
 
     private void LookAtMouse()
@@ -390,13 +414,14 @@ public class Player : MonoBehaviour
         {
             //  오른쪽 보기
 
-            transform.localScale = new Vector3(-2f, 2f, 1);
-
+            transform.localScale = new Vector3(-srSize, srSize, 1);
+            dashPaticle.transform.localScale = new Vector3(srSize, srSize, 1);
         }
         else if (MousePoint.x < playerOnCam.x)
         {
             //왼쪽 보기
-            transform.localScale = new Vector3(2f, 2f, 1);
+            transform.localScale = new Vector3(srSize, srSize, 1);
+            dashPaticle.transform.localScale = new Vector3(-srSize, srSize, 1);
         }
     }
 
@@ -447,7 +472,7 @@ public class Player : MonoBehaviour
             if (hasItem.Count < weafonIndex + 1)
                 return;
 
-            myWeapon.GetComponent<Weafon>().ChangeWeafon(hasItem[weafonIndex].gameObject);
+           // myWeapon.GetComponent<Weafon>().ChangeWeafon(hasItem[weafonIndex].gameObject);
         }
     }
 
@@ -506,7 +531,7 @@ public class Player : MonoBehaviour
                         hasItem.Insert(weafonIndex, ray.collider.gameObject);
 
 
-                        myWeapon.GetComponent<Weafon>().ChangeWeafon(hasItem[weafonIndex].gameObject);
+                        //myWeapon.GetComponent<Weafon>().ChangeWeafon(hasItem[weafonIndex].gameObject);
                         ray.collider.gameObject.SetActive(false);
                         hasItem[weafonIndex].gameObject.SetActive(true);
                         return;
