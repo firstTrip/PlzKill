@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 51507773831303474}
   - component: {fileID: 2987059798898358347}
   m_Layer: 0
-  m_Name: Blood
+  m_Name: blood
   m_TagString: Blood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,8 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 97d6407fb46d8be48a79f3970c63e934, type: 3}
   m_Color: {r: 1, g: 0.10147552, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sizeOfBlood: 0
+  ps: {fileID: 0}
 --- !u!58 &51507773831303474
 CircleCollider2D:
   m_ObjectHideFlags: 0
