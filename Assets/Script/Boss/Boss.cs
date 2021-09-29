@@ -31,6 +31,7 @@ public class Boss : MonoBehaviour
 
     [Header(" ???? ????")]
     public int BulletSpeed;
+
     [Space]
 
     public Transform handPos;
