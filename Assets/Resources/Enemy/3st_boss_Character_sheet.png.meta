@@ -1,0 +1,1584 @@
+fileFormatVersion: 2
+guid: 3c08f8f93ae940840b1b96aeeadedce9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7489515269489624196
+    second: 3st_boss_Character_sheet_0
+  - first:
+      213: -4431857025561479013
+    second: 3st_boss_Character_sheet_1
+  - first:
+      213: -3949273939058254503
+    second: 3st_boss_Character_sheet_2
+  - first:
+      213: -7802582710264860832
+    second: 3st_boss_Character_sheet_3
+  - first:
+      213: 1736389122356710688
+    second: 3st_boss_Character_sheet_4
+  - first:
+      213: -4833694774584134546
+    second: 3st_boss_Character_sheet_5
+  - first:
+      213: 1107422658058963528
+    second: 3st_boss_Character_sheet_6
+  - first:
+      213: -5951500077379739689
+    second: 3st_boss_Character_sheet_7
+  - first:
+      213: 2177233525074871884
+    second: 3st_boss_Character_sheet_8
+  - first:
+      213: 2170908696926426621
+    second: 3st_boss_Character_sheet_9
+  - first:
+      213: 4970442142479018827
+    second: 3st_boss_Character_sheet_10
+  - first:
+      213: -1788824764375386989
+    second: 3st_boss_Character_sheet_11
+  - first:
+      213: -912660492596341322
+    second: 3st_boss_Character_sheet_12
+  - first:
+      213: -7489788138449592194
+    second: 3st_boss_Character_sheet_13
+  - first:
+      213: 5585745099006251221
+    second: 3st_boss_Character_sheet_14
+  - first:
+      213: 1121724742316116474
+    second: 3st_boss_Character_sheet_15
+  - first:
+      213: -3209358020859886346
+    second: 3st_boss_Character_sheet_16
+  - first:
+      213: -5692461433756511127
+    second: 3st_boss_Character_sheet_17
+  - first:
+      213: 788027655430631310
+    second: 3st_boss_Character_sheet_18
+  - first:
+      213: 8743502666612603473
+    second: 3st_boss_Character_sheet_19
+  - first:
+      213: 6419473038760355431
+    second: 3st_boss_Character_sheet_20
+  - first:
+      213: 3925850459220084688
+    second: 3st_boss_Character_sheet_21
+  - first:
+      213: 176708399630296231
+    second: 3st_boss_Character_sheet_22
+  - first:
+      213: 4153610945366657382
+    second: 3st_boss_Character_sheet_23
+  - first:
+      213: 7138655463949473955
+    second: 3st_boss_Character_sheet_24
+  - first:
+      213: 2546301336286724089
+    second: 3st_boss_Character_sheet_25
+  - first:
+      213: -9027312550341067894
+    second: 3st_boss_Character_sheet_26
+  - first:
+      213: 4810452748694265250
+    second: 3st_boss_Character_sheet_27
+  - first:
+      213: -2914020779497884779
+    second: 3st_boss_Character_sheet_28
+  - first:
+      213: 6805841680388166153
+    second: 3st_boss_Character_sheet_29
+  - first:
+      213: -2419900699234829063
+    second: 3st_boss_Character_sheet_30
+  - first:
+      213: -5225138733691229498
+    second: 3st_boss_Character_sheet_31
+  - first:
+      213: 4891193120574410958
+    second: 3st_boss_Character_sheet_32
+  - first:
+      213: 8440740125036826449
+    second: 3st_boss_Character_sheet_33
+  - first:
+      213: 2859914927018067699
+    second: 3st_boss_Character_sheet_34
+  - first:
+      213: -3919861435923174252
+    second: 3st_boss_Character_sheet_35
+  - first:
+      213: -3370912590212078130
+    second: 3st_boss_Character_sheet_36
+  - first:
+      213: 8662454339327294532
+    second: 3st_boss_Character_sheet_37
+  - first:
+      213: -9035995606535641287
+    second: 3st_boss_Character_sheet_38
+  - first:
+      213: 814758748290343982
+    second: 3st_boss_Character_sheet_39
+  - first:
+      213: 7716196466381049796
+    second: 3st_boss_Character_sheet_40
+  - first:
+      213: 3196880855469916794
+    second: 3st_boss_Character_sheet_41
+  - first:
+      213: -717272509383657527
+    second: 3st_boss_Character_sheet_42
+  - first:
+      213: 8637271846145330812
+    second: 3st_boss_Character_sheet_43
+  - first:
+      213: -7812298532226098905
+    second: 3st_boss_Character_sheet_44
+  - first:
+      213: 2277521455538084497
+    second: 3st_boss_Character_sheet_45
+  - first:
+      213: -2994062765133517240
+    second: 3st_boss_Character_sheet_46
+  - first:
+      213: -1129534017396430586
+    second: 3st_boss_Character_sheet_47
+  - first:
+      213: 1440109977020350233
+    second: 3st_boss_Character_sheet_48
+  - first:
+      213: 9077172662572027986
+    second: 3st_boss_Character_sheet_49
+  - first:
+      213: -8076036971866116184
+    second: 3st_boss_Character_sheet_50
+  - first:
+      213: -6907255921378523039
+    second: 3st_boss_Character_sheet_51
+  - first:
+      213: 2561061428261881628
+    second: 3st_boss_Character_sheet_52
+  - first:
+      213: 3641992627726829619
+    second: 3st_boss_Character_sheet_53
+  - first:
+      213: -8513966589059703057
+    second: 3st_boss_Character_sheet_54
+  - first:
+      213: -4760721766705839299
+    second: 3st_boss_Character_sheet_55
+  - first:
+      213: -6012804822332576172
+    second: 3st_boss_Character_sheet_56
+  - first:
+      213: -7939624189484057385
+    second: 3st_boss_Character_sheet_57
+  - first:
+      213: -4601939591493327705
+    second: 3st_boss_Character_sheet_58
+  - first:
+      213: 6015505634516343016
+    second: 3st_boss_Character_sheet_59
+  - first:
+      213: 437130484898945862
+    second: 3st_boss_Character_sheet_60
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 795
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7bf4362b85ef0890800000000000000
+      internalID: -7489515269489624196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 795
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b98b6182481ee72c0800000000000000
+      internalID: -4431857025561479013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 795
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d99bdc64c5139c0800000000000000
+      internalID: -3949273939058254503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 795
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06fee086d58a7b390800000000000000
+      internalID: -7802582710264860832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 795
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d8cedf4b4e81810800000000000000
+      internalID: 1736389122356710688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 731
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e64304866344becb0800000000000000
+      internalID: -4833694774584134546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 731
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ac2d54a0b5e5f00800000000000000
+      internalID: 1107422658058963528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 731
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df12174636086da0800000000000000
+      internalID: -5951500077379739689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 731
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46c8270b56173e10800000000000000
+      internalID: 2177233525074871884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 731
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df51b1835fd902e10800000000000000
+      internalID: 2170908696926426621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 731
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4be7174bce8af440800000000000000
+      internalID: 4970442142479018827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 731
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 394bbf9ba51dc27e0800000000000000
+      internalID: -1788824764375386989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 731
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b513421e149553f0800000000000000
+      internalID: -912660492596341322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 731
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7027c4ee5dee0890800000000000000
+      internalID: -7489788138449592194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 731
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d09520b29d848d40800000000000000
+      internalID: 5585745099006251221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 731
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af9c481c5ba219f00800000000000000
+      internalID: 1121724742316116474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 731
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f4889942e11673d0800000000000000
+      internalID: -3209358020859886346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 731
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96415576c705001b0800000000000000
+      internalID: -5692461433756511127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 731
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f602b3af2afea00800000000000000
+      internalID: 788027655430631310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 731
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15aff18a959275970800000000000000
+      internalID: 8743502666612603473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 731
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766228887bc861950800000000000000
+      internalID: 6419473038760355431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 667
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d70e1f413c6b7630800000000000000
+      internalID: 3925850459220084688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 667
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4aacc6a5bc37200800000000000000
+      internalID: 176708399630296231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 667
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66901c5e52794a930800000000000000
+      internalID: 4153610945366657382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 667
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a81c9e7259911360800000000000000
+      internalID: 7138655463949473955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 667
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fff8701397465320800000000000000
+      internalID: 2546301336286724089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 667
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8bbe70701b88b280800000000000000
+      internalID: -9027312550341067894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 667
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ad19beb94922c240800000000000000
+      internalID: 4810452748694265250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 667
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593fbe94a815f87d0800000000000000
+      internalID: -2914020779497884779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 667
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902951d03f4337e50800000000000000
+      internalID: 6805841680388166153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 667
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc736e9229ca6ed0800000000000000
+      internalID: -2419900699234829063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 603
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca233471049c77b0800000000000000
+      internalID: -5225138733691229498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 603
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec01caf7a3201e340800000000000000
+      internalID: 4891193120574410958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 539
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15fc43a3c68832570800000000000000
+      internalID: 8440740125036826449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 539
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6cfb0497570b720800000000000000
+      internalID: 2859914927018067699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 539
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ceb07dacad999c0800000000000000
+      internalID: -3919861435923174252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 539
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec5648bebdc1831d0800000000000000
+      internalID: -3370912590212078130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 475
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44cf4a27358373870800000000000000
+      internalID: 8662454339327294532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 475
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 937e370eed1b99280800000000000000
+      internalID: -9035995606535641287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 475
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24ec79c3ca9e4b00800000000000000
+      internalID: 814758748290343982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 475
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf44c3ddcf651b60800000000000000
+      internalID: 7716196466381049796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 475
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a720883433a9d5c20800000000000000
+      internalID: 3196880855469916794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 347
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c7b807f37cbb06f0800000000000000
+      internalID: -717272509383657527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 347
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e89f95bf0cdd770800000000000000
+      internalID: 8637271846145330812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 347
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7299b5350e3259390800000000000000
+      internalID: -7812298532226098905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 347
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19a9dad62b16b9f10800000000000000
+      internalID: 2277521455538084497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 347
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e2ef047c3f276d0800000000000000
+      internalID: -2994062765133517240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 347
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609ad53bbc61350f0800000000000000
+      internalID: -1129534017396430586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 347
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f3bc1e46c4cf310800000000000000
+      internalID: 1440109977020350233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 283
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2501e75917898fd70800000000000000
+      internalID: 9077172662572027986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 219
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8afaffaa9272cef80800000000000000
+      internalID: -8076036971866116184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 219
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1680581f55f7420a0800000000000000
+      internalID: -6907255921378523039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 155
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c170187ccc7ba8320800000000000000
+      internalID: 2561061428261881628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_53
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 155
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 338cf32bff4fa8230800000000000000
+      internalID: 3641992627726829619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 27
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee5d850f7058d980800000000000000
+      internalID: -8513966589059703057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_55
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 27
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33470dc6c48eedb0800000000000000
+      internalID: -4760721766705839299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_56
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 27
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e6c1d0fd93e8ca0800000000000000
+      internalID: -6012804822332576172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_57
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 27
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc34b79dd9c0d190800000000000000
+      internalID: -7939624189484057385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_58
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 27
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4eb3bd250a220c0800000000000000
+      internalID: -4601939591493327705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_59
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 27
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e815b9c08e5b7350800000000000000
+      internalID: 6015505634516343016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3st_boss_Character_sheet_60
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 27
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b55e82cdff01600800000000000000
+      internalID: 437130484898945862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
