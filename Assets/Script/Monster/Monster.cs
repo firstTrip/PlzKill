@@ -83,7 +83,7 @@ public class Monster : MonoBehaviour
             this.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
             //this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
             this.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-            //InstantinateBlood();
+            InstantinateBlood();
             death = true;
             Destroy(gameObject, 1f);
         }
@@ -107,7 +107,7 @@ public class Monster : MonoBehaviour
         for(int n = blood; n>0; n--)
         {
             Instantiate(bloodPiece, this.transform.position, Quaternion.identity);
-
+            Debug.Log(this.transform.position);
         }
 
     }

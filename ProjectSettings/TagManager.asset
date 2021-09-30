@@ -12,6 +12,7 @@ TagManager:
   - Obstacle
   - Mob_Monster
   - Boss
+  - Bullet
   layers:
   - Default
   - TransparentFX

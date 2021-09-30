@@ -3376,7 +3376,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -3419,13 +3419,14 @@ MonoBehaviour:
   att: 20
   attSpeed: 0.1
   attRange: 1
-  bloodPiece: {fileID: 5695302310409974974, guid: 91951f6f01f3c704dbae80a670f2ac56,
+  bloodPiece: {fileID: 4361666691257713436, guid: e8234567a678c774595565126aa15d31,
     type: 3}
   anim: {fileID: 4219179322484032501}
   nextDiretion: 0
   traceTarget: {fileID: 0}
   textObj: {fileID: 323697615979723228, guid: 6c81e843f5295c14cb5c3f2d50f897ee, type: 3}
   textPos: {fileID: 1275538691}
+  monsterData: {fileID: 3581976156537835587}
   monsterType: 2
 --- !u!1 &7543682971031278281
 GameObject:

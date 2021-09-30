@@ -63,6 +63,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float dashCoolTime;
     private float leftTime = 0;
 
+    [Header("무적 시간")]
+    [SerializeField] private float hurtTime;
     [Space]
 
 
@@ -577,6 +579,12 @@ public class Player : MonoBehaviour
             Debug.Log(collision.name);
             GetDamage(collision.GetComponent<Boss>().bAtt, collision.gameObject.transform);
         }
+
+        if(collision.CompareTag("Bullet"))
+        {
+            Debug.Log(collision.name);
+            GetDamage(collision.GetComponent<Bullet>().damage, collision.gameObject.transform);
+        }
     }
 
     public void OnTrampoline(float JumpPower)
@@ -603,6 +611,7 @@ public class Player : MonoBehaviour
 
 
         Debug.Log(HP);
+        StartCoroutine(changeColor());
         StartCoroutine(TouchMonster());
 
         Invoke("recoverIdle", 0.2f);
@@ -612,10 +621,33 @@ public class Player : MonoBehaviour
     {
 
         Physics2D.IgnoreLayerCollision(PlayerLayer, MonsterLayer, true);
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(hurtTime);
         Physics2D.IgnoreLayerCollision(PlayerLayer, MonsterLayer, false);
 
     }
+
+    IEnumerator changeColor()
+    {
+        int countime = 0;
+
+        while(countime<8)
+        {
+            if (countime % 2 == 0)
+                sr.color = new Color(255, 255, 255, 0);
+            else
+                sr.color = new Color(255, 255, 255, 100);
+
+            yield return new WaitForSeconds(0.2f);
+
+            countime++;
+        }
+
+        sr.color = new Color(255, 255, 255, 100);
+
+        yield return null;
+        
+    }
+
 
     public float setAtt()
     {
