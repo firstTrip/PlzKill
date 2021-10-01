@@ -342,7 +342,7 @@ public class Player : MonoBehaviour
             int SwishSound = Random.Range(1, 4);
             SoundManager.Instance.PlaySound("Swish"+ SwishSound.ToString());
             Debug.Log("Attack" + SwishSound.ToString());
-            //myWeapon.GetComponent<Weafon>().Attack();
+            myWeapon.GetComponent<Weafon>().Attack();
             Invoke("CancleAttack", attSpeed);
         }
     }

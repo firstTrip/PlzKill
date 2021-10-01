@@ -16,13 +16,18 @@ public class Weafon : MonoBehaviour
     private float endPos;
 
     private float attackTime;
+    float z;
 
     public WeaponId weaponId;
 
     private Animator anim;
 
+    private bool isAttack;
+    private bool isRight;
+
     private bool flag;
     private bool DirectFlag;
+
     private void Start()
     {
         player = GetComponentInParent<Player>().gameObject;
@@ -35,20 +40,36 @@ public class Weafon : MonoBehaviour
 
         attackTime = 0.5f;
     }
+
     // Update is called once per frame
     void Update()
     {
-        if (flag)
+        if (isAttack)
             TrackingMonuse();
     }
 
     private void TrackingMonuse()
     {
         Vector2 Mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        float z = Mathf.Atan2(Mouse.y, Mouse.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, z -90);
+
+        if(Mouse.x >0)
+        {
+            isRight = true;
+            Debug.Log("isRight : " + isRight);
+
+        }
+        else
+        {
+            isRight = false;
+            Debug.Log("isRight : " + isRight);
+
+        }
+
+        z = Mathf.Atan2(Mouse.y, Mouse.x) * Mathf.Rad2Deg -90;
+        transform.rotation = Quaternion.Euler(0, 0, z);
         startPos = this.transform.rotation.z;
     }
+
     IEnumerator AttackMotion()
     {
         float changePos = 60;
@@ -68,8 +89,53 @@ public class Weafon : MonoBehaviour
 
     }
 
+    IEnumerator attackTest()
+    {
+        float angle = z;
+
+        if (!isRight)
+        {
+            while (angle < (150 - z))
+            {
+                Debug.Log(angle);
+
+                isAttack = false;
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+                yield return new WaitForSeconds(0.025f);
+
+                angle += 10;
+            }
+
+        }else
+        {
+
+            while (angle > (-150 + z))
+            {
+                Debug.Log(angle);
+
+                isAttack = false;
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+                yield return new WaitForSeconds(0.01f);
+
+                angle -= 10;
+            }
+        }
+
+
+        gameObject.transform.rotation = Quaternion.Euler(0,0,z);
+        isAttack = true;
+
+        yield return null;
+    }
+
     public void Attack()
     {
+
+        StartCoroutine(attackTest());
+
+        /*
         DirectFlag = !DirectFlag;
         flag = false;
         float ChangePos = player.transform.localScale.x > 0 ? -270 : 270;
@@ -83,6 +149,7 @@ public class Weafon : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, startPos);
 
         Invoke("DosenAttack", attackTime);
+        */
     }
 
 
