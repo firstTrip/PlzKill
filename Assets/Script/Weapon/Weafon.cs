@@ -24,6 +24,7 @@ public class Weafon : MonoBehaviour
 
     private bool isAttack;
     private bool isRight;
+    private bool isUp;
 
     private bool flag;
     private bool DirectFlag;
@@ -52,7 +53,13 @@ public class Weafon : MonoBehaviour
     {
         Vector2 Mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 
-        if(Mouse.x >0)
+        if (Mouse.y > 0)
+            isUp = true;
+        else
+            isUp = false;
+
+
+        if (Mouse.x >0)
         {
             isRight = true;
             Debug.Log("isRight : " + isRight);
@@ -64,6 +71,8 @@ public class Weafon : MonoBehaviour
             Debug.Log("isRight : " + isRight);
 
         }
+
+
 
         z = Mathf.Atan2(Mouse.y, Mouse.x) * Mathf.Rad2Deg -90;
         transform.rotation = Quaternion.Euler(0, 0, z);
@@ -93,26 +102,30 @@ public class Weafon : MonoBehaviour
     {
         float angle = z;
 
-        if (!isRight)
+        Debug.Log(isUp);
+
+        if (!isRight && isUp) // 왼쪽 위 공격
         {
+
             while (angle < (150 - z))
             {
-                Debug.Log(angle);
-
+                
                 isAttack = false;
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, angle);
 
-                yield return new WaitForSeconds(0.025f);
+                yield return new WaitForSeconds(0.01f);
 
                 angle += 10;
+
             }
 
-        }else
-        {
+            Debug.Log(angle +" : "+ (150 - z));
 
-            while (angle > (-150 + z))
+        }
+        else if (!isRight && !isUp) // 왼쪽 아래 공격
+        {
+            while (angle < (150 - z))
             {
-                Debug.Log(angle);
 
                 isAttack = false;
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, angle);
@@ -120,9 +133,47 @@ public class Weafon : MonoBehaviour
                 yield return new WaitForSeconds(0.01f);
 
                 angle -= 10;
-            }
-        }
 
+            }
+
+            Debug.Log(angle + " : " + (150 - z));
+
+        }
+        else if(isRight && isUp) // 오른쪽 아래 공격 
+        {
+
+            while (angle > (-150 + z))
+            {
+
+                isAttack = false;
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+                yield return new WaitForSeconds(0.01f);
+
+                angle -= 10;
+
+            }
+
+            Debug.Log(angle + " : " + (-150 + z));
+
+        }
+        else if(isRight && !isUp) // 오른쪽 아래 공격
+        {
+            while (angle < (150 - z))
+            {
+
+                isAttack = false;
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+                yield return new WaitForSeconds(0.01f);
+
+                angle += 10;
+
+            }
+
+            Debug.Log(angle + " : " + (-150 + z));
+
+        }
 
         gameObject.transform.rotation = Quaternion.Euler(0,0,z);
         isAttack = true;
