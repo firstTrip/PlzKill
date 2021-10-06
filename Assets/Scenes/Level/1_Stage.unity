@@ -124,28 +124,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &15129338 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7117098279347326691, guid: 2fc0d5c2c9edb1348985c96c284a0511,
-    type: 3}
-  m_PrefabInstance: {fileID: 18888933}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &15129342
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 15129338}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.5
 --- !u!1001 &18888933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -262,11 +240,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Monster_StaffSergeant
-      objectReference: {fileID: 0}
-    - target: {fileID: 8498599371880871867, guid: 2fc0d5c2c9edb1348985c96c284a0511,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fc0d5c2c9edb1348985c96c284a0511, type: 3}
@@ -5440,28 +5413,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8234567a678c774595565126aa15d31, type: 3}
---- !u!1 &716576652 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8550614802887063247, guid: b89ba0086db274c4fa88eab11d55222b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1669549324}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &716576656
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716576652}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.5
 --- !u!1 &718992644
 GameObject:
   m_ObjectHideFlags: 0
@@ -9865,28 +9816,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &1474099518 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 163648784527163605, guid: 68bf007e377168443944eaf60cd1813d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1775992329}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &1474099522
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474099518}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.5
 --- !u!1001 &1477115540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10626,11 +10555,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 614268112551972583, guid: b89ba0086db274c4fa88eab11d55222b,
-        type: 3}
-      propertyPath: monsterType
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2667926106130659249, guid: b89ba0086db274c4fa88eab11d55222b,
         type: 3}
       propertyPath: m_Pivot.x
@@ -10740,11 +10664,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Monster_2ndLieutenant
-      objectReference: {fileID: 0}
-    - target: {fileID: 7034049671666077591, guid: b89ba0086db274c4fa88eab11d55222b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Monster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b89ba0086db274c4fa88eab11d55222b, type: 3}
@@ -11416,11 +11335,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Monster_MasterSergeant
-      objectReference: {fileID: 0}
-    - target: {fileID: 1545140973559953805, guid: 68bf007e377168443944eaf60cd1813d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5902785105218601387, guid: 68bf007e377168443944eaf60cd1813d,
         type: 3}

@@ -607,7 +607,7 @@ MonoBehaviour:
   textObj: {fileID: 0}
   textPos: {fileID: 0}
   monsterData: {fileID: 8965214367807696799}
-  monsterType: 0
+  monsterType: 2
 --- !u!114 &8965214367807696799
 MonoBehaviour:
   m_ObjectHideFlags: 0

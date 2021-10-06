@@ -2974,7 +2974,7 @@ GameObject:
   - component: {fileID: 614268112551972580}
   m_Layer: 5
   m_Name: Monster_2ndLieutenant
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3078,7 +3078,7 @@ MonoBehaviour:
   textObj: {fileID: 0}
   textPos: {fileID: 0}
   monsterData: {fileID: 614268112551972580}
-  monsterType: 0
+  monsterType: 2
 --- !u!114 &614268112551972580
 MonoBehaviour:
   m_ObjectHideFlags: 0
