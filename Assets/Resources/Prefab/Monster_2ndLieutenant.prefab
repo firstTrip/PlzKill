@@ -2986,7 +2986,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7034049671666077591}
-  m_LocalRotation: {x: -0, y: 0.008726557, z: -0, w: 0.9999619}
+  m_LocalRotation: {x: 0, y: 0.008726558, z: 0, w: 0.999962}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children:
@@ -3072,7 +3072,7 @@ MonoBehaviour:
   attSpeed: 0
   attRange: 0
   bloodPiece: {fileID: 0}
-  anim: {fileID: 0}
+  anim: {fileID: 4330800172992493348}
   nextDiretion: 0
   traceTarget: {fileID: 0}
   textObj: {fileID: 0}
