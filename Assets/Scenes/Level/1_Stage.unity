@@ -241,6 +241,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster_StaffSergeant
       objectReference: {fileID: 0}
+    - target: {fileID: 8498599371880871867, guid: 2fc0d5c2c9edb1348985c96c284a0511,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fc0d5c2c9edb1348985c96c284a0511, type: 3}
 --- !u!1 &33853437
@@ -10555,6 +10560,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 614268112551972583, guid: b89ba0086db274c4fa88eab11d55222b,
+        type: 3}
+      propertyPath: monsterType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2667926106130659249, guid: b89ba0086db274c4fa88eab11d55222b,
         type: 3}
       propertyPath: m_Pivot.x
@@ -10664,6 +10674,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Monster_2ndLieutenant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034049671666077591, guid: b89ba0086db274c4fa88eab11d55222b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Monster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b89ba0086db274c4fa88eab11d55222b, type: 3}
@@ -11335,6 +11350,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Monster_MasterSergeant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1545140973559953805, guid: 68bf007e377168443944eaf60cd1813d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5902785105218601387, guid: 68bf007e377168443944eaf60cd1813d,
         type: 3}
