@@ -20,7 +20,7 @@ public class Weafon : MonoBehaviour
 
     public WeaponId weaponId;
 
-    private Animator anim;
+    //private Animator anim;
 
     private bool isAttack;
     private bool isRight;
@@ -101,13 +101,14 @@ public class Weafon : MonoBehaviour
     IEnumerator attackTest()
     {
         float angle = z;
-
+        int cnt =0;
+        float ectAngle =0;
         Debug.Log(isUp);
 
         if (!isRight && isUp) // 왼쪽 위 공격
         {
 
-            while (angle < (150 - z))
+            while (angle < (120 - angle))
             {
                 
                 isAttack = false;
@@ -117,14 +118,35 @@ public class Weafon : MonoBehaviour
 
                 angle += 10;
 
-            }
+                Debug.Log("NOW : " + angle);
 
+                ectAngle = 120 - angle;
+            }
+            Debug.Log(120 - angle);
+            Debug.Log(ectAngle);
+
+            if(ectAngle > 0)
+            {
+                while (ectAngle > 0)
+                {
+                    gameObject.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+                    yield return new WaitForSeconds(0.01f);
+
+                    angle += 10;
+
+                    ectAngle = 120 - angle;
+
+                }
+
+
+            }
             Debug.Log(angle +" : "+ (150 - z));
 
         }
         else if (!isRight && !isUp) // 왼쪽 아래 공격
         {
-            while (angle < (150 - z))
+            while (angle > (180 + angle))
             {
 
                 isAttack = false;
@@ -133,6 +155,8 @@ public class Weafon : MonoBehaviour
                 yield return new WaitForSeconds(0.01f);
 
                 angle -= 10;
+
+                Debug.Log("NOW : " + angle);
 
             }
 
@@ -142,7 +166,7 @@ public class Weafon : MonoBehaviour
         else if(isRight && isUp) // 오른쪽 아래 공격 
         {
 
-            while (angle > (-150 + z))
+            while (angle > (-180 - angle))
             {
 
                 isAttack = false;
@@ -152,14 +176,16 @@ public class Weafon : MonoBehaviour
 
                 angle -= 10;
 
+                Debug.Log("NOW : " + angle);
+
             }
 
-            Debug.Log(angle + " : " + (-150 + z));
+            Debug.Log(angle + " : " + (-150 + angle));
 
         }
         else if(isRight && !isUp) // 오른쪽 아래 공격
         {
-            while (angle < (150 - z))
+            while (angle < (180 + angle))
             {
 
                 isAttack = false;
@@ -168,6 +194,8 @@ public class Weafon : MonoBehaviour
                 yield return new WaitForSeconds(0.01f);
 
                 angle += 10;
+
+                Debug.Log("NOW : " + angle );
 
             }
 
@@ -184,8 +212,9 @@ public class Weafon : MonoBehaviour
     public void Attack()
     {
 
+        //anim.SetTrigger("Attack");
+        ShakeCamera.Instance.OnShakeCamera();
         StartCoroutine(attackTest());
-
         /*
         DirectFlag = !DirectFlag;
         flag = false;
