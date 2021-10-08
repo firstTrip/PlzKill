@@ -20,7 +20,12 @@ public class Weafon : MonoBehaviour
 
     public WeaponId weaponId;
 
+    [Space]
+    [Header("아이탬 이펙트")]
+    public GameObject WeafonEffect;
     //private Animator anim;
+
+    [Space]
 
     private bool isAttack;
     private bool isRight;
@@ -51,6 +56,8 @@ public class Weafon : MonoBehaviour
 
     private void TrackingMonuse()
     {
+        int correctionValue =0;
+
         Vector2 Mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 
         if (Mouse.y > 0)
@@ -58,23 +65,26 @@ public class Weafon : MonoBehaviour
         else
             isUp = false;
 
+        Debug.Log("위 아래 : "+ isUp);
+
 
         if (Mouse.x >0)
         {
             isRight = true;
             Debug.Log("isRight : " + isRight);
+            correctionValue = 60;
 
         }
         else
         {
             isRight = false;
             Debug.Log("isRight : " + isRight);
-
+            correctionValue = -60;
         }
 
 
 
-        z = Mathf.Atan2(Mouse.y, Mouse.x) * Mathf.Rad2Deg -90;
+        z = Mathf.Atan2(Mouse.y, Mouse.x) * Mathf.Rad2Deg -90 + correctionValue;
         transform.rotation = Quaternion.Euler(0, 0, z);
         startPos = this.transform.rotation.z;
     }
@@ -101,12 +111,16 @@ public class Weafon : MonoBehaviour
     IEnumerator attackTest()
     {
         float angle = z;
-        int cnt =0;
         float ectAngle =0;
-        Debug.Log(isUp);
+
+        Debug.Log("오른쪽 : " + isRight);
+        Debug.Log("위 : " + isUp);
+
 
         if (!isRight && isUp) // 왼쪽 위 공격
         {
+            Debug.Log("왼쪽 위 공격");
+
 
             while (angle < (120 - angle))
             {
@@ -118,11 +132,9 @@ public class Weafon : MonoBehaviour
 
                 angle += 10;
 
-                Debug.Log("NOW : " + angle);
-
                 ectAngle = 120 - angle;
             }
-            Debug.Log(120 - angle);
+
             Debug.Log(ectAngle);
 
             if(ectAngle > 0)
@@ -141,13 +153,22 @@ public class Weafon : MonoBehaviour
 
 
             }
+
             Debug.Log(angle +" : "+ (150 - z));
 
         }
         else if (!isRight && !isUp) // 왼쪽 아래 공격
         {
-            while (angle > (180 + angle))
+            Debug.Log("angle : " + angle);
+
+            Debug.Log("왼쪽 아래 공격");
+
+
+            // -228     -108
+            while (angle < (120 + angle))
             {
+
+                Debug.Log("wht dksemfdjdha");
 
                 isAttack = false;
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, angle);
@@ -156,15 +177,38 @@ public class Weafon : MonoBehaviour
 
                 angle -= 10;
 
-                Debug.Log("NOW : " + angle);
+                //ectAngle = 120 - angle;
 
+
+
+                if (angle < -120)
+                    break;
             }
+
+            /*
+            if (ectAngle > 0)
+            {
+                while (ectAngle > 0)
+                {
+                    gameObject.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+                    yield return new WaitForSeconds(0.01f);
+
+                    angle -= 10;
+
+                    ectAngle = 120 + angle;
+
+                }
+
+
+            }*/
 
             Debug.Log(angle + " : " + (150 - z));
 
         }
-        else if(isRight && isUp) // 오른쪽 아래 공격 
+        else if(isRight && isUp) // 오른쪽 위 공격 
         {
+            Debug.Log("오른쪽 위 공격");
 
             while (angle > (-180 - angle))
             {
@@ -176,7 +220,6 @@ public class Weafon : MonoBehaviour
 
                 angle -= 10;
 
-                Debug.Log("NOW : " + angle);
 
             }
 
@@ -188,6 +231,9 @@ public class Weafon : MonoBehaviour
             while (angle < (180 + angle))
             {
 
+                Debug.Log("오른쪽 아래 공격");
+
+
                 isAttack = false;
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, angle);
 
@@ -195,7 +241,6 @@ public class Weafon : MonoBehaviour
 
                 angle += 10;
 
-                Debug.Log("NOW : " + angle );
 
             }
 
@@ -211,6 +256,16 @@ public class Weafon : MonoBehaviour
 
     public void Attack()
     {
+        int x = 0;
+
+        if (isRight)
+            x = 1;
+        else
+            x = -1;
+        // go 의 위치를 어택 포지션 노말라이즈드 한것의 좌표값 으로 전환 
+        GameObject go = Instantiate(WeafonEffect, transform.parent.position + new Vector3(1 * x,1,0), Quaternion.identity);
+        Debug.Log(transform.parent.position);
+        Destroy(go, 1.5f);
 
         //anim.SetTrigger("Attack");
         ShakeCamera.Instance.OnShakeCamera();

@@ -12,7 +12,7 @@ public class WeaponId : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+        //sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
     }
 
    

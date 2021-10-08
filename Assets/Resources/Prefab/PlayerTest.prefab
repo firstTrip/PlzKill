@@ -4978,6 +4978,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1141063311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6547860399309203817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02425972acfc0724fada9d7de45b517d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  att: 0
+  PlayerAtt: 0
+  weaponId: {fileID: 0}
+--- !u!114 &1141063312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6547860399309203817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e267ce9761302574eb24e36e3f743a6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 100
+  att: 10
+  attSpeed: 10
+  sprite: {fileID: 21300000, guid: a36105118b101d44b86e0a1afe940d8a, type: 3}
 --- !u!1 &8816280656958121314
 GameObject:
   m_ObjectHideFlags: 0
@@ -5142,7 +5173,7 @@ MonoBehaviour:
   dashCoolTime: 3
   hurtTime: 0.5
   anim: {fileID: 0}
-  myWeapon: {fileID: 0}
+  myWeapon: {fileID: 6547860399309203817}
   dashPaticle: {fileID: 257254675}
   CollTimeImage: {fileID: 0}
   GroundLayer:
@@ -5279,6 +5310,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6095871616342050371, guid: b587c67ce1907e947af1b9aa05820294,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6095871616342050396, guid: b587c67ce1907e947af1b9aa05820294,
         type: 3}
       propertyPath: m_Name
@@ -5286,6 +5322,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b587c67ce1907e947af1b9aa05820294, type: 3}
+--- !u!1 &6547860399309203817 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6095871616342050396, guid: b587c67ce1907e947af1b9aa05820294,
+    type: 3}
+  m_PrefabInstance: {fileID: 1028596045205499701}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6547860399309203831 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6095871616342050370, guid: b587c67ce1907e947af1b9aa05820294,
