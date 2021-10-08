@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
 
-
-public class Boss : MonoBehaviour
+public class Centaur : MonoBehaviour
 {
     public int patternIndex;
     public int curCountPatterns;
@@ -20,7 +18,7 @@ public class Boss : MonoBehaviour
     [Space]
     public Transform[] bulletPos;
     [Space]
-    public GameObject smashBullet;
+    public GameObject Arrow;
 
     public SpriteRenderer sr;
     public Animator Anim;
@@ -52,7 +50,7 @@ public class Boss : MonoBehaviour
 
 
     private int nextDiretion;
-    private enum BossState 
+    private enum BossState
     {
         Death,
         Idle,
@@ -72,21 +70,12 @@ public class Boss : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         Anim = GetComponent<Animator>();
         spriteSize = sr.transform.localScale;
-        Debug.Log("boss Size :"+spriteSize);
+        Debug.Log("boss Size :" + spriteSize);
         bossState = BossState.Idle;
 
         bAtt = 30f;
         patternIndex = 0;
         Think();
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawSphere(this.transform.position + new Vector3(rightXoffset, 0, 0), radius);
-
-        Gizmos.color = Color.blue;
-        Gizmos.DrawSphere(this.transform.position + new Vector3(leftXoffset, 0, 0), radius);
     }
 
     // Update is called once per frame
@@ -102,11 +91,13 @@ public class Boss : MonoBehaviour
             Flip();
     }
 
+
+
     void Think()
     {
         bossState = BossState.Idle;
 
-        patternIndex = patternIndex == 2 ? 0 : patternIndex +1;
+        patternIndex = patternIndex == 2 ? 0 : patternIndex + 1;
         curCountPatterns = 0;
 
         switch (patternIndex)
@@ -123,24 +114,6 @@ public class Boss : MonoBehaviour
                 SmashToPlayer();
                 break;
         }
-    }
-
-    void Walk()
-    {
-
-        Debug.Log("Walk");
-        bossState = BossState.Walk;
-
-        Flip();
-
-        rb.velocity = new Vector2(nextDiretion *5, rb.velocity.y);
-
-        curCountPatterns++;
-
-        if (curCountPatterns < maxPatternsCount[patternIndex])
-            Invoke("Walk", DashCoolTime);
-        else
-            Invoke("Think", 2);
     }
 
     void Flip()
@@ -174,7 +147,6 @@ public class Boss : MonoBehaviour
         bossState = BossState.Dash;
         Flip();
 
-
         StartCoroutine("WaitDash");
 
     }
@@ -182,8 +154,7 @@ public class Boss : MonoBehaviour
 
     IEnumerator WaitDash()
     {
-        Anim.SetTrigger("Test2");
-        yield return new WaitForSeconds(2f);
+        Anim.SetTrigger("Dash");
 
         bool isRight = Player.transform.position.x - gameObject.transform.position.x > 0 ? true : false;
 
@@ -201,6 +172,8 @@ public class Boss : MonoBehaviour
             Stun();
         }
 
+        yield return new WaitForSeconds(DashCoolTime);
+
         curCountPatterns++;
 
         if (curCountPatterns < maxPatternsCount[patternIndex])
@@ -212,24 +185,27 @@ public class Boss : MonoBehaviour
     void SmashToPlayer()
     {
         Debug.Log("SmashToPlayer");
-        Anim.SetTrigger("Test");
+        StartCoroutine("ShotArrow");
 
-        for (int i=0; i< bulletCnt; i++)
+        
+    }
+
+    IEnumerator ShotArrow()
+    {
+
+        while (bulletCnt < 5)
         {
-            GameObject Bullet = Instantiate(smashBullet , bulletPos[i].position + new Vector3((i) * -0.6f , (i) * -0.3f, 0),Quaternion.identity);
-            Rigidbody2D rbB=  Bullet.GetComponent<Rigidbody2D>();
+            Anim.SetTrigger("Attack");
 
-            //Bullet.transform.rotation = Quaternion.Euler(0, 0, 90);
+            yield return new WaitForSeconds(1f);
 
-            Vector2 temp = Player.transform.position - bulletPos[i].position;
+            bulletCnt++;
 
-            float z = Mathf.Atan2(temp.x,temp.y) * Mathf.Rad2Deg;
-            Bullet.transform.rotation = Quaternion.Euler(0, 0, z -100);
-
-            rbB.AddForce(new Vector2(temp.x,temp.y) * BulletSpeed, ForceMode2D.Impulse);
-
-            Destroy(Bullet, 1.5f);
         }
+
+        yield return null;
+
+        bulletCnt = 0;
         curCountPatterns++;
 
         if (curCountPatterns < maxPatternsCount[patternIndex])
@@ -238,7 +214,44 @@ public class Boss : MonoBehaviour
             Invoke("Think", 2);
     }
 
-   
+    public void Shot()
+    {
+        Debug.Log("count shot");
+
+        GameObject Bullet = Instantiate(Arrow, handPos.position, Quaternion.identity);
+        Rigidbody2D rbB = Bullet.GetComponent<Rigidbody2D>();
+
+        //Bullet.transform.rotation = Quaternion.Euler(0, 0, 90);
+
+        Vector2 temp = Player.transform.position - handPos.position;
+
+        float z = Mathf.Atan2(temp.x, temp.y) * Mathf.Rad2Deg;
+
+        Bullet.transform.rotation = Quaternion.Euler(0, 0, z - 100);
+
+        rbB.AddForce(new Vector2(temp.x, temp.y) * BulletSpeed, ForceMode2D.Impulse);
+
+        Destroy(Bullet, 1.5f);
+    }
+
+
+    void Walk()
+    {
+
+        Debug.Log("Walk");
+        bossState = BossState.Walk;
+
+        Flip();
+
+        rb.velocity = new Vector2(nextDiretion * 5, rb.velocity.y);
+
+        curCountPatterns++;
+
+        if (curCountPatterns < maxPatternsCount[patternIndex])
+            Invoke("Walk", DashCoolTime);
+        else
+            Invoke("Think", 2);
+    }
 
     void Stun()
     {
