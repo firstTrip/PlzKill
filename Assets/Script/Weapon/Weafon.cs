@@ -17,6 +17,8 @@ public class Weafon : MonoBehaviour
 
     private float attackTime;
     float z;
+    float attackPos;
+    Vector2 attackByVec;
 
     public WeaponId weaponId;
 
@@ -60,6 +62,8 @@ public class Weafon : MonoBehaviour
 
         Vector2 Mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 
+
+
         if (Mouse.y > 0)
             isUp = true;
         else
@@ -85,6 +89,17 @@ public class Weafon : MonoBehaviour
 
 
         z = Mathf.Atan2(Mouse.y, Mouse.x) * Mathf.Rad2Deg -90 + correctionValue;
+        attackPos = Mathf.Atan2(Mouse.y, Mouse.x) * Mathf.Rad2Deg;
+
+        attackByVec = Mouse.normalized;
+                      //new Vector2(Mathf.Cos(Mathf.Abs(attackPos)), Mathf.Sin(Mathf.Abs(attackPos)));
+
+
+
+        Debug.Log(Mouse.normalized);
+
+        Debug.DrawLine(this.transform.position, (Vector2)transform.parent.position + Mouse.normalized, Color.red);
+
         transform.rotation = Quaternion.Euler(0, 0, z);
         startPos = this.transform.rotation.z;
     }
@@ -257,13 +272,22 @@ public class Weafon : MonoBehaviour
     public void Attack()
     {
         int x = 0;
+        int y = 0;
 
         if (isRight)
             x = 1;
         else
             x = -1;
+
+        if (isUp)
+            y = 1;
+        else
+            y = -1;
+
         // go 의 위치를 어택 포지션 노말라이즈드 한것의 좌표값 으로 전환 
-        GameObject go = Instantiate(WeafonEffect, transform.parent.position + new Vector3(1 * x,1,0), Quaternion.identity);
+        //GameObject go = Instantiate(WeafonEffect, transform.parent.position + new Vector3(1 * x,1,0), Quaternion.identity);
+        GameObject go = Instantiate(WeafonEffect, (Vector2)transform.parent.position + attackByVec, Quaternion.identity);
+        go.transform.localScale = new Vector2( transform.localScale.x * x, transform.localScale.y * y);
         Debug.Log(transform.parent.position);
         Destroy(go, 1.5f);
 
