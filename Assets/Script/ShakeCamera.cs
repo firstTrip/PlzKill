@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class ShakeCamera : MonoBehaviour
 {
@@ -35,7 +36,11 @@ public class ShakeCamera : MonoBehaviour
     [SerializeField] private float shakeIntensity;
 
 
+    //[SerializeField] private GameObject machinCam;
 
+    [SerializeField] private CinemachineVirtualCamera vcam;
+
+    private GameObject Player;
     private void Awake()
     {
         #region SingleTon
@@ -49,13 +54,21 @@ public class ShakeCamera : MonoBehaviour
         }
         #endregion
 
+        vcam = GetComponent<CinemachineVirtualCamera>();
+        Player = null;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
-            OnShakeCamera();
+       if(Player == null)
+        {
+            Player = GameObject.FindGameObjectWithTag("Player");
+            if(Player != null)
+            {
+                vcam.Follow= Player.transform;
+            }
+        }
     }
 
     public void OnShakeCamera(float shakeTime = 0.1f,float shakeIntensity =0.1f)
@@ -70,8 +83,8 @@ public class ShakeCamera : MonoBehaviour
     private IEnumerator ShakeByPos()
     {
         Vector3 startPos = transform.position;
-
-        while(shakeTime >0.0f)
+        vcam.Follow = null;
+        while (shakeTime >0.0f)
         {
             transform.position = startPos + Random.insideUnitSphere * shakeIntensity;
 
@@ -80,7 +93,7 @@ public class ShakeCamera : MonoBehaviour
             yield return null;
 
         }
-
+        vcam.Follow = Player.transform;
         transform.position = startPos;
     }
 

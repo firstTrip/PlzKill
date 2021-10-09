@@ -243,12 +243,13 @@ public class Monster : MonoBehaviour
    
     public void GetDamage(float Damage)
     {
-
+        Debug.Log(Damage);
         GameObject DamageText = Instantiate(textObj);
         DamageText.GetComponent<DamageText>().damage = Damage;
 
         DamageText.transform.position = textPos.position;
         HP -= Damage;
+        Debug.Log(HP);
     }
 
 

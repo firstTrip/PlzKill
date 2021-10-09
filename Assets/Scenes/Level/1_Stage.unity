@@ -4671,6 +4671,7 @@ MonoBehaviour:
   att: 0
   PlayerAtt: 0
   weaponId: {fileID: 0}
+  WeafonEffect: {fileID: 0}
 --- !u!1 &594431185
 GameObject:
   m_ObjectHideFlags: 0
@@ -5460,6 +5461,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Unit12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7573831300888823078, guid: 1994975bee226d342a9af656f33d2796,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7573831300888823078, guid: 1994975bee226d342a9af656f33d2796,
         type: 3}
@@ -9137,8 +9143,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1333428252}
   - component: {fileID: 1333428251}
-  - component: {fileID: 1333428254}
   - component: {fileID: 1333428253}
+  - component: {fileID: 1333428254}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -9227,6 +9233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shakeTime: 0
   shakeIntensity: 0
+  vcam: {fileID: 0}
 --- !u!1 &1334070149
 GameObject:
   m_ObjectHideFlags: 0
@@ -9302,6 +9309,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1141063311, guid: 3363670bb3812de4f84c6e21e9e2220e, type: 3}
+      propertyPath: att
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1141063311, guid: 3363670bb3812de4f84c6e21e9e2220e, type: 3}
+      propertyPath: WeafonEffect
+      value: 
+      objectReference: {fileID: 6792148894428114632, guid: 3af666cdacb30064e86a88751d83f915,
+        type: 3}
     - target: {fileID: 4522228429287218500, guid: 3363670bb3812de4f84c6e21e9e2220e,
         type: 3}
       propertyPath: m_Pivot.x
@@ -18321,7 +18337,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1974760144}
   - component: {fileID: 1974760143}
-  - component: {fileID: 1974760146}
   - component: {fileID: 1974760142}
   - component: {fileID: 1974760145}
   m_Layer: 0
@@ -18430,20 +18445,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1974760146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974760141}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc54622a9796f5d4d9b7fb91f62d4852, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shakeTime: 0
-  shakeIntensity: 0
 --- !u!1 &1978499885
 GameObject:
   m_ObjectHideFlags: 0

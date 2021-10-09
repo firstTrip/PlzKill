@@ -44,6 +44,9 @@ public class Weafon : MonoBehaviour
         weaponId = this.gameObject.GetComponentInChildren<WeaponId>();
         flag = true;
         DirectFlag = true;
+
+        WeafonEffect.GetComponent<Effect>().setDamage(att);
+        Debug.Log( "weafon : "+att);
         //anim = GetComponent<Animator>();
 
         attackTime = 0.5f;
