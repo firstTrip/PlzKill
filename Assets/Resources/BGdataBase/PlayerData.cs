@@ -143,6 +143,28 @@ public partial class PlayerData : BGEntityGo
 			_dashCoolTime[Entity.Index] = value;
 		}
 	}
+	public System.Single Blood
+	{
+		get
+		{
+			return _Blood[Entity.Index];
+		}
+		set
+		{
+			_Blood[Entity.Index] = value;
+		}
+	}
+	public UnityEngine.Vector3 PlayerPos
+	{
+		get
+		{
+			return _PlayerPos[Entity.Index];
+		}
+		set
+		{
+			_PlayerPos[Entity.Index] = value;
+		}
+	}
 	private static BansheeGz.BGDatabase.BGFieldEntityName __name;
 	public static BansheeGz.BGDatabase.BGFieldEntityName _name
 	{
@@ -231,6 +253,24 @@ public partial class PlayerData : BGEntityGo
 		{
 			if(__dashCoolTime==null || __dashCoolTime.IsDeleted) __dashCoolTime=(BansheeGz.BGDatabase.BGFieldFloat) MetaDefault.GetField(new BGId(5392769588600640680,8110546161694491553));
 			return __dashCoolTime;
+		}
+	}
+	private static BansheeGz.BGDatabase.BGFieldFloat __Blood;
+	public static BansheeGz.BGDatabase.BGFieldFloat _Blood
+	{
+		get
+		{
+			if(__Blood==null || __Blood.IsDeleted) __Blood=(BansheeGz.BGDatabase.BGFieldFloat) MetaDefault.GetField(new BGId(4838787082467356020,8891401840368730760));
+			return __Blood;
+		}
+	}
+	private static BansheeGz.BGDatabase.BGFieldVector3 __PlayerPos;
+	public static BansheeGz.BGDatabase.BGFieldVector3 _PlayerPos
+	{
+		get
+		{
+			if(__PlayerPos==null || __PlayerPos.IsDeleted) __PlayerPos=(BansheeGz.BGDatabase.BGFieldVector3) MetaDefault.GetField(new BGId(4927522080790921470,2963813559556869769));
+			return __PlayerPos;
 		}
 	}
 }

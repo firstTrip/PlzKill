@@ -64,6 +64,16 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+            DataManager.Instance.Save();
+
+        if (Input.GetKeyDown(KeyCode.R))
+            DataManager.Instance.Load();
+    }
+
+
     private bool isPause;
 
     public void GamePause(bool TrueIsPause)

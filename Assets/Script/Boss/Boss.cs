@@ -14,6 +14,7 @@ public class Boss : MonoBehaviour
     [Space]
     [Header("HP")]
     public float HP;
+    public float MaxHP;
 
     [Space]
     public GameObject Player;
@@ -63,9 +64,9 @@ public class Boss : MonoBehaviour
     }
 
     private BossState bossState;
-
+    // 질량에 따라 대쉬 속도 달라지는 거 고쳐야 하고 부디치면 밀리는거 사라져야함
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
@@ -74,6 +75,8 @@ public class Boss : MonoBehaviour
         spriteSize = sr.transform.localScale;
         Debug.Log("boss Size :"+spriteSize);
         bossState = BossState.Idle;
+        HP = 1000;
+        MaxHP = HP;
 
         bAtt = 30f;
         patternIndex = 0;
@@ -100,6 +103,10 @@ public class Boss : MonoBehaviour
 
         if (bossState == BossState.Idle)
             Flip();
+
+
+        if (HP < 0)
+            Debug.Log("dead");
     }
 
     void Think()
@@ -238,7 +245,11 @@ public class Boss : MonoBehaviour
             Invoke("Think", 2);
     }
 
-   
+    public void GetDamage(float Damage)
+    {
+        HP -= Damage;
+        Debug.Log(HP);
+    }
 
     void Stun()
     {
@@ -247,6 +258,16 @@ public class Boss : MonoBehaviour
         DashCoolTime = 3f;
         Debug.Log(bossState);
 
+    }
+
+    public float setHp()
+    {
+        return HP;
+    }
+
+    public float setMaxHp()
+    {
+        return MaxHP;
     }
 
     void ChangeIdle()

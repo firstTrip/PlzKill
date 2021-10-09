@@ -220,6 +220,46 @@ public class Player : MonoBehaviour
         isOverWall = true;
     }
 
+    public void LoadStat()
+    {
+        MaxHP = playerData.HP;
+
+        HP = MaxHP;
+
+
+        maxBlood = playerData.MaxBlood;
+        blood = playerData.Blood;
+
+        att = playerData.att;
+        speed = playerData.speed;
+        jumpPower = playerData.jumpPower;
+        dashPower = playerData.dashPower;
+        attSpeed = playerData.attSpeed;
+
+        transform.position= playerData.PlayerPos;
+
+        Debug.Log(att + " playerData.att");
+    }
+
+    public void SaveStat()
+    {
+        playerData.HP = HP;
+
+        playerData.MaxBlood = maxBlood ;
+        playerData.Blood = blood;
+
+        playerData.att = att;
+        playerData.speed =speed;
+
+        playerData.jumpPower = jumpPower;
+        playerData.dashPower = dashPower;
+        playerData.attSpeed = attSpeed;
+
+        playerData.PlayerPos = transform.position;
+
+        Debug.Log(playerData.att + " playerData.att");
+    }
+
     private void FixedUpdate()
     {
         if (HP < 0)
@@ -555,19 +595,6 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Blood"))
-        {
-            if (maxBlood < blood)
-                return;
-
-            blood += collision.GetComponent<Blood>().setBlood();
-
-            if (blood > maxBlood)
-                blood = maxBlood;
-            Debug.Log(blood);
-
-        }else
-        
         if (collision.CompareTag("Monster"))
         {
             GetDamage(collision.GetComponent<Monster>().att, collision.gameObject.transform);
@@ -677,6 +704,21 @@ public class Player : MonoBehaviour
     public float setBlood()
     {
         return blood;
+    }
+
+    public void getBlood(float Blood)
+    {
+
+        if (maxBlood < blood)
+            return;
+
+        blood += Blood;
+
+        if (blood > maxBlood)
+            blood = maxBlood;
+
+        Debug.Log(Blood + " get Blood");
+
     }
 
     public void GetReward(Reward reward)

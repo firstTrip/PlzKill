@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6792148894428114633}
   - component: {fileID: 8773397509238110779}
   - component: {fileID: 6045206503213108814}
+  - component: {fileID: 5181182772807976952}
   m_Layer: 0
   m_Name: SWeffect
   m_TagString: Untagged
@@ -73,9 +74,9 @@ SpriteRenderer:
   m_SortingLayerID: -256380347
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0acd1d1d125655e4583d46815e843f9e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: caeabea5befb9ce4086aba6c4f24cd8f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 10.24, y: 6.4}
@@ -101,7 +102,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.24, y: 6.4}
+    oldSize: {x: 12, y: 12}
     newSize: {x: 10.24, y: 6.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -122,3 +123,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad847f1bde768d47850a699962fd1d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &5181182772807976952
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6792148894428114632}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c71ceb9b689b7a4a874e2d0d7910c42, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

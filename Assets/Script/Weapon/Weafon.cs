@@ -22,9 +22,12 @@ public class Weafon : MonoBehaviour
 
     public WeaponId weaponId;
 
+    int cnt;
+
     [Space]
     [Header("아이탬 이펙트")]
     public GameObject WeafonEffect;
+    public GameObject skill;
     //private Animator anim;
 
     [Space]
@@ -50,6 +53,7 @@ public class Weafon : MonoBehaviour
         //anim = GetComponent<Animator>();
 
         attackTime = 0.5f;
+        cnt = 0;
     }
 
     // Update is called once per frame
@@ -96,12 +100,6 @@ public class Weafon : MonoBehaviour
 
         attackByVec = Mouse.normalized;
                       //new Vector2(Mathf.Cos(Mathf.Abs(attackPos)), Mathf.Sin(Mathf.Abs(attackPos)));
-
-
-
-        Debug.Log(Mouse.normalized);
-
-        Debug.DrawLine(this.transform.position, (Vector2)transform.parent.position + Mouse.normalized, Color.red);
 
         transform.rotation = Quaternion.Euler(0, 0, z);
         startPos = this.transform.rotation.z;
@@ -274,6 +272,7 @@ public class Weafon : MonoBehaviour
 
     public void Attack()
     {
+
         int x = 0;
         int y = 0;
 
@@ -289,12 +288,26 @@ public class Weafon : MonoBehaviour
 
         // go 의 위치를 어택 포지션 노말라이즈드 한것의 좌표값 으로 전환 
         //GameObject go = Instantiate(WeafonEffect, transform.parent.position + new Vector3(1 * x,1,0), Quaternion.identity);
-        GameObject go = Instantiate(WeafonEffect, (Vector2)transform.parent.position + attackByVec, Quaternion.identity);
-        go.transform.localScale = new Vector2( transform.localScale.x * x, transform.localScale.y * y);
-        Debug.Log(transform.parent.position);
-        Destroy(go, 1.5f);
 
-        //anim.SetTrigger("Attack");
+        if(cnt >2)
+        {
+
+            Debug.Log("is Skill");
+            GameObject go = Instantiate(skill, (Vector2)transform.parent.position, Quaternion.identity);
+           // go.transform.localScale = new Vector2(transform.localScale.x * x, transform.localScale.y * y);
+            Destroy(go, 0.5f);
+
+            cnt = 0;
+
+        }
+        else
+        {
+            GameObject go = Instantiate(WeafonEffect, (Vector2)transform.parent.position + attackByVec, Quaternion.identity);
+            go.transform.localScale = new Vector2(transform.localScale.x * x, transform.localScale.y * y);
+            Destroy(go, 0.5f);
+
+        }
+
         ShakeCamera.Instance.OnShakeCamera();
         StartCoroutine(attackTest());
         /*
@@ -312,6 +325,8 @@ public class Weafon : MonoBehaviour
 
         Invoke("DosenAttack", attackTime);
         */
+
+        cnt++;
     }
 
 

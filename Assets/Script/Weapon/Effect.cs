@@ -13,12 +13,24 @@ public class Effect : MonoBehaviour
         Debug.Log("Weafon Damage :" + damage);
     }
 
+
+    public void DestroyEffect()
+    {
+        Destroy(gameObject);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Monster"))
         {
             Debug.Log(damage);
             collision.GetComponent<Monster>().GetDamage(damage);
+            Debug.Log("HE Got damge");
+        }
+
+        if (collision.CompareTag("Boss"))
+        {
+            Debug.Log(damage);
+            collision.GetComponent<Boss>().GetDamage(damage);
             Debug.Log("HE Got damge");
         }
     }
