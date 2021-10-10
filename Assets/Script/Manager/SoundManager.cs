@@ -6,7 +6,6 @@ public class SoundManager : MonoBehaviour
 {
     public AudioSource audioSource;
 
-    public AudioClip BGM;
 
     [Header("Swish Sound")]
     public AudioClip Swish1;
@@ -20,6 +19,18 @@ public class SoundManager : MonoBehaviour
     public AudioClip Attack2;
     public AudioClip Attack3;
 
+
+    [Space]
+    [Header("skill")]
+    public AudioClip BasicSwSkill;
+
+    [Space]
+
+    [Header("BGM")]
+    public AudioClip[] NomalBGM;
+    
+    [Space]
+    public AudioClip[] BossBgm;
 
 
     #region SingleTon
@@ -58,6 +69,55 @@ public class SoundManager : MonoBehaviour
             Destroy(this);
         }
         #endregion
+        PlayLoopSound("NomalLoopSound");
+
+    }
+
+    public void PlayLoopSound(string loopSound)
+    {
+        if (!audioSource.isPlaying)
+            audioSource.Stop();
+        StartCoroutine(loopSound);
+    }
+
+    
+
+    IEnumerator NomalLoopSound()
+    {
+        audioSource.volume = 1;
+        audioSource.clip = NomalBGM[0];
+        audioSource.Play();
+
+        while (true)
+        {
+            yield return new WaitForSeconds(1.0f);
+            if (!audioSource.isPlaying)
+            {
+                audioSource.clip = NomalBGM[1];
+                audioSource.Play();
+                audioSource.loop = true;
+            }
+        }
+
+    }
+
+    IEnumerator BossLoopSound()
+    {
+        audioSource.volume = 1;
+        audioSource.clip = BossBgm[0];
+        audioSource.Play();
+
+        while (true)
+        {
+            yield return new WaitForSeconds(1.0f);
+            if (!audioSource.isPlaying)
+            {
+                audioSource.clip = BossBgm[1];
+                audioSource.Play();
+                audioSource.loop = true;
+            }
+        }
+
     }
 
     public void PlaySound(string soundName)
@@ -94,6 +154,11 @@ public class SoundManager : MonoBehaviour
         else if (soundName == "Attack3")
         {
             audioSource.PlayOneShot(Attack3);
+
+        }
+        else if (soundName == "BasicSwSkill")
+        {
+            audioSource.PlayOneShot(BasicSwSkill);
 
         }
         else if (soundName == "Run")

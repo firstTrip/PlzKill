@@ -8,13 +8,18 @@ public class StateChangeAction : MonoBehaviour
 
     private void Action()
     {
+        Debug.Log("sibal druwa");
+
         if (isActive)
         {
             isActive = false;
              
-            if (GameManager.Instance.gameMode == GameManager.GameMode.nomal)
-                GameManager.Instance.gameMode = GameManager.GameMode.boss;
 
+            if (GameManager.Instance.gameMode == GameManager.GameMode.nomal)
+            {
+                GameManager.Instance.gameMode = GameManager.GameMode.boss;
+                GameManager.Instance.BossActive();
+            }
             else if (GameManager.Instance.gameMode == GameManager.GameMode.boss)
                 GameManager.Instance.gameMode = GameManager.GameMode.nomal;
 

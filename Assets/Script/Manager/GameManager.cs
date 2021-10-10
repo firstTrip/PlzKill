@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
     public EnumGameState NowState;
 
     private GameObject scanObject;
+
+    private GameObject BossObject;
     public bool isAction;
 
     private int NpcCount;
@@ -68,6 +70,7 @@ public class GameManager : MonoBehaviour
         Duration = 1f;
         NpcCount = 0;
         SetStatList();
+        BossObject = GameObject.FindGameObjectWithTag("Boss");
         gameMode = GameMode.nomal;
     }
 
@@ -78,6 +81,8 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
             DataManager.Instance.Load();
+
+
     } 
     private bool isPause;
 
@@ -95,6 +100,11 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1;
             ChangeGameState(EnumGameState.Action);
         }
+    }
+
+    public void BossActive()
+    {
+        BossObject.GetComponent<Boss>().StartThink();
     }
 
     public void ChangeGameState(EnumGameState state)

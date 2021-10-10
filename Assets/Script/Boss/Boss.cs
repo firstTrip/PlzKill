@@ -50,7 +50,7 @@ public class Boss : MonoBehaviour
     public float radius;
 
     public bool onWall;
-
+    private bool isActive = false;
 
     private int nextDiretion;
     private enum BossState 
@@ -80,7 +80,7 @@ public class Boss : MonoBehaviour
 
         bAtt = 30f;
         patternIndex = 0;
-        Think();
+       
     }
 
     private void OnDrawGizmos()
@@ -95,7 +95,7 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bossState == BossState.Death)
+        if (bossState == BossState.Death || GameManager.Instance.gameMode == GameManager.GameMode.nomal)
             return;
 
         onWall = Physics2D.OverlapCircle(this.transform.position + new Vector3(rightXoffset, 0, 0), radius, LayerMask.GetMask("Ground"))
@@ -268,6 +268,12 @@ public class Boss : MonoBehaviour
     public float setMaxHp()
     {
         return MaxHP;
+    }
+
+    // 보스 호출
+    public void StartThink()
+    {
+        Think();
     }
 
     void ChangeIdle()
