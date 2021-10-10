@@ -18,15 +18,16 @@ public class Boss : MonoBehaviour
 
     [Space]
     public GameObject Player;
+    public GameObject nextStage;
     [Space]
     public Transform[] bulletPos;
     [Space]
-    public GameObject smashBullet;
+    [SerializeField] protected GameObject smashBullet;
 
     public SpriteRenderer sr;
     public Animator Anim;
     Vector2 spriteSize;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     public float bAtt;
 
@@ -50,10 +51,10 @@ public class Boss : MonoBehaviour
     public float radius;
 
     public bool onWall;
-    private bool isActive = false;
+    public bool isActive = false;
 
-    private int nextDiretion;
-    private enum BossState 
+    public int nextDiretion;
+    public enum BossState 
     {
         Death,
         Idle,
@@ -63,7 +64,7 @@ public class Boss : MonoBehaviour
         Berserk
     }
 
-    private BossState bossState;
+    public BossState bossState;
     // 질량에 따라 대쉬 속도 달라지는 거 고쳐야 하고 부디치면 밀리는거 사라져야함
     // Start is called before the first frame update
     void Awake()
@@ -75,6 +76,7 @@ public class Boss : MonoBehaviour
         spriteSize = sr.transform.localScale;
         Debug.Log("boss Size :"+spriteSize);
         bossState = BossState.Idle;
+        nextStage.SetActive(false);
         HP = 1000;
         MaxHP = HP;
 
@@ -106,6 +108,9 @@ public class Boss : MonoBehaviour
 
 
         if (HP < 0)
+        {
+            nextStage.SetActive(true);
+        }
             Debug.Log("dead");
     }
 
@@ -245,7 +250,7 @@ public class Boss : MonoBehaviour
             Invoke("Think", 2);
     }
 
-    public void GetDamage(float Damage)
+    public virtual void GetDamage(float Damage)
     {
         HP -= Damage;
 
@@ -261,18 +266,18 @@ public class Boss : MonoBehaviour
 
     }
 
-    public float setHp()
+    public virtual float setHp()
     {
         return HP;
     }
 
-    public float setMaxHp()
+    public virtual float setMaxHp()
     {
         return MaxHP;
     }
 
     // 보스 호출
-    public void StartThink()
+    public virtual void StartThink()
     {
         Think();
     }
@@ -283,7 +288,7 @@ public class Boss : MonoBehaviour
 
     }
 
-    public string GetBossState()
+    public virtual string GetBossState()
     {
         return bossState.ToString();
     }

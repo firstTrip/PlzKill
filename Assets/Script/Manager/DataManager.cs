@@ -7,7 +7,7 @@ using System.IO;
 public class DataManager : MonoBehaviour
 {
 
-    private GameObject player;
+    [SerializeField] private GameObject player;
 
     #region SingleTon
     /* SingleTon */
@@ -67,8 +67,16 @@ public class DataManager : MonoBehaviour
     {
         if (!HasSavedFile) return;
 
+        player.GetComponent<Player>().LoadStat();
+        BGRepo.I.Addons.Get<BGAddonSaveLoad>().Load(File.ReadAllBytes(SaveFilePath));
+    }
+
+    public void LoadPos()
+    {
+        if (!HasSavedFile) return;
 
         player.GetComponent<Player>().LoadStat();
+        player.GetComponent<Player>().LoadPos();
         BGRepo.I.Addons.Get<BGAddonSaveLoad>().Load(File.ReadAllBytes(SaveFilePath));
     }
 }

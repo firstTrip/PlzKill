@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Centaur : MonoBehaviour
+public class Centaur : Boss
 {
+    /*
     public int patternIndex;
     public int curCountPatterns;
     public int[] maxPatternsCount;
@@ -17,13 +18,10 @@ public class Centaur : MonoBehaviour
     public GameObject Player;
     [Space]
     public Transform[] bulletPos;
-    [Space]
-    public GameObject Arrow;
+    
 
     public SpriteRenderer sr;
     public Animator Anim;
-    Vector2 spriteSize;
-    private Rigidbody2D rb;
 
     public float bAtt;
 
@@ -40,15 +38,19 @@ public class Centaur : MonoBehaviour
 
     [Space]
 
-    public Transform handPos;
     public int bulletCnt;
     public float DashCoolTime;
 
     public float radius;
 
     public bool onWall;
+    */
+    [Space]
+    //public GameObject Arrow;
 
-
+    private Vector2 SpriteSize;
+    //private Rigidbody2D rb;
+    /*
     private int nextDiretion;
     private enum BossState
     {
@@ -61,27 +63,29 @@ public class Centaur : MonoBehaviour
     }
 
     private BossState bossState;
+    */
+
+    public GameObject hand;
+    public GameObject Arrow;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         Anim = GetComponent<Animator>();
-        spriteSize = sr.transform.localScale;
-        Debug.Log("boss Size :" + spriteSize);
+        SpriteSize = sr.transform.localScale;
         bossState = BossState.Idle;
 
         bAtt = 30f;
         patternIndex = 0;
-        Think();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (bossState == BossState.Death)
+        if (bossState == BossState.Death || GameManager.Instance.gameMode == GameManager.GameMode.nomal)
             return;
 
         onWall = Physics2D.OverlapCircle(this.transform.position + new Vector3(rightXoffset, 0, 0), radius, LayerMask.GetMask("Ground"))
@@ -111,7 +115,7 @@ public class Centaur : MonoBehaviour
                 break;
 
             case 2:
-                SmashToPlayer();
+                SmashToPlayer2();
                 break;
         }
     }
@@ -130,12 +134,12 @@ public class Centaur : MonoBehaviour
 
         if (nextDiretion == -1)
         {
-            transform.localScale = new Vector3(-spriteSize.x, spriteSize.y, 1);
+            transform.localScale = new Vector3(-SpriteSize.x, SpriteSize.y, 1);
 
         }
         else if (nextDiretion == 1)
         {
-            transform.localScale = new Vector3(spriteSize.x, spriteSize.y, 1);
+            transform.localScale = new Vector3(SpriteSize.x, SpriteSize.y, 1);
 
         }
     }
@@ -182,12 +186,11 @@ public class Centaur : MonoBehaviour
             Invoke("Think", 2);
 
     }
-    void SmashToPlayer()
+    void SmashToPlayer2()
     {
-        Debug.Log("SmashToPlayer");
+        Debug.Log("ShotArrow");
         StartCoroutine("ShotArrow");
 
-        
     }
 
     IEnumerator ShotArrow()
@@ -209,7 +212,7 @@ public class Centaur : MonoBehaviour
         curCountPatterns++;
 
         if (curCountPatterns < maxPatternsCount[patternIndex])
-            Invoke("SmashToPlayer", 2);
+            Invoke("SmashToPlayer2", 2);
         else
             Invoke("Think", 2);
     }
@@ -217,21 +220,26 @@ public class Centaur : MonoBehaviour
     public void Shot()
     {
         Debug.Log("count shot");
+        Flip();
 
-        GameObject Bullet = Instantiate(Arrow, handPos.position, Quaternion.identity);
-        Rigidbody2D rbB = Bullet.GetComponent<Rigidbody2D>();
+        GameObject go = Instantiate(Arrow);
+        go.transform.position = hand.transform.position;
+        go.transform.rotation = Quaternion.identity;
+
+
+        Rigidbody2D rbB = go.GetComponent<Rigidbody2D>();
 
         //Bullet.transform.rotation = Quaternion.Euler(0, 0, 90);
 
-        Vector2 temp = Player.transform.position - handPos.position;
+        Vector2 temp = Player.transform.position - hand.transform.position;
 
         float z = Mathf.Atan2(temp.x, temp.y) * Mathf.Rad2Deg;
 
-        Bullet.transform.rotation = Quaternion.Euler(0, 0, z - 100);
+        go.transform.rotation = Quaternion.Euler(0, 0, z - 100);
 
         rbB.AddForce(new Vector2(temp.x, temp.y) * BulletSpeed, ForceMode2D.Impulse);
 
-        Destroy(Bullet, 1.5f);
+        Destroy(go, 1.5f);
     }
 
 
@@ -253,6 +261,15 @@ public class Centaur : MonoBehaviour
             Invoke("Think", 2);
     }
 
+    
+    public override void GetDamage(float Damage)
+    {
+        HP -= Damage;
+
+        Debug.Log(HP);
+    }
+    
+
     void Stun()
     {
         bossState = BossState.Stun;
@@ -267,9 +284,25 @@ public class Centaur : MonoBehaviour
         bossState = BossState.Idle;
 
     }
+    
+    public override float setHp()
+    {
+        return HP;
+    }
 
-    public string GetBossState()
+    public override  float setMaxHp()
+    {
+        return MaxHP;
+    }
+
+    public override void StartThink()
+    {
+        Think();
+    }
+
+    public override string GetBossState()
     {
         return bossState.ToString();
     }
+    
 }

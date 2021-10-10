@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7123676633032033735}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -45,13 +45,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 7123676633032033730}
-  BGM: {fileID: 0}
   Swish1: {fileID: 8300000, guid: 210d7325ae4783741a7fa6d61c92bb03, type: 3}
   Swish2: {fileID: 8300000, guid: 031378dd79bc6b14e902bbd43996ce1b, type: 3}
   Swish3: {fileID: 8300000, guid: 227d4f1ffaf525f43b39d128c41e73e0, type: 3}
   Attack1: {fileID: 8300000, guid: 20f609078cf086c418d1db294c9146fc, type: 3}
   Attack2: {fileID: 8300000, guid: 1591f4f4da9b82349a131e7fef39e838, type: 3}
   Attack3: {fileID: 8300000, guid: 34be97bbaf93fa14a8cac73f6836aa50, type: 3}
+  BasicSwSkill: {fileID: 8300000, guid: d07ee7649eb2287468c3899824a1772b, type: 3}
+  NomalBGM:
+  - {fileID: 8300000, guid: f4c339aa518fcf44ba4782b0e163bf0e, type: 3}
+  - {fileID: 8300000, guid: 26a00f32da34a0d4da678b5904038cfb, type: 3}
+  BossBgm:
+  - {fileID: 8300000, guid: cd4cc41ef8923a84a862ea9e2e03c9d5, type: 3}
+  - {fileID: 8300000, guid: cd4cc41ef8923a84a862ea9e2e03c9d5, type: 3}
 --- !u!82 &7123676633032033730
 AudioSource:
   m_ObjectHideFlags: 0

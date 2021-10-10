@@ -19,6 +19,7 @@ public class StateChangeAction : MonoBehaviour
             {
                 GameManager.Instance.gameMode = GameManager.GameMode.boss;
                 GameManager.Instance.BossActive();
+                SoundManager.Instance.PlayLoopSound("BossLoopSound");
             }
             else if (GameManager.Instance.gameMode == GameManager.GameMode.boss)
                 GameManager.Instance.gameMode = GameManager.GameMode.nomal;

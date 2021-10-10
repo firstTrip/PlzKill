@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class BasicSWSkill : MonoBehaviour
 {
-    private float damage = 10;
+    private float damage;
     public int DamageCnt;
 
-    // Start is called before the first frame update
-    void Start()
+  
+    public void setDamage(float wDamage)
     {
-        damage = (int)Random.Range(damage/2 - 2, damage/2 + 3);
+        damage = (int)Random.Range(wDamage / 2 - 5, wDamage / 2 + 5);
+        Debug.Log("Weafon Damage :" + damage);
     }
 
     void DamageTo(GameObject obj)
@@ -22,19 +23,52 @@ public class BasicSWSkill : MonoBehaviour
         }
     }
 
+    IEnumerator CDamageToMonster(GameObject obj)
+    {
+
+        for (int i = 0; i < DamageCnt; i++)
+        {
+            obj.GetComponent<Monster>().GetDamage(damage);
+            Debug.Log("HE Got damge");
+            yield return new WaitForSeconds(0.2f);
+
+        }
+
+        yield return null;
+
+    }
+
+    IEnumerator CDamageToBoss(GameObject obj)
+    {
+
+        for (int i = 0; i < DamageCnt; i++)
+        {
+            obj.GetComponent<Boss>().GetDamage(damage);
+            Debug.Log("HE Got damge");
+            yield return new WaitForSeconds(0.2f);
+
+        }
+        yield return null;
+
+    }
+    void DamageToMonster()
+    {
+        
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Monster"))
         {
             Debug.Log(damage);
-            DamageTo(collision.gameObject);
+            StartCoroutine(CDamageToMonster(collision.gameObject));
             Debug.Log("HE Got skill damge");
         }
 
         else if (collision.CompareTag("Boss"))
         {
             Debug.Log(damage);
-            DamageTo(collision.gameObject);
+            StartCoroutine(CDamageToBoss(collision.gameObject));
         }
     }
 }

@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &103035824755743211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 103035824755743208}
+  - component: {fileID: 103035824755743209}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &103035824755743208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103035824755743211}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 267.02762, y: 460.74982, z: -103.748474}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &103035824755743209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103035824755743211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98589cf47a1cb2478d9fbdf51b22d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NowState: 0
+  isAction: 0
+  Duration: 0
+  RewardList:
+  - ReName: "\uACF5\uACA9\uB825 \uC99D\uAC00"
+    gain: 10
+    weight: 5
+  - ReName: "\uACF5\uACA9 \uC18D\uB3C4 \uC99D\uAC00"
+    gain: 5
+    weight: 15
+  - ReName: "\uCCB4\uB825 \uC99D\uAC00"
+    gain: 5
+    weight: 15
+  - ReName: "\uBC29\uC5B4\uB825 \uC99D\uAC00"
+    gain: 5
+    weight: 10
+  - ReName: "\uD761\uD608 \uD6A8\uC728 \uC99D\uAC00"
+    gain: 5
+    weight: 5
+  - ReName: "\uC774\uB3D9 \uC18D\uB3C4 \uC99D\uAC00"
+    gain: 5
+    weight: 15
+  - ReName: "\uC810\uD504\uB825 \uC99D\uAC00"
+    gain: 5
+    weight: 15
+  - ReName: "\uB300\uC2DC \uCFE8\uD0C0\uC784 \uAC10\uC18C"
+    gain: -10
+    weight: 10
+  - ReName: "\uAE30\uBCF8 \uC2A4\uD0AC \uCFE8\uD0C0\uC784 \uAC10\uC18C"
+    gain: -10
+    weight: 5
+  - ReName: "\uC2A4\uD0AC \uCD94\uAC00"
+    gain: 0
+    weight: 5
+  RewardResult: []
+  total: 0
+  gameMode: 0

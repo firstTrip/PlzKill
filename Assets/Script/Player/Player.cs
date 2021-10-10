@@ -167,7 +167,9 @@ public class Player : MonoBehaviour
         {
             Attack();
         }
+
         StopSpeed(); //  관성 삭제
+
 
     }
 
@@ -237,10 +239,16 @@ public class Player : MonoBehaviour
         dashPower = playerData.dashPower;
         attSpeed = playerData.attSpeed;
 
+        Debug.Log(playerData.att);
+        Debug.Log(att);
+    }
+
+    public void LoadPos()
+    {
         transform.position= playerData.PlayerPos;
 
-        Debug.Log(att + " playerData.att");
     }
+
 
     public void SaveStat()
     {
@@ -267,7 +275,6 @@ public class Player : MonoBehaviour
             return;
 
 
-
         if (isOverWall) 
         {
             if (rb.velocity.y > 0)
@@ -277,6 +284,8 @@ public class Player : MonoBehaviour
         }
 
         Move();
+
+
     }
 
     private void Move()
@@ -369,7 +378,11 @@ public class Player : MonoBehaviour
         if (Input.GetButtonUp("Horizontal"))
         {
             rb.velocity = new Vector2(rb.velocity.normalized.x * 0.5f, rb.velocity.y);
+
+            rb.velocity = Vector2.zero;
+
         }
+
     }
 
     private void Attack()
@@ -594,7 +607,7 @@ public class Player : MonoBehaviour
         Instantiate(temp, transform.position, Quaternion.identity);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Monster"))
         {
@@ -608,6 +621,7 @@ public class Player : MonoBehaviour
             GetDamage(collision.GetComponent<Boss>().bAtt, collision.gameObject.transform);
         }
 
+        else
         if(collision.CompareTag("Bullet"))
         {
             Debug.Log(collision.name);
@@ -728,15 +742,20 @@ public class Player : MonoBehaviour
         {
             case "공격력 증가":
                 Debug.Log("공격력 증가");
+                att = att * (1.1f);
+                Debug.Log(att);
                 break;
 
             case "공격 속도 증가":
                 Debug.Log("공격 속도 증가");
-
+                attSpeed = attSpeed * (1.1f);
+                Debug.Log(attSpeed);
                 break;
 
             case "체력 증가":
                 Debug.Log("체력 증가");
+                MaxHP = MaxHP * (1.1f);
+                Debug.Log(MaxHP);
 
                 break;
 
@@ -752,16 +771,22 @@ public class Player : MonoBehaviour
 
             case "이동 속도 증가":
                 Debug.Log("이동 속도 증가");
+                speed = speed * (1.2f);
+                Debug.Log(speed);
 
                 break;
 
             case "점프력 증가":
                 Debug.Log("점프력 증");
+                jumpPower = jumpPower * (1.2f);
+                Debug.Log(jumpPower);
 
                 break;
 
             case "대시 쿨타임 감소":
                 Debug.Log("대시 쿨타임 감소");
+                dashCoolTime = dashCoolTime * (0.8f);
+                Debug.Log(dashCoolTime);
 
                 break;
 
@@ -777,6 +802,8 @@ public class Player : MonoBehaviour
         
 
         }
+        
+        //DataManager.Instance.Save();
 
     }
     public void getDashCnt(int cnt)

@@ -26,8 +26,10 @@ public class Monster : MonoBehaviour
     private bool death;
     private bool isTracing;
     private bool isAttacking;
+    private bool isStun;
 
     [SerializeField] private GameObject traceTarget;
+    [SerializeField] private GameObject Player;
     [SerializeField] private GameObject textObj;
     [SerializeField] private Transform textPos;
 
@@ -53,9 +55,11 @@ public class Monster : MonoBehaviour
         Debug.Log(setSize);
         rb = GetComponent<Rigidbody2D>();
         monsterData = GetComponent<MonsterData>();
+        Player = GameObject.FindGameObjectWithTag("Player");
         death = false;
         isTracing = false;
         isAttacking = true;
+        isStun = false;
         Invoke("Think", 1f);
     }
 
@@ -72,7 +76,7 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (death)
+        if (death || isStun)
             return;
 
         if(HP < 0 )
@@ -248,10 +252,26 @@ public class Monster : MonoBehaviour
         DamageText.GetComponent<DamageText>().damage = Damage;
 
         DamageText.transform.position = textPos.position;
+        SoundManager.Instance.PlaySound("Attack1");
+
+        StartCoroutine("Stun");
         HP -= Damage;
-        Debug.Log(HP);
+        //Debug.Log(dir);
     }
 
+
+    IEnumerator Stun()
+    {
+        CancelInvoke();
+
+        anim.PlayAnimation(3);
+        rb.velocity = Vector2.zero;
+        isStun = true;
+
+        yield return new WaitForSeconds(0.2f);
+        isStun = false;
+
+    }
 
     private void Stop()
     {
@@ -263,7 +283,7 @@ public class Monster : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (monsterType != MonsterType.NavMonster)
+        if (monsterType != MonsterType.NavMonster ||isStun)
             return;
 
         if (collision.CompareTag("Player"))
@@ -276,7 +296,7 @@ public class Monster : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (monsterType != MonsterType.NavMonster)
+        if (monsterType != MonsterType.NavMonster || isStun)
             return;
 
         if (collision.CompareTag("Player"))
@@ -289,7 +309,7 @@ public class Monster : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (monsterType != MonsterType.NavMonster)
+        if (monsterType != MonsterType.NavMonster || isStun)
             return;
 
         if (collision.CompareTag("Player"))

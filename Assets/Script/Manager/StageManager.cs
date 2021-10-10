@@ -66,7 +66,7 @@ public class StageManager : MonoBehaviour
     public void CallStage()
     {
         Debug.Log(levelNum + "-" + stageNum + "_Stage");
-        SceneManager.LoadScene(levelNum + "-"+ stageNum + "_Stage");
+        SceneManager.LoadScene(stageNum + "_Stage");
         stageNum++;
 
         if (stageNum == 4)

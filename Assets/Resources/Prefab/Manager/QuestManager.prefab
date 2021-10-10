@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3288094415462286962
+--- !u!1 &67498532838672855
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,51 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3288094415462286964}
-  - component: {fileID: 3288094415462286965}
+  - component: {fileID: 67498532838672856}
+  - component: {fileID: 67498532838672857}
   m_Layer: 0
-  m_Name: UIManager
+  m_Name: QuestManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3288094415462286964
+--- !u!4 &67498532838672856
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3288094415462286962}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 540.1736, y: 161.40985, z: -61.848885}
+  m_GameObject: {fileID: 67498532838672855}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -21.373245, y: 12.575465, z: -14.675053}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3288094415462286965
+--- !u!114 &67498532838672857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3288094415462286962}
+  m_GameObject: {fileID: 67498532838672855}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16a8b4d15c126b343894b8538dcbd1cf, type: 3}
+  m_Script: {fileID: 11500000, guid: 038ba9a419db1fa4b9d49c98fddf4994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textBox: {fileID: 0}
-  textNpcBox: {fileID: 0}
-  FadeImg: {fileID: 0}
-  text: {fileID: 0}
-  npcText: {fileID: 0}
-  npcButton:
-  - {fileID: 0}
-  - {fileID: 0}
-  RewardButton:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  talkIndex: 0
+  QuestIndex: 0

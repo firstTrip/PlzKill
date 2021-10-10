@@ -255,9 +255,10 @@ public class Weafon : MonoBehaviour
 
                 yield return new WaitForSeconds(0.01f);
 
-                angle += 10;
+                angle -= 10;
 
-
+                if (angle < -120)
+                    break;
             }
 
             Debug.Log(angle + " : " + (-150 + z));
@@ -293,11 +294,13 @@ public class Weafon : MonoBehaviour
         {
 
             Debug.Log("is Skill");
-            GameObject go = Instantiate(skill, (Vector2)transform.parent.position, Quaternion.identity);
+            GameObject go2 = Instantiate(skill, (Vector2)transform.parent.position, Quaternion.identity);
 
-            // go.transform.localScale = new Vector2(transform.localScale.x * x, transform.localScale.y * y);
+            Debug.Log(go2);
+
+            go2.GetComponentInChildren<BasicSWSkill>().setDamage(att + PlayerAtt);
             SoundManager.Instance.PlaySound("BasicSwSkill");
-            Destroy(go, 0.5f);
+            Destroy(go2, 0.5f);
 
             cnt = 0;
 

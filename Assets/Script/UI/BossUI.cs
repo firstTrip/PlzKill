@@ -18,7 +18,7 @@ public class BossUI : MonoBehaviour
 
     float MHp;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         Boss = GameObject.FindGameObjectWithTag("Boss");
         SetBossImg();

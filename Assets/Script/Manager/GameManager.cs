@@ -72,6 +72,8 @@ public class GameManager : MonoBehaviour
         SetStatList();
         BossObject = GameObject.FindGameObjectWithTag("Boss");
         gameMode = GameMode.nomal;
+
+        //DataManager.Instance.Load();
     }
 
     private void Update()

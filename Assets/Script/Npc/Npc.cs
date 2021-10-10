@@ -80,6 +80,8 @@ public class Npc : MonoBehaviour
 
         DestroyNpc();
 
+
+
     }
 
     public void NoSelect()
@@ -93,7 +95,11 @@ public class Npc : MonoBehaviour
         GameManager.Instance.TalkAction(this.gameObject);
         GameManager.Instance.UpNpcCnt();
 
-        Invoke("DestroyNpc",2f);
+        Invoke("DestroyNpc", 2f);
+
+       
+
+       
     }
 
     void DestroyNpc()
