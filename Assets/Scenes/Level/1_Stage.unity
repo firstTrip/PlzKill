@@ -13198,7 +13198,7 @@ GameObject:
   - component: {fileID: 1805997240}
   m_Layer: 12
   m_Name: coll
-  m_TagString: Boss
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21334,7 +21334,7 @@ PrefabInstance:
     - target: {fileID: 2563109325632947040, guid: fe8162713dd00ce46905b47dce0aec2d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -20.51
+      value: -19.5
       objectReference: {fileID: 0}
     - target: {fileID: 2563109325632947040, guid: fe8162713dd00ce46905b47dce0aec2d,
         type: 3}
@@ -21355,6 +21355,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Monster_soldier
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768368269740608251, guid: fe8162713dd00ce46905b47dce0aec2d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.56
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8178435658092927848, guid: fe8162713dd00ce46905b47dce0aec2d, type: 3}

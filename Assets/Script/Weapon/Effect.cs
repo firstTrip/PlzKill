@@ -27,7 +27,7 @@ public class Effect : MonoBehaviour
             Debug.Log("HE Got damge");
         }
 
-        if (collision.CompareTag("Boss"))
+        else if (collision.CompareTag("Boss"))
         {
             Debug.Log(damage);
             collision.GetComponent<Boss>().GetDamage(damage);

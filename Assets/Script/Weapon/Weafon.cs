@@ -294,7 +294,9 @@ public class Weafon : MonoBehaviour
 
             Debug.Log("is Skill");
             GameObject go = Instantiate(skill, (Vector2)transform.parent.position, Quaternion.identity);
-           // go.transform.localScale = new Vector2(transform.localScale.x * x, transform.localScale.y * y);
+
+            // go.transform.localScale = new Vector2(transform.localScale.x * x, transform.localScale.y * y);
+            SoundManager.Instance.PlaySound("BasicSwSkill");
             Destroy(go, 0.5f);
 
             cnt = 0;

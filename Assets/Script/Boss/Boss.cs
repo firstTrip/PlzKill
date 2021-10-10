@@ -249,8 +249,6 @@ public class Boss : MonoBehaviour
     {
         HP -= Damage;
 
-        int dir = transform.position.x - Player.transform.position.x > 0 ? 1 : -1;
-        rb.AddForce(new Vector2(dir, 1) * 1.5f, ForceMode2D.Impulse);
         Debug.Log(HP);
     }
 
