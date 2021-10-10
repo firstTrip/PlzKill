@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8266204540670734424}
   - component: {fileID: 3950808225913266332}
   m_Layer: 0
-  m_Name: mad-Sheet_0
+  m_Name: Mad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

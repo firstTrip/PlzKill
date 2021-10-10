@@ -87,6 +87,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     public GameObject myWeapon;
     public GameObject dashPaticle;
+    public GameObject MadEffect;
     public Image CollTimeImage;
     private Camera cam;
     private SpriteRenderer sr;
@@ -182,7 +183,7 @@ public class Player : MonoBehaviour
         hasItem = new List<GameObject>();
         playerData = GetComponent<PlayerData>();
         sr = GetComponent<SpriteRenderer>();
-
+        MadEffect.SetActive(false);
         MaxHP = playerData.HP;
 
         HP = MaxHP;
@@ -529,6 +530,7 @@ public class Player : MonoBehaviour
                 CancleBerserkMode(BAtt, BSpeed, BAttSpeed);
                 cnt = 0;
                 isBerserk = false;
+                MadEffect.SetActive(false);
 
                 return;
             }
@@ -537,6 +539,7 @@ public class Player : MonoBehaviour
             speed = BSpeed * 2;
             attSpeed = BAttSpeed / 2;
             isBerserk = true;
+            MadEffect.SetActive(true);
         }
     }
 

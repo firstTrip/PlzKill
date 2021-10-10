@@ -9861,24 +9861,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1141063311, guid: 3363670bb3812de4f84c6e21e9e2220e, type: 3}
-      propertyPath: att
-      value: 10
+    - target: {fileID: 744039274710670643, guid: 3363670bb3812de4f84c6e21e9e2220e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7
       objectReference: {fileID: 0}
-    - target: {fileID: 1141063311, guid: 3363670bb3812de4f84c6e21e9e2220e, type: 3}
-      propertyPath: skill
-      value: 
-      objectReference: {fileID: 4216821771276272434, guid: d995cf27e74e15d4bb8c8600923f7bb7,
+    - target: {fileID: 744039274710670643, guid: 3363670bb3812de4f84c6e21e9e2220e,
         type: 3}
-    - target: {fileID: 1141063311, guid: 3363670bb3812de4f84c6e21e9e2220e, type: 3}
-      propertyPath: WeafonEffect
-      value: 
-      objectReference: {fileID: 6792148894428114632, guid: 3af666cdacb30064e86a88751d83f915,
-        type: 3}
-    - target: {fileID: 1387706799290081344, guid: 3363670bb3812de4f84c6e21e9e2220e,
-        type: 3}
-      propertyPath: m_Mass
-      value: 1
+      propertyPath: m_LocalScale.y
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 4522228429287218500, guid: 3363670bb3812de4f84c6e21e9e2220e,
         type: 3}
