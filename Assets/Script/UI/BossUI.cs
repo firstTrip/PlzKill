@@ -14,18 +14,27 @@ public class BossUI : MonoBehaviour
     [SerializeField] private Image Hpbar;
     [SerializeField] private TextMeshProUGUI HpText;
 
+    [SerializeField] private GameObject bossUi;
+
     float MHp;
     // Start is called before the first frame update
     void Awake()
     {
         Boss = GameObject.FindGameObjectWithTag("Boss");
         SetBossImg();
+
+        bossUi.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        HpFillAmount();
+        if(GameManager.Instance.gameMode ==GameManager.GameMode.boss)
+        {
+            bossUi.SetActive(true);
+            HpFillAmount();
+
+        }
 
     }
 

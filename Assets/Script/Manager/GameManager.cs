@@ -43,6 +43,15 @@ public class GameManager : MonoBehaviour
 
     private int num = 0;
     public int total;
+
+    public enum GameMode
+    {
+        nomal,
+        boss
+    }
+
+    public GameMode gameMode; 
+
     private void Awake()
     {
         #region SingleTon
@@ -59,9 +68,7 @@ public class GameManager : MonoBehaviour
         Duration = 1f;
         NpcCount = 0;
         SetStatList();
-
-
-
+        gameMode = GameMode.nomal;
     }
 
     private void Update()
@@ -71,9 +78,7 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
             DataManager.Instance.Load();
-    }
-
-
+    } 
     private bool isPause;
 
     public void GamePause(bool TrueIsPause)
