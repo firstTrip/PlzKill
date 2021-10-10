@@ -10,7 +10,7 @@ public class BasicSWSkill : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        damage = (int)Random.Range(damage - 2, damage + 3);
+        damage = (int)Random.Range(damage/2 - 2, damage/2 + 3);
     }
 
 

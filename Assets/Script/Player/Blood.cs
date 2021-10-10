@@ -17,7 +17,7 @@ public class Blood : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sizeOfBlood = 10;
-        rb.AddForce(Vector2.up*10, ForceMode2D.Impulse);
+        rb.AddForce(Vector2.up *3, ForceMode2D.Impulse);
     }
 
 
@@ -25,8 +25,15 @@ public class Blood : MonoBehaviour
     private void Update()
     {
         RaycastHit2D ray = Physics2D.Raycast(this.transform.position, Vector2.up, 1f, LayerMask.GetMask("Player"));
+        RaycastHit2D ray2 = Physics2D.Raycast(this.transform.position, Vector2.down, 0.2f, LayerMask.GetMask("Ground"));
 
-        if(ray)
+        if (ray2)
+        {
+            rb.velocity = Vector2.zero;
+            rb.bodyType = RigidbodyType2D.Kinematic;
+        }
+
+        if (ray)
         {
             Debug.Log("into blood");
             ray.collider.GetComponent<Player>().getBlood(blood);
