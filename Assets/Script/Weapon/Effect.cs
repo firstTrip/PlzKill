@@ -5,7 +5,7 @@ using UnityEngine;
 public class Effect : MonoBehaviour
 {
 
-    private float damage=10;
+    private float damage;
 
     public void setDamage(float wDamage)
     {

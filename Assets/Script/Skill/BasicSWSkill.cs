@@ -13,11 +13,6 @@ public class BasicSWSkill : MonoBehaviour
         damage = (int)Random.Range(damage - 2, damage + 3);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {

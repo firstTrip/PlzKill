@@ -381,7 +381,7 @@ public class Player : MonoBehaviour
             anim.SetTrigger("attack");
             int SwishSound = Random.Range(1, 4);
             SoundManager.Instance.PlaySound("Swish"+ SwishSound.ToString());
-            Debug.Log("Attack" + SwishSound.ToString());
+
             myWeapon.GetComponent<Weafon>().Attack();
             Invoke("CancleAttack", attSpeed);
         }
@@ -409,8 +409,6 @@ public class Player : MonoBehaviour
             dashCnt--;
             isDashing = true;
             isOverWall = false;
-            //rb.constraints = RigidbodyConstraints2D.None;
-            //rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
             rb.gravityScale = 0;
 

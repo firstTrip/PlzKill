@@ -49,7 +49,7 @@ public class Weafon : MonoBehaviour
         DirectFlag = true;
 
         WeafonEffect.GetComponent<Effect>().setDamage(att);
-        Debug.Log( "weafon : "+att);
+        Debug.Log( "weafon : "+(att +PlayerAtt));
         //anim = GetComponent<Animator>();
 
         attackTime = 0.5f;
@@ -303,6 +303,7 @@ public class Weafon : MonoBehaviour
         else
         {
             GameObject go = Instantiate(WeafonEffect, (Vector2)transform.parent.position + attackByVec, Quaternion.identity);
+            go.GetComponent<Effect>().setDamage(att+PlayerAtt);
             go.transform.localScale = new Vector2(transform.localScale.x * x, transform.localScale.y * y);
             Destroy(go, 0.5f);
 
@@ -351,6 +352,10 @@ public class Weafon : MonoBehaviour
         Debug.Log("Attack" + AttackSound.ToString());
     }
 
+    public void getAtt()
+    {
+
+    }
  
 
     private void OnTriggerEnter2D(Collider2D collision)
