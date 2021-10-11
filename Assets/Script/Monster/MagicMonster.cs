@@ -66,12 +66,12 @@ public class MagicMonster : MonoBehaviour
 
     protected virtual void Initiallized()
     {
-        HP = monsterData.HP;
-        speed = monsterData.Speed;
-        attRange = monsterData.AttRange;
-        att = monsterData.Att;
-        attSpeed = monsterData.AttSpeed;
-        blood = (int)monsterData.BloodCnt;
+        HP = 100;
+        speed =2;
+        attRange = 4;
+        att = 10;
+        attSpeed = 1;
+        blood = 1;
     }
     // Update is called once per frame
     void Update()

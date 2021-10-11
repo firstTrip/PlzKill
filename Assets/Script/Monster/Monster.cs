@@ -267,7 +267,7 @@ public class Monster : MonoBehaviour
         anim.PlayAnimation(3);
         rb.velocity = Vector2.zero;
         isStun = true;
-
+        isTracing = false;
         yield return new WaitForSeconds(0.2f);
         isStun = false;
 
@@ -315,6 +315,7 @@ public class Monster : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isTracing = false;
+            traceTarget = null;
             Stop();
             Invoke("Think", 2f);
         }

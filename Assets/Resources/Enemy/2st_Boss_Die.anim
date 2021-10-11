@@ -34,6 +34,8 @@ AnimationClip:
     - time: 0.33333334
       value: {fileID: 1622088310215598805, guid: 9ed8f646616aeaf48a59e5bde8c1b431,
         type: 3}
+    - time: 0.41666666
+      value: {fileID: 0}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -58,12 +60,13 @@ AnimationClip:
     - {fileID: -9045315907837196689, guid: 9ed8f646616aeaf48a59e5bde8c1b431, type: 3}
     - {fileID: -6601538654649131335, guid: 9ed8f646616aeaf48a59e5bde8c1b431, type: 3}
     - {fileID: 1622088310215598805, guid: 9ed8f646616aeaf48a59e5bde8c1b431, type: 3}
+    - {fileID: 0}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.41666666
+    m_StopTime: 0.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -82,4 +85,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.33333334
+    functionName: MakeEffect
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

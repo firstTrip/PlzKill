@@ -55,6 +55,8 @@ public class Boss : MonoBehaviour
 
     public int nextDiretion;
     public GameObject DieEffect;
+
+    public Sprite OpenImg;
     public enum BossState 
     {
         Death,
@@ -77,7 +79,7 @@ public class Boss : MonoBehaviour
         spriteSize = sr.transform.localScale;
         Debug.Log("boss Size :"+spriteSize);
         bossState = BossState.Idle;
-        nextStage.SetActive(false);
+        //nextStage.SetActive(false);
         HP = 1000;
         MaxHP = HP;
 
@@ -111,7 +113,7 @@ public class Boss : MonoBehaviour
         if (HP < 0)
         {
             CancelInvoke();
-            nextStage.SetActive(true);
+            nextStage.GetComponent<SpriteRenderer>().sprite = OpenImg;
             Anim.SetTrigger("Die");
             bossState = BossState.Death;
             rb.velocity = Vector2.zero;
