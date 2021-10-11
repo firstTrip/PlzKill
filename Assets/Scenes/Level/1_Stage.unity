@@ -17900,6 +17900,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6937939984374021772, guid: 94ce949394cea2141b7efd67eac804dd,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 39.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937939984374021772, guid: 94ce949394cea2141b7efd67eac804dd,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3b7ec863c52dd8848857724b54f00704,
+        type: 2}
+    - target: {fileID: 6937939984374021772, guid: 94ce949394cea2141b7efd67eac804dd,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 39.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937939984374021772, guid: 94ce949394cea2141b7efd67eac804dd,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -5238266572691265140, guid: 3b7ec863c52dd8848857724b54f00704,
+        type: 2}
+    - target: {fileID: 6937939984374021772, guid: 94ce949394cea2141b7efd67eac804dd,
+        type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937939984374021772, guid: 94ce949394cea2141b7efd67eac804dd,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94ce949394cea2141b7efd67eac804dd, type: 3}
 --- !u!1001 &4068845625254841179

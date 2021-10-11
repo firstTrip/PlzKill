@@ -73,7 +73,8 @@ public class CharacterUI : MonoBehaviour
 
     private void BloodFillAmount()
     {
-        BloodText.text = player.setBlood().ToString();
+        BloodText.text = ((int)player.setBlood()).ToString();
+        Debug.Log(player.setBlood());
     }
 
     private void DashCnt()
