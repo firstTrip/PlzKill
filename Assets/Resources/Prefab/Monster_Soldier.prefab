@@ -3424,6 +3424,7 @@ MonoBehaviour:
   anim: {fileID: 4219179322484032501}
   nextDiretion: 0
   traceTarget: {fileID: 0}
+  Player: {fileID: 0}
   textObj: {fileID: 323697615979723228, guid: 6c81e843f5295c14cb5c3f2d50f897ee, type: 3}
   textPos: {fileID: 1275538691}
   monsterData: {fileID: 3581976156537835587}
