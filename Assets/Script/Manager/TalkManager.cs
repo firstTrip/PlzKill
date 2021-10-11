@@ -54,10 +54,13 @@ public class TalkManager : MonoBehaviour
     {
         // 9 = NoSelect 를 선택시
         // 11 = YesSelect 를 선택시
-        talkData.Add(10 +1000,new string[]{"안녕!!","넌 무엇을 원하니?\n선택해" });
-        talkData.Add(11+1000, new string[] { "왜 나를 죽이는가...." });
+        talkData.Add(10 +1000,new string[]{"안녕하십니까!\n지하층에 사람이 많은데\n오시느라 고생하셨습니다\n최근 지하층의 수장이 사람들에게\n행패를 부리는 바람에\n분위기가 좋진 않습니다만..\n근데 지하층엔 무슨일로 오셨습니까?" }); 
 
-        talkData.Add(9+1000, new string[] { "살려줘서 고맙다네 \n 나중에 꼭 보상을 하겠네" });
+        //Yes
+        talkData.Add(11+1000, new string[] { "어째서....\n\n - 피의 대가로 능력이 증가합니다" });
+
+        //No
+        talkData.Add(9+1000, new string[] { "지하층의 수장을 처치하시겠다고요..?\n그.. 그럼 저희도 돕겠습니다!\n병사의 창고에서 빼돌린 무기입니다\n하나 들고가세요\n\n - 주민으로 부터 숨겨진 무기 중 하나를 받습니다" });
 
     }
 
