@@ -47,6 +47,18 @@ TextureImporter:
   - first:
       213: -2799632118534624639
     second: Sword_14
+  - first:
+      213: -1081480511545006218
+    second: Sword_15
+  - first:
+      213: 1835520974732236037
+    second: Sword_16
+  - first:
+      213: 4089178380912411086
+    second: Sword_17
+  - first:
+      213: -7975054269012116090
+    second: Sword_18
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -257,9 +269,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 566
-        y: 510
-        width: 146
-        height: 17
+        y: 491
+        width: 195
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -445,6 +457,90 @@ TextureImporter:
       name: Sword_14
       rect:
         serializedVersion: 2
+        x: 400
+        y: 315
+        width: 133
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a28f8db65b529d0800000000000000
+      internalID: -2799632118534624639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword_15
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 315
+        width: 133
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6772ad5643fcdf0f0800000000000000
+      internalID: -1081480511545006218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword_16
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 235
+        width: 133
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50591bcf994197910800000000000000
+      internalID: 1835520974732236037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword_17
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 235
+        width: 133
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec1cd71721eafb830800000000000000
+      internalID: 4089178380912411086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sword_18
+      rect:
+        serializedVersion: 2
         x: 68
         y: 50
         width: 210
@@ -456,8 +552,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18a28f8db65b529d0800000000000000
-      internalID: -2799632118534624639
+      spriteID: 68df11f556ae25190800000000000000
+      internalID: -7975054269012116090
       vertices: []
       indices: 
       edges: []
