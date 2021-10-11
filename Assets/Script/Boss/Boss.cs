@@ -54,6 +54,7 @@ public class Boss : MonoBehaviour
     public bool isActive = false;
 
     public int nextDiretion;
+    public GameObject DieEffect;
     public enum BossState 
     {
         Death,
@@ -109,7 +110,12 @@ public class Boss : MonoBehaviour
 
         if (HP < 0)
         {
+            CancelInvoke();
             nextStage.SetActive(true);
+            Anim.SetTrigger("Die");
+            bossState = BossState.Death;
+            rb.velocity = Vector2.zero;
+            GameManager.Instance.gameMode = GameManager.GameMode.nomal;
         }
             Debug.Log("dead");
     }
@@ -291,5 +297,11 @@ public class Boss : MonoBehaviour
     public virtual string GetBossState()
     {
         return bossState.ToString();
+    }
+
+    public virtual void MakeEffect()
+    {
+        Instantiate(DieEffect,transform.position,Quaternion.identity);
+        Destroy(gameObject, 1f);
     }
 }

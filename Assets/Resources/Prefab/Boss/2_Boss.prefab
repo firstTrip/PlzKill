@@ -226,7 +226,7 @@ MonoBehaviour:
   bAtt: 10
   leftXoffset: 0
   rightXoffset: 0
-  BulletSpeed: 30
+  BulletSpeed: 10
   handPos: {fileID: 1520273595617983021}
   bulletCnt: 0
   DashCoolTime: 0
@@ -234,9 +234,11 @@ MonoBehaviour:
   onWall: 0
   isActive: 0
   nextDiretion: 0
+  DieEffect: {fileID: 3504683433193790221, guid: aa24b1873d837be4cbd64396307c8b0e,
+    type: 3}
   bossState: 0
-  Arrow: {fileID: 126370589633834932, guid: 62162030ab2d0c945b402d3aa4c8e6b2, type: 3}
   hand: {fileID: 537011307}
+  Arrow: {fileID: 126370589633834932, guid: 29ea03824ac4c834ca5dc507b2382f03, type: 3}
 --- !u!50 &1520273596171798333
 Rigidbody2D:
   serializedVersion: 4
@@ -329,6 +331,7 @@ MonoBehaviour:
   onWall: 0
   isActive: 0
   nextDiretion: 0
+  DieEffect: {fileID: 0}
   bossState: 0
-  Arrow: {fileID: 0}
-  hand: {fileID: 0}
+  hand: {fileID: 1520273595617983010}
+  Arrow: {fileID: 126370589633834932, guid: 29ea03824ac4c834ca5dc507b2382f03, type: 3}

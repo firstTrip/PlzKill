@@ -16529,6 +16529,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1304084416818653362, guid: 722831205098fb243ac81303043da0c7,
         type: 3}
+      propertyPath: DieEffect
+      value: 
+      objectReference: {fileID: 3504683433193790221, guid: aa24b1873d837be4cbd64396307c8b0e,
+        type: 3}
+    - target: {fileID: 1304084416818653362, guid: 722831205098fb243ac81303043da0c7,
+        type: 3}
       propertyPath: nextStage
       value: 
       objectReference: {fileID: 1270910983}

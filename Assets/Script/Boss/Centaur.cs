@@ -93,6 +93,15 @@ public class Centaur : Boss
 
         if (bossState == BossState.Idle)
             Flip();
+
+        if (HP < 0)
+        {
+            CancelInvoke();
+            Anim.SetTrigger("Die");
+            bossState = BossState.Death;
+            rb.velocity = Vector2.zero;
+            GameManager.Instance.gameMode = GameManager.GameMode.nomal;
+        }
     }
 
 
@@ -304,5 +313,10 @@ public class Centaur : Boss
     {
         return bossState.ToString();
     }
-    
+
+    public override void MakeEffect()
+    {
+        Instantiate(DieEffect, transform.position, Quaternion.identity);
+        Destroy(gameObject, 1f);
+    }
 }
